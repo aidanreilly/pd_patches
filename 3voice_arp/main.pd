@@ -1,7 +1,7 @@
-#N canvas 0 50 1366 696 10;
+#N canvas -8 -8 1366 696 10;
 #X declare -path patch_editor_abs;
 #X declare -path patch_editor_abs;
-#X obj 12 600 declare -path patch_editor_abs;
+#X obj 153 48 declare -path patch_editor_abs;
 #N canvas 0 50 718 398 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
 #X obj 26 34 loadbang;
@@ -306,7 +306,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -634,7 +634,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -688,7 +688,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1565,7 +1565,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1619,7 +1619,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1673,7 +1673,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1891,7 +1891,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2757,7 +2757,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3298,7 +3298,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -4617,8 +4617,8 @@ as well.;
 #X connect 36 0 19 0;
 #X connect 39 0 38 0;
 #X connect 40 0 39 0;
-#X restore 12 621 pd patch-editor-do-not-delete;
-#X text 15 572 DO NOT DELETE THESE OBJECTS:;
+#X restore 153 69 pd patch-editor-do-not-delete;
+#X text 156 20 DO NOT DELETE THESE OBJECTS:;
 #X obj 10 20 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
 0;
 #X obj 11 46 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
@@ -4632,9 +4632,51 @@ as well.;
 #X obj 11 104 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0
 10 -262144 -4034 -1;
 #X obj 1114 30 hammond-knobs;
-#X text 287 37 Purple is an attenuator \, green is an attenuverter
+#X text 154 96 Purple is an attenuator \, green is an attenuverter
 ;
 #X obj -55 747 declare -path patch_editor_abs;
 #X text -43 731 DO NOT DELETE THESE OBJECTS:;
-#X obj 42 370 maestro4 1;
+#X obj 189 546 maestro4 1;
+#X obj 944 387 bwl-osc 1;
+#X obj 735 388 bwl-osc 1;
+#X obj 1148 386 bwl-osc 2;
+#X obj 951 539 ladder-filter 1;
+#X obj 1159 534 bp-filter 1;
+#X obj 710 681 lpg 1;
+#X obj 489 319 stereo-delay 1;
+#X obj 360 109 phasor 1;
+#X obj 235 318 millerverb 1;
+#X obj 955 671 vca 1;
+#X obj 192 199 mixer4 2;
+#X obj 869 106 trigger-seq 1;
+#X obj -17 559 quantizer 1;
+#X obj 613 82 basic-lfo 1;
+#X obj -11 205 basic-lfo 2;
+#X obj 92 364 s&h 1;
+#X obj 15 431 polarizer 1;
+#X obj 778 263 adsr 1;
+#X obj 530 464 wavefold 1;
+#X obj 551 566 analog-filter 1;
+#X connect 9 0 27 0;
+#X connect 9 12 25 1;
+#X connect 14 0 17 0;
+#X connect 15 0 32 0;
+#X connect 16 0 18 0;
+#X connect 17 0 23 0;
+#X connect 19 0 20 0;
+#X connect 20 0 24 0;
+#X connect 20 1 24 1;
+#X connect 22 0 13 4;
+#X connect 22 1 13 6;
+#X connect 24 0 22 0;
+#X connect 25 0 29 1;
+#X connect 25 0 31 0;
+#X connect 26 0 15 0;
+#X connect 27 4 25 0;
+#X connect 28 1 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 26 0;
+#X connect 31 0 19 1;
+#X connect 32 0 33 0;
+#X connect 33 0 19 0;
 #X coords 0 696 1 695 85 60 0;
