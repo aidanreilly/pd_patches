@@ -1,4 +1,4 @@
-#N canvas -8 -8 1366 696 10;
+#N canvas 0 50 1366 696 10;
 #X obj -116 -325 inlet;
 #X obj 21 -325 inlet;
 #X obj 151 -325 inlet;
@@ -97,8 +97,8 @@
 #X text 150 -341 stop now;
 #X text 282 -341 stop at the end of loop;
 #X obj 823 9 loadbang;
-#X obj 871 -151 table LoopInMemory\$0 410000;
-#X text 895 -132 Sample Rate: 41KHz;
+#X obj 871 -152 table LoopInMemory\$0 480000;
+#X text 895 -132 Sample Rate: 48KHz;
 #X connect 0 0 42 0;
 #X connect 1 0 43 0;
 #X connect 2 0 44 0;

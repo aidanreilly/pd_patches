@@ -2,7 +2,7 @@
 
 https://guitarextended.wordpress.com/2013/08/05/making-a-looper-with-pure-data/
 
-direction/speed control quantized to musical intervals.
+* direction/speed control quantized to musical intervals.
 * No quantization a stand still to double speed forward or backward.
 * Quantization resulting in chromatic intervals across +/- 1 octave forward or backwards
 * Quantization to only perfect fifths and octaves across +/- 1 octave forward or backwards
