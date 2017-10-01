@@ -17,11 +17,11 @@
 #X obj 22 104 r~ \$0-BWMSKSignal;
 #X obj 24 71 s~ \$0-BWMSKSignal;
 #X obj 416 227 hsl 100 20 0 1 0 0 \$0-a \$0-ra delay 4 8 0 10 -262144
--1 -1 0 1;
+-1 -1 4300 1;
 #X obj 526 361 hsl 120 20 0 1 0 0 \$0-c \$0-rc gain-all 4 8 0 10 -262144
 -1 -1 5950 1;
 #X obj 416 254 hsl 100 20 0 1 0 0 \$0-b \$0-rb feedback 4 8 0 10 -262144
--1 -1 0 1;
+-1 -1 1600 1;
 #N canvas 0 50 458 308 rh_scalelog 0;
 #X obj 20 155 exp;
 #X obj 20 107 *;
@@ -158,7 +158,7 @@
 #X obj 1002 350 t b f f;
 #X obj 1054 194 r \$0-stop-s;
 #X obj 1053 220 r \$0-speed-s;
-#N canvas 254 91 717 606 recording 1;
+#N canvas 254 91 717 606 recording 0;
 #X msg 164 110 stop;
 #X obj 97 80 sel start stop;
 #X obj 97 59 list \$1;
