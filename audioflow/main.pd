@@ -1,7 +1,7 @@
-#N canvas 0 50 1366 680 10;
+#N canvas -8 -8 1366 696 10;
 #X declare -path patch_editor_abs;
 #X declare -path patch_editor_abs;
-#X obj 12 584 declare -path patch_editor_abs;
+#X obj 12 600 declare -path patch_editor_abs;
 #N canvas 0 50 718 398 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
 #X obj 26 34 loadbang;
@@ -360,7 +360,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -794,7 +794,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1010,7 +1010,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1118,7 +1118,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1226,7 +1226,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1280,7 +1280,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1671,7 +1671,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1835,7 +1835,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 2 256;
+10 -262144 -1 -1 4 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1943,7 +1943,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2159,7 +2159,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2755,7 +2755,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3242,7 +3242,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -4612,177 +4612,261 @@ as well.;
 #X connect 27 0 26 0;
 #X connect 36 0 35 0;
 #X connect 37 0 36 0;
-#X restore 12 605 pd patch-editor-do-not-delete;
-#X text 15 556 DO NOT DELETE THESE OBJECTS:;
-#X obj 10 4 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
+#X restore 12 621 pd patch-editor-do-not-delete;
+#X text 15 572 DO NOT DELETE THESE OBJECTS:;
+#X obj 10 20 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
 0;
-#X obj 11 30 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
+#X obj 11 46 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
 17 7 0 10 -262144 -1 -1;
-#X obj 11 50 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
+#X obj 11 66 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
 -262144 -1 -1;
-#X obj 11 68 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
+#X obj 11 84 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
 7 0 10 -262144 -1 -1;
-#X obj 11 108 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
+#X obj 11 124 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
 -262144 -1 -1;
-#X obj 11 88 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0 10
--262144 -4034 -1;
-#X obj 1114 14 hammond-knobs;
-#X text 229 629 Purple is an attenuator \, green is an attenuverter
+#X obj 11 104 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0
+10 -262144 -4034 -1;
+#X obj 644 24 hammond-knobs;
+#X text 229 645 Purple is an attenuator \, green is an attenuverter
 ;
-#X obj -55 731 declare -path patch_editor_abs;
-#X text -43 715 DO NOT DELETE THESE OBJECTS:;
-#X obj 88 293 maestro4 1;
-#X obj 964 506 trigger-seq 1;
-#X obj 1022 371 basic-lfo 1;
-#X floatatom 1252 600 0 0 0 0 - - -;
-#X obj 1252 512 cputime;
-#X obj 1252 372 loadbang;
-#X obj 1252 456 metro 1000;
-#X msg 1252 400 1;
-#X floatatom 1252 428 0 0 0 0 - - -;
-#X obj 1252 484 t b b;
-#X obj 1252 572 * 0.1;
-#X obj 1252 541 int;
-#X text 1297 428 <-- on/off;
-#X text 1185 628 CPU load in percent;
-#X obj 259 49 r k1;
-#X floatatom 258 73 5 0 0 0 - - -, f 5;
-#X floatatom 404 69 5 0 0 0 - - -, f 5;
-#X floatatom 753 17 5 0 0 0 - - -, f 5;
-#X floatatom 798 16 5 0 0 0 - - -, f 5;
-#X floatatom 850 16 5 0 0 0 - - -, f 5;
-#X floatatom 898 15 5 0 0 0 - - -, f 5;
-#X floatatom 676 73 5 0 0 0 - - -, f 5;
-#X floatatom 728 73 5 0 0 0 - - -, f 5;
-#X floatatom 776 72 5 0 0 0 - - -, f 5;
-#X floatatom 830 71 5 0 0 0 - - -, f 5;
-#X floatatom 882 71 5 0 0 0 - - -, f 5;
-#X floatatom 930 70 5 0 0 0 - - -, f 5;
-#X obj 970 -7 r b1;
-#X obj 1023 -7 r b2;
-#X obj 1070 -9 r b3;
-#X obj 404 43 r k2;
-#X obj 753 -9 r k3;
-#X obj 798 -10 r k4;
-#X obj 850 -10 r k5;
-#X obj 898 -11 r k6;
-#X obj 676 47 r k7;
-#X obj 728 46 r k8;
-#X obj 776 46 r k9;
-#X obj 830 45 r k10;
-#X obj 882 45 r k11;
-#X obj 930 44 r k12;
-#X obj 969 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 617 659 declare -path patch_editor_abs;
+#X text 629 643 DO NOT DELETE THESE OBJECTS:;
+#X obj 160 385 maestro4 1;
+#X floatatom 782 592 0 0 0 0 - - -;
+#X obj 782 504 cputime;
+#X obj 782 364 loadbang;
+#X obj 782 448 metro 1000;
+#X msg 782 392 1;
+#X floatatom 782 420 0 0 0 0 - - -;
+#X obj 782 476 t b b;
+#X obj 782 564 * 0.1;
+#X obj 782 533 int;
+#X text 827 420 <-- on/off;
+#X text 715 620 CPU load in percent;
+#X obj 136 34 loopguts;
+#N canvas 0 50 1366 696 controls 0;
+#X obj 24 57 r k1;
+#X floatatom 23 81 5 0 0 0 - - -, f 5;
+#X floatatom 180 79 5 0 0 0 - - -, f 5;
+#X floatatom 546 15 5 0 0 0 - - -, f 5;
+#X floatatom 850 32 5 0 0 0 - - -, f 5;
+#X floatatom 898 31 5 0 0 0 - - -, f 5;
+#X floatatom 830 87 5 0 0 0 - - -, f 5;
+#X floatatom 882 87 5 0 0 0 - - -, f 5;
+#X floatatom 930 86 5 0 0 0 - - -, f 5;
+#X obj 970 9 r b1;
+#X obj 1023 9 r b2;
+#X obj 1070 7 r b3;
+#X obj 180 53 r k2;
+#X obj 546 -11 r k4;
+#X obj 850 6 r k5;
+#X obj 898 5 r k6;
+#X obj 830 61 r k10;
+#X obj 882 61 r k11;
+#X obj 930 60 r k12;
+#X obj 969 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 1023 16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1023 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1079 152 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1079 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 918 117 moses 63;
-#X floatatom 952 156 5 0 0 0 - - -, f 5;
-#X floatatom 886 188 5 0 0 0 - - -, f 5;
-#X obj 980 91 sel 1;
-#X obj 990 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 994 64 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 526 43 moses 63;
+#X floatatom 579 68 5 0 0 0 - - -, f 5;
+#X floatatom 527 72 5 0 0 0 - - -, f 5;
+#X obj 980 107 sel 1;
+#X obj 994 80 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 1011 126 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1011 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1031 91 sel 1;
-#X obj 1060 126 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1031 107 sel 1;
+#X obj 1060 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1038 65 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 1038 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 138 109 ~inlet;
-#X obj 151 58 adc~;
-#X obj 450 321 basic-osc 4;
-#X obj 461 469 lpg 2;
-#X obj 258 123 * 1;
-#X obj 259 94 / 127;
-#X text 638 614 namecanvas https://puredata.info/docs/tutorials/TipsAndTricks#id14
-;
-#X obj 257 148 float;
-#X obj 403 198 list trim;
-#X obj 403 123 * 1;
-#X obj 404 94 / 127;
-#X obj 402 148 float;
-#X obj 721 339 8steps 1;
-#X obj 580 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 23 131 * 1;
+#X obj 24 102 / 127;
+#X obj 22 156 float;
+#X obj 179 208 list trim;
+#X obj 179 133 * 1;
+#X obj 180 104 / 127;
+#X obj 178 158 float;
+#X obj 934 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 792 214 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 792 230 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X text 679 226 rec/play;
-#X text 579 220 stop/start;
-#X obj 254 196 list trim;
-#X obj 255 171 list prepend /delay;
-#X obj 405 170 list prepend /feedback;
-#X obj 575 180 list trim;
-#X obj 571 147 list prepend /Looperrecord;
-#X obj 405 272 loopguts;
-#X text 168 2 route /Looperrecord /Looperfwd /Looperbwd /Looperstop
+#X obj 44 210 list trim;
+#X obj 20 179 list prepend /delay;
+#X obj 181 180 list prepend /feedback;
+#X obj 929 276 list trim;
+#X obj 925 243 list prepend /Looperrecord;
+#X text 9 5 route /Looperrecord /Looperfwd /Looperbwd /Looperstop /pitch
+/delay /feedback /gainRaw /GainDel /GainLoop /phase /bypass /fwd /bwd
+/onOff;
+#X obj 779 289 list trim;
+#X obj 784 263 list prepend /onOff;
+#X obj 609 290 list trim;
+#X obj 448 289 list trim;
+#X obj 611 262 list prepend /Looperfwd;
+#X obj 433 241 list prepend /Looperbwd;
+#X obj 590 185 float;
+#X obj 491 215 float;
+#X obj 157 410 hsl 20 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 101 416 hsl 20 15 -10 0 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 89 374 -1;
+#X obj 504 596 outlet;
+#X obj 586 127 * 10;
+#X obj 586 99 / 63;
+#X obj 580 151 - 10;
+#X obj 523 100 / 63;
+#X obj 522 125 * -10;
+#X obj 514 158 + 10;
+#X obj 497 186 * -1;
+#X floatatom 839 407 5 0 0 0 - - -, f 5;
+#X obj 838 536 list trim;
+#X obj 838 461 * 1;
+#X obj 839 432 / 127;
+#X obj 837 486 float;
+#X floatatom 1009 406 5 0 0 0 - - -, f 5;
+#X obj 1008 535 list trim;
+#X obj 1008 460 * 1;
+#X obj 1009 431 / 127;
+#X obj 1007 485 float;
+#X floatatom 1179 407 5 0 0 0 - - -, f 5;
+#X obj 1178 536 list trim;
+#X obj 1178 461 * 1;
+#X obj 1179 432 / 127;
+#X obj 1177 486 float;
+#X obj 839 381 r k7;
+#X obj 1009 380 r k8;
+#X obj 1179 381 r k9;
+#X obj 840 508 list prepend /gainRaw;
+#X obj 1010 507 list prepend /GainDel;
+#X obj 1180 508 list prepend /GainLoop;
+#X obj 809 167 loadbang;
+#X obj 759 127 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 348 61 5 0 0 0 - - -, f 5;
+#X obj 347 190 list trim;
+#X obj 347 115 * 1;
+#X obj 348 86 / 127;
+#X obj 346 140 float;
+#X obj 349 162 list prepend /pitch;
+#X obj 348 35 r k3;
+#X connect 0 0 1 0;
+#X connect 1 0 32 0;
+#X connect 2 0 36 0;
+#X connect 3 0 22 0;
+#X connect 9 0 19 0;
+#X connect 10 0 20 0;
+#X connect 11 0 21 0;
+#X connect 12 0 2 0;
+#X connect 13 0 3 0;
+#X connect 14 0 4 0;
+#X connect 15 0 5 0;
+#X connect 16 0 6 0;
+#X connect 17 0 7 0;
+#X connect 18 0 8 0;
+#X connect 19 0 26 0;
+#X connect 20 0 30 0;
+#X connect 22 0 24 0;
+#X connect 22 1 23 0;
+#X connect 23 0 59 0;
+#X connect 24 0 61 0;
+#X connect 25 0 38 0;
+#X connect 25 1 27 0;
+#X connect 26 0 25 0;
+#X connect 28 1 29 0;
+#X connect 30 0 28 0;
+#X connect 31 0 33 0;
+#X connect 32 0 31 0;
+#X connect 33 0 41 0;
+#X connect 34 0 57 0;
+#X connect 35 0 37 0;
+#X connect 36 0 35 0;
+#X connect 37 0 42 0;
+#X connect 38 0 44 0;
+#X connect 39 0 47 0;
+#X connect 40 0 57 0;
+#X connect 41 0 40 0;
+#X connect 42 0 34 0;
+#X connect 43 0 57 0;
+#X connect 44 0 43 0;
+#X connect 46 0 57 0;
+#X connect 47 0 46 0;
+#X connect 48 0 57 0;
+#X connect 49 0 57 0;
+#X connect 50 0 48 0;
+#X connect 51 0 49 0;
+#X connect 52 0 50 0;
+#X connect 53 0 51 0;
+#X connect 56 0 55 0;
+#X connect 58 0 60 0;
+#X connect 59 0 58 0;
+#X connect 60 0 52 0;
+#X connect 61 0 62 0;
+#X connect 62 0 63 0;
+#X connect 63 0 64 0;
+#X connect 64 0 53 0;
+#X connect 65 0 68 0;
+#X connect 66 0 57 0;
+#X connect 67 0 69 0;
+#X connect 68 0 67 0;
+#X connect 69 0 83 0;
+#X connect 70 0 73 0;
+#X connect 71 0 57 0;
+#X connect 72 0 74 0;
+#X connect 73 0 72 0;
+#X connect 74 0 84 0;
+#X connect 75 0 78 0;
+#X connect 76 0 57 0;
+#X connect 77 0 79 0;
+#X connect 78 0 77 0;
+#X connect 79 0 85 0;
+#X connect 80 0 65 0;
+#X connect 81 0 70 0;
+#X connect 82 0 75 0;
+#X connect 83 0 66 0;
+#X connect 84 0 71 0;
+#X connect 85 0 76 0;
+#X connect 86 0 39 0;
+#X connect 87 0 39 0;
+#X connect 88 0 91 0;
+#X connect 89 0 57 0;
+#X connect 90 0 92 0;
+#X connect 91 0 90 0;
+#X connect 92 0 93 0;
+#X connect 93 0 89 0;
+#X connect 94 0 88 0;
+#X restore 196 0 pd controls;
+#X text 248 582 route /Looperrecord /Looperfwd /Looperbwd /Looperstop
 /pitch /delay /feedback /gainRaw /GainDel /GainLoop /phase /bypass
 /fwd /bwd /onOff;
-#X obj 779 273 list trim;
-#X obj 784 247 list prepend /onOff;
-#X connect 14 0 70 1;
-#X connect 15 4 14 0;
-#X connect 15 4 79 0;
-#X connect 17 0 24 0;
-#X connect 18 0 20 0;
-#X connect 19 0 22 0;
-#X connect 20 0 21 0;
-#X connect 21 0 19 0;
-#X connect 22 0 17 0;
-#X connect 22 1 17 1;
-#X connect 23 0 16 0;
-#X connect 24 0 23 0;
-#X connect 27 0 28 0;
-#X connect 28 0 72 0;
-#X connect 29 0 77 0;
-#X connect 39 0 57 0;
-#X connect 40 0 54 0;
-#X connect 41 0 55 0;
-#X connect 42 0 56 0;
-#X connect 43 0 29 0;
-#X connect 44 0 30 0;
-#X connect 45 0 31 0;
-#X connect 46 0 32 0;
-#X connect 47 0 33 0;
-#X connect 48 0 34 0;
-#X connect 49 0 35 0;
-#X connect 50 0 36 0;
-#X connect 51 0 37 0;
-#X connect 52 0 38 0;
-#X connect 53 0 39 0;
-#X connect 54 0 62 0;
-#X connect 55 0 66 0;
-#X connect 57 0 59 0;
-#X connect 57 1 58 0;
-#X connect 60 0 61 0;
-#X connect 60 0 80 0;
-#X connect 60 1 63 0;
-#X connect 62 0 60 0;
-#X connect 64 0 81 0;
-#X connect 64 1 65 0;
-#X connect 66 0 64 0;
-#X connect 69 0 70 0;
-#X connect 70 0 89 0;
-#X connect 71 0 74 0;
-#X connect 72 0 71 0;
-#X connect 74 0 85 0;
-#X connect 75 0 89 1;
-#X connect 76 0 78 0;
-#X connect 77 0 76 0;
-#X connect 78 0 86 0;
-#X connect 79 0 69 0;
-#X connect 80 0 88 0;
-#X connect 81 0 92 0;
-#X connect 84 0 89 1;
-#X connect 85 0 84 0;
-#X connect 86 0 75 0;
-#X connect 87 0 89 1;
-#X connect 88 0 87 0;
-#X connect 89 0 13 0;
-#X connect 91 0 89 1;
-#X connect 92 0 91 0;
-#X coords 0 680 1 679 85 60 0;
+#X obj 136 264 granular-delay 2;
+#X obj 133 5 adc~;
+#X obj 136 64 bitcrush 1;
+#X obj 136 154 ladder-filter 1;
+#X connect 9 4 30 1;
+#X connect 9 5 31 1;
+#X connect 9 9 28 4;
+#X connect 9 10 28 1;
+#X connect 9 11 28 3;
+#X connect 15 0 22 0;
+#X connect 16 0 18 0;
+#X connect 17 0 20 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 20 0 15 0;
+#X connect 20 1 15 1;
+#X connect 21 0 14 0;
+#X connect 22 0 21 0;
+#X connect 25 0 30 0;
+#X connect 26 0 25 1;
+#X connect 28 0 13 0;
+#X connect 28 1 13 2;
+#X connect 29 0 25 0;
+#X connect 29 1 25 0;
+#X connect 30 0 31 0;
+#X connect 31 0 28 0;
+#X coords 0 696 1 695 85 60 0;
