@@ -4713,7 +4713,7 @@ as well.;
 -1 -1;
 #X obj 742 420 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 459 223 master-metronome;
+#X obj 452 227 master-metronome;
 #X obj 464 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 573 175 5 0 0 0 - - -, f 5;
