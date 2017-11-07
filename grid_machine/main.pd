@@ -1,4 +1,4 @@
-#N canvas -8 -8 1366 696 10;
+#N canvas 0 50 1366 696 10;
 #X declare -path patch_editor_abs;
 #X declare -path patch_editor_abs;
 #X obj 12 600 declare -path patch_editor_abs;
@@ -3448,7 +3448,7 @@ your external folders.;
 #X msg 38 178 1;
 #X obj 38 156 r open-signal-flow!;
 #X msg 38 203 \; pd-signal-flow vis \$1;
-#N canvas 369 16 852 668 signal-flow 0;
+#N canvas 369 50 852 668 signal-flow 0;
 #X obj 22 10 cnv 15 365 30 empty empty SIGNAL-FLOW 20 12 0 14 -226533
 -262144 0;
 #X obj 26 161 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -158136
