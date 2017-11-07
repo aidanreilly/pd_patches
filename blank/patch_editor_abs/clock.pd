@@ -1,10 +1,10 @@
 #N canvas 0 22 1026 506 10;
 #X obj 222 145 tgl 15 1 \$0-clock-on/off-s \$0-clock-on/off-r ON/OFF
-17 7 0 10 -262144 -1 -1 1 1;
+17 7 0 10 -262144 -1 -1 0 1;
 #X obj 409 211 metro 100;
 #X obj 408 285 vline~;
 #X obj 107 126 hsl 128 15 0 127 0 1 \$0-clock-clk-rate-s \$0-clock-clk-rate-r
-RATE 133 7 0 10 -262144 -1 -1 11700 1;
+RATE 133 7 0 10 -262144 -1 -1 10405 1;
 #X floatatom 104 141 5 0 0 0 - - -, f 5;
 #X msg 110 213 127 \$1;
 #X obj 110 235 -;
@@ -17,12 +17,12 @@ RATE 133 7 0 10 -262144 -1 -1 11700 1;
 #X obj 160 115 cnv 5 5 5 empty empty CLOCK 0 0 0 12 -262144 -66577
 0;
 #X obj 408 351 outlet~;
-#X obj 320 79 inlet~;
+#X obj 320 48 inlet~;
 #X obj 574 81 inlet~;
 #X obj 320 120 snapshot~;
 #X obj 320 171 t b f;
 #X obj 110 280 +;
-#X text 319 55 CLK-RATE CV INPUT;
+#X text 319 24 CLK-RATE CV INPUT;
 #X text 577 62 ON/OFF GATE INPUT;
 #X obj 244 109 cnv 5 5 5 empty empty ON/OFF 0 0 0 8 -262144 -226533
 0;
@@ -226,6 +226,7 @@ RATE 133 7 0 10 -262144 -1 -1 11700 1;
 #X connect 1 0 3 0;
 #X connect 2 0 0 0;
 #X restore 593 308 pd parameter-nudging-system;
+#X obj 321 94 *~ -1;
 #X connect 0 0 1 0;
 #X connect 1 0 10 0;
 #X connect 2 0 13 0;
@@ -238,8 +239,8 @@ RATE 133 7 0 10 -262144 -1 -1 11700 1;
 #X connect 10 0 36 0;
 #X connect 10 1 9 0;
 #X connect 11 0 35 0;
-#X connect 14 0 16 0;
 #X connect 14 0 30 0;
+#X connect 14 0 39 0;
 #X connect 15 0 29 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
@@ -256,4 +257,5 @@ RATE 133 7 0 10 -262144 -1 -1 11700 1;
 #X connect 34 1 8 0;
 #X connect 35 0 34 0;
 #X connect 36 0 2 0;
+#X connect 39 0 16 0;
 #X coords 0 -1 1 1 175 75 2 100 100;

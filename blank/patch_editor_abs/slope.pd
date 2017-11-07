@@ -42,15 +42,15 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X msg 619 196 9999;
 #X obj 718 26 inlet~;
 #X obj 107 165 hsl 128 15 1.27 127 1 1 \$0-slope-fall-s \$0-slope-fall-r
-FALL 133 7 0 10 -262144 -1 -1 600 1;
+FALL 133 7 0 10 -262144 -1 -1 0 1;
 #X obj 107 133 hsl 128 15 1.27 127 1 1 \$0-slope-rise-s \$0-slope-rise-r
 RISE 133 7 0 10 -262144 -1 -1 0 1;
 #X obj 107 196 hsl 128 15 0 127 0 1 \$0-slope-depth-s \$0-slope-depth-r
-DEPTH-/+ 133 7 0 10 -150893 -1 -1 12700 1;
+DEPTH-/+ 133 7 0 10 -150893 -1 -1 0 1;
 #X obj 107 149 hsl 128 15 0 127 0 1 \$0-slope-rise-cv-att-s \$0-slope-rise-cv-att-r
-RISE(CV) 133 7 0 10 -158136 -1 -1 6900 1;
+RISE(CV) 133 7 0 10 -158136 -1 -1 0 1;
 #X obj 107 181 hsl 128 15 0 127 0 1 \$0-slope-fall-cv-att-s \$0-slope-fall-cv-att-r
-FALL(CV) 133 7 0 10 -158136 -1 -1 8900 1;
+FALL(CV) 133 7 0 10 -158136 -1 -1 0 1;
 #X obj 126 125 cnv 5 5 5 empty empty SLOPE 0 0 0 12 -262144 -66577
 0;
 #X obj 717 185 snapshot~;
@@ -199,7 +199,7 @@ FALL(CV) 133 7 0 10 -158136 -1 -1 8900 1;
 #X obj 344 607 *~;
 #X obj 864 384 s \$0-instance-num;
 #X obj 864 336 makefilename %d;
-#X obj 232 125 cnv 5 5 5 empty \$0-instance-num 1 0 0 0 12 -262144
+#X obj 232 125 cnv 5 5 5 empty \$0-instance-num 0 0 0 0 12 -262144
 -66577 0;
 #X msg 864 361 label \$1;
 #X obj 359 313 - 18;

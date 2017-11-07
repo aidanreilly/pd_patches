@@ -1,6 +1,6 @@
 #N canvas 0 22 1050 738 10;
 #X obj 117 143 vsl 15 96 0 127 0 1 \$0-sinebank-1-s \$0-sinebank-1-r
-1 5 -9 0 10 -262144 -1 -1 4800 1;
+1 5 -9 0 10 -262144 -1 -1 4500 1;
 #X obj 132 143 vsl 15 96 0 127 0 1 \$0-sinebank-2-s \$0-sinebank-2-r
 2 5 -9 0 10 -262144 -1 -1 7200 1;
 #X obj 147 143 vsl 15 96 0 127 0 1 \$0-sinebank-3-s \$0-sinebank-3-r
@@ -52,13 +52,13 @@
 #X obj 641 75 *~ 127;
 #X obj 641 97 s~ \$0-sinebank-cv4;
 #X obj 117 242 tgl 15 1 \$0-sinebank-lfo1-s \$0-sinebank-lfo1-r empty
-17 7 1 10 -262144 -1 -1 1 1;
+17 7 1 10 -262144 -1 -1 0 1;
 #X obj 132 242 tgl 15 1 \$0-sinebank-lfo2-s \$0-sinebank-lfo2-r empty
 17 7 1 10 -262144 -1 -1 1 1;
 #X obj 147 242 tgl 15 1 \$0-sinebank-lfo3-s \$0-sinebank-lfo3-r empty
 17 7 1 10 -262144 -1 -1 1 1;
 #X obj 162 242 tgl 15 1 \$0-sinebank-lfo4-s \$0-sinebank-lfo4-r LFO
-17 7 0 10 -262144 -1 -1 1 1;
+17 7 0 10 -262144 -1 -1 0 1;
 #X obj 343 130 r \$0-sinebank-lfo1-s;
 #X obj 227 285 -;
 #X obj 343 162 sel 0 1;
@@ -173,7 +173,7 @@
 #X restore 352 522 pd sine3;
 #X obj 113 122 cnv 5 5 5 empty empty SINEBANK 0 0 0 12 -262144 -66577
 0;
-#X obj 177 122 cnv 5 5 5 empty \$0-instance-num 1 0 0 0 12 -262144
+#X obj 177 122 cnv 5 5 5 empty \$0-instance-num 0 0 0 0 12 -262144
 -66577 0;
 #N canvas 315 35 895 724 state-saving-multiple-instances 0;
 #X obj 205 1 loadbang;
