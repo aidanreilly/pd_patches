@@ -1,4 +1,4 @@
-#N canvas 0 50 1366 696 10;
+#N canvas -8 -8 1366 726 10;
 #X declare -path patch_editor_abs;
 #X obj 6 708 declare -path patch_editor_abs;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
@@ -5468,7 +5468,7 @@ for more details.;
 #X obj 883 311 asr;
 #X obj 8 462 maestro4 1;
 #X obj 21 238 megaverb 1;
-#X obj 16 146 mixer2 1;
+#X obj 41 133 mixer2 1;
 #X obj 270 493 preset-manager 1;
 #X obj 786 403 polarizer 1;
 #X obj 73 357 pitchshifter 1;
