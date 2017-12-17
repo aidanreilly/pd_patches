@@ -1,6 +1,6 @@
-#N canvas 2 50 1278 730 10;
+#N canvas -8 -8 1366 696 10;
 #X declare -path patch_editor_abs;
-#X obj 6 708 declare -path patch_editor_abs;
+#X obj 8 645 declare -path patch_editor_abs;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
 #X obj 26 34 loadbang;
@@ -728,7 +728,7 @@
 #X msg 177 62 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 418 s SAVE-S;
@@ -782,7 +782,7 @@
 #X msg 177 62 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 418 s SAVE-S;
@@ -4405,7 +4405,7 @@ more elaborate pd-code for deeper control.;
 #X obj 204 151 r open-organelle-map!;
 #X msg 204 198 \; pd-organelle-map vis \$1;
 #X obj 203 272 r open-modules!;
-#N canvas 655 50 624 752 modules 0;
+#N canvas 655 0 624 700 modules 0;
 #X obj 13 425 cnv 15 180 15 empty empty MODULATION: 10 8 0 12 -158136
 -262144 0;
 #X obj 13 446 bng 15 250 50 0 \$0-create-basic-lfo! empty <--BASIC-LFO
@@ -5433,8 +5433,8 @@ for more details.;
 #X connect 16 0 15 0;
 #X connect 17 0 16 0;
 #X connect 20 0 4 0;
-#X restore 6 729 pd patch-editor-do-not-delete;
-#X text 18 692 DO NOT DELETE THESE OBJECTS:;
+#X restore 8 666 pd patch-editor-do-not-delete;
+#X text 20 629 DO NOT DELETE THESE OBJECTS:;
 #X obj 9 5 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
 0;
 #X obj 10 31 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
@@ -5447,4 +5447,3 @@ for more details.;
 -262144 -1 -1;
 #X obj 10 89 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0 10
 -262144 -4034 -1;
-#X obj 1002 14 hammond-knobs;
