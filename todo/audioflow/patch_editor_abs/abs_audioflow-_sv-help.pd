@@ -1,0 +1,25 @@
+#N canvas 3 50 695 454 10;
+#X obj 13 15 adc~;
+#X obj 13 281 dac~;
+#X text 288 4 auduioflow~ - delay with forward-backward looper;
+#X text 290 413 Peace \; -svanya;
+#X text 287 24 audioflow~ is an audio patch which does the follow.
+\; \; It takes an incoming signal and sends it to a delay~. \; It then
+sends the vd~ read signal to a looper as well as the delayed signal
+to the outlet. \; \; When record is pressed on the looper a sample
+record begins recording the vd~ read line. \; It also is then sent
+to out. \; \; The direction either forward or back of the loop is controlled
+by the vector. So - speeds are played in reverse \, and positive speeds
+are played forward. \; \; The pitch of the loop may also be controlled.
+\; \; Not sure if this is even necessary but a further multiplier(-1
+to 1) may be applied to the loop. \; \; The info: positional bar is
+not a control and only shows the speed and direction of the loop. \;
+\; Each channel \, raw \, delay \, and loop \, may be mixed using the
+gain controls. \; And an overall gain control is at the bottom. \;
+\; Notes: after you stop recording the loop begins to play automatically.
+And you can merely tap record again and play stops automatically.;
+#X obj 13 46 abs_audioflow-_sv;
+#X connect 0 0 5 0;
+#X connect 0 1 5 0;
+#X connect 5 0 1 0;
+#X connect 5 0 1 1;

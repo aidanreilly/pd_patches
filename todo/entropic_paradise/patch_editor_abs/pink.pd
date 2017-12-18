@@ -1,0 +1,17 @@
+#N canvas 0 50 1366 696 10;
+#X obj 500 421 wtable 5;
+#X obj 415 9 noise 9;
+#X obj 420 50 lp-filter2 4;
+#X obj 437 162 env-follower 4;
+#X obj 438 554 outlet~;
+#X obj 662 6 inlet~;
+#X obj 515 5 inlet~;
+#X text 562 28 cutoff Xmod;
+#X obj 428 291 quantizer 4;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 5 0 0 1;
+#X connect 6 0 2 1;
+#X connect 8 0 0 0;

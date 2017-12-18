@@ -1,0 +1,2 @@
+0 47 1 96 0 38 1 44100;
+C:/Users/areilly/pd/sampler/samples/loop1.wav;
