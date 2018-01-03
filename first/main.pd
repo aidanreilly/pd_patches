@@ -5454,7 +5454,7 @@ for more details.;
 #X obj 155 -20 basic-lfo 1;
 #X obj 772 294 bwl-osc 1;
 #X obj 315 377 bwl-osc 2;
-#X obj 25 181 bwl-osc 3;
+#X obj 27 181 bwl-osc 3;
 #X obj 558 396 bwl-osc 4;
 #X obj 778 421 lpg 1;
 #X obj 316 497 lpg 2;
