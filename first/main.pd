@@ -5451,7 +5451,7 @@ for more details.;
 #X obj 18 448 maestro4 1;
 #X obj 644 282 asr;
 #X obj 690 -29 mega-sequencer 1;
-#X obj 155 -17 basic-lfo 1;
+#X obj 155 -20 basic-lfo 1;
 #X obj 772 294 bwl-osc 1;
 #X obj 315 377 bwl-osc 2;
 #X obj 25 181 bwl-osc 3;
