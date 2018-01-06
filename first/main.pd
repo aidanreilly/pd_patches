@@ -5480,7 +5480,7 @@ for more details.;
 #X obj 1278 232 knob 10;
 #X obj 541 387 bwl-osc 0;
 #X obj 746 385 bwl-osc 1;
-#X obj 971 386 bwl-osc 2;
+#X obj 971 384 bwl-osc 2;
 #X obj 1177 384 bwl-osc 3;
 #X obj 9 314 vca 0;
 #X obj 185 313 vca 1;
