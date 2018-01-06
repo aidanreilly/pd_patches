@@ -1,6 +1,6 @@
 #N canvas 74 82 523 286 10;
 #X obj 105 129 hsl 128 15 0 127 0 1 empty empty -/+RANGE 135 7 0 10
--262144 -1 -1 11900 1;
+-262144 -1 -1 2200 1;
 #X obj 87 239 s NUDGE-RANGE;
 #X obj 240 114 bng 15 250 50 0 empty empty NUDGE! 18 8 0 10 -262144
 -226533 -1;
@@ -14,6 +14,8 @@
 ;
 #X obj 87 211 f;
 #X obj 60 189 t b b;
+#X obj 159 28 loadbang;
+#X msg 163 59 22;
 #X connect 0 0 4 0;
 #X connect 0 0 9 1;
 #X connect 2 0 10 0;
@@ -22,4 +24,6 @@
 #X connect 9 0 1 0;
 #X connect 10 0 3 0;
 #X connect 10 1 9 0;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;
 #X coords 0 -1 1 1 200 50 2 100 100;
