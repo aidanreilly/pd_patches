@@ -5627,23 +5627,23 @@ for more details.;
 #X connect 48 0 40 0;
 #X restore 240 703 pd gs2scene_1;
 #X obj 111 153 hsl 256 15 0 1 0 0 empty empty length 2 8 0 10 -262144
--1 -1 225 1;
+-1 -1 0 1;
 #X obj 111 171 hsl 256 8 0 1 0 0 empty empty rnd 2 4 0 10 -262144 -1
--1 900 1;
+-1 0 1;
 #X obj 377 163 hsl 96 15 0 0.5 0 0 empty empty ramp 2 8 0 10 -262144
--1 -1 2300 1;
+-1 -1 0 1;
 #X obj 111 116 hsl 256 15 0 1 0 0 empty empty position 2 8 0 10 -262144
--1 -1 17800 1;
+-1 -1 0 1;
 #X obj 377 183 hsl 96 15 0 1 0 0 empty empty pan_rnd 2 8 0 10 -262144
--1 -1 4900 1;
+-1 -1 0 1;
 #X obj 377 143 hsl 96 15 0 1 0 0 empty empty pitch_rnd 2 8 0 10 -262144
 -1 -1 0 1;
 #X obj 111 134 hsl 256 8 0 1 0 0 empty empty rnd 2 4 0 10 -262144 -1
--1 400 1;
+-1 0 1;
 #X obj 111 190 hsl 256 15 0 1 0 0 empty empty density 2 8 0 10 -262144
--1 -1 8450 1;
+-1 -1 0 1;
 #X obj 111 208 hsl 256 8 0 1 0 0 empty empty rnd 2 4 0 10 -262144 -1
--1 11100 1;
+-1 0 1;
 #X obj 154 639 route 0 1 2 3 4 5 6 7;
 #X obj 126 567 int;
 #X obj -12 260 delay 1;
@@ -5776,7 +5776,7 @@ for more details.;
 #X connect 45 0 41 0;
 #X restore 274 736 pd gs2scene_2;
 #X obj 118 259 hsl 296 8 0 7 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12643 1;
+-1 -1 25286 1;
 #X obj 189 222 bng 30 250 50 0 empty empty s3 10 10 0 10 -20333 -1
 -262144;
 #N canvas 115 152 968 652 gs2scene_3 0;
@@ -6809,7 +6809,7 @@ for more details.;
 #X obj -376 557 +;
 #X obj -381 532 t b f;
 #X obj 118 300 hsl 296 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 19667 1;
+-1 -1 8604 1;
 #X obj -334 556 +;
 #X obj -339 531 t b f;
 #X obj -294 558 +;
@@ -7964,7 +7964,7 @@ fx.;
 -1 2100 1;
 #X text 714 13 <-bpm;
 #X obj 108 200 hsl 175 8 0 15 0 0 empty empty empty -2 -6 0 8 -262144
--258699 -1 0 1;
+-258699 -1 16240 1;
 #X obj 291 106 vsl 8 90 0 1 0 1 empty empty gl 0 100 1 8 -262144 -1
 -1 1800 1;
 #X obj 104 121 vsl 8 73 -1 1 0 1 empty empty empty 0 -8 0 8 -262144
@@ -8072,7 +8072,7 @@ fx.;
 #X obj 249 102 nbx 3 14 2 16 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 16 256;
 #X obj 201 105 hsl 40 8 -30 30 0 0 empty empty lfo -24 5 0 10 -262144
--1 -1 1894 1;
+-1 -1 2101 1;
 #N canvas 705 79 1076 1000 lopass2p2zm 0;
 #X obj -222 90 inlet~;
 #X obj 133 939 outlet~;
@@ -9986,11 +9986,9 @@ hp-filter;
 #X connect 134 0 133 0;
 #X coords 0 -1 1 1 320 110 1 100 100;
 #X restore 397 476 pd pcf1s;
-#X obj 9 297 stereo-delay 1;
 #X obj 964 46 butt 1;
 #X msg 900 125 location samples/loop0.wav;
 #X obj 1095 20 external-audio 3;
-#X obj 216 294 stereo-delay 2;
 #X obj 674 80 knob 4;
 #X obj 225 222 knob 5;
 #X obj 156 182 knob 6;
@@ -10027,26 +10025,14 @@ hp-filter;
 #X connect 34 1 26 0;
 #X connect 35 0 24 5;
 #X connect 37 0 24 5;
-#X connect 38 0 39 0;
-#X connect 38 1 43 0;
-#X connect 39 0 23 0;
-#X connect 39 1 23 2;
-#X connect 40 0 36 3;
-#X connect 41 0 24 5;
-#X connect 42 0 36 0;
-#X connect 42 1 36 1;
-#X connect 43 0 23 4;
-#X connect 43 1 23 6;
-#X connect 44 1 28 0;
-#X connect 45 0 43 1;
-#X connect 45 0 43 2;
-#X connect 45 0 39 1;
-#X connect 45 0 39 2;
-#X connect 46 0 39 3;
-#X connect 46 0 43 3;
-#X connect 47 0 39 4;
-#X connect 47 0 43 4;
-#X connect 48 1 27 0;
-#X connect 49 1 29 0;
-#X connect 52 0 41 0;
-#X connect 53 1 25 1;
+#X connect 38 0 23 0;
+#X connect 38 1 23 2;
+#X connect 39 0 36 3;
+#X connect 40 0 24 5;
+#X connect 41 0 36 0;
+#X connect 41 1 36 1;
+#X connect 42 1 28 0;
+#X connect 46 1 27 0;
+#X connect 47 1 29 0;
+#X connect 50 0 40 0;
+#X connect 51 1 25 1;
