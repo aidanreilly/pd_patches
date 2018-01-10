@@ -1,0 +1,1 @@
+requires disis_munger to be installed. on rpi: /usr/lib/pd/extra win: %ProgramFiles(x86)%\Pd\extra
