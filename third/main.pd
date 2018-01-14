@@ -5507,11 +5507,11 @@ for more details.;
 #X obj 681 325 nbx 5 14 0 10 0 1 empty empty empty 0 -6 0 10 -262144
 -1 -1 10 256;
 #X obj 624 324 nbx 5 14 0 100 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 0 256;
+-1 -1 2 256;
 #X obj 568 323 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 1 256;
+-1 -1 2 256;
 #X obj 511 323 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 3 256;
+-1 -1 2 256;
 #X obj 454 322 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
 -1 -1 92 256;
 #X obj 396 322 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
@@ -5524,6 +5524,7 @@ for more details.;
 -1 -1 189 256;
 #X obj 406 370 disis_munger~ 3000 2 16;
 #X obj 590 67 wtable 1;
+#X obj 844 64 sampler;
 #X connect 10 0 14 0;
 #X connect 11 0 12 0;
 #X connect 13 0 10 0;
@@ -5557,4 +5558,5 @@ for more details.;
 #X connect 65 0 64 0;
 #X connect 66 0 38 0;
 #X connect 66 1 38 2;
-#X connect 67 0 66 0;
+#X connect 68 0 66 0;
+#X connect 68 1 66 0;

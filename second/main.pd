@@ -1,4 +1,4 @@
-#N canvas 0 50 1366 696 10;
+#N canvas 594 36 1920 1038 10;
 #X declare -path patch_editor_abs;
 #X obj 8 645 declare -path patch_editor_abs;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
@@ -296,7 +296,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5462,8 +5462,48 @@ for more details.;
 #X floatatom 133 160 5 0 0 0 - - -, f 5;
 #X text 180 158 num 2 cv;
 #X text 164 115 440 mid a 57;
-#X obj 46 394 maestro4;
-#X obj 281 179 sampler;
+#X obj 371 448 maestro4;
+#X obj 701 358 granular-delay 1;
+#X obj 1082 85 external-audio 1;
+#X obj 360 145 random-voltages 1;
+#X obj 360 57 clock 1;
+#X obj 703 468 stereo-delay 1;
+#X obj 804 -6 basic-lfo 1;
+#X obj 1144 336 rg_grain~;
+#X obj 952 533 mixer4;
+#X text 104 298 counter;
+#X obj 182 344 + 1;
+#X obj 106 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 94 425 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 118 425 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 138 425 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 159 425 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 182 426 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 199 426 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 427 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 239 427 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 106 374 float 1;
+#X obj 108 321 r b2;
+#X obj 106 399 route 0 1 2 3 4 5 6 7;
+#X obj 181 371 mod 8;
+#X obj 266 663 openpanel;
+#X obj 282 689 t b a;
+#X msg 346 716 set symbol \$1;
+#X obj 285 820 soundfiler;
+#X msg 285 800 read -resize \$1 \$2;
+#X obj 296 721 t b a;
+#X obj 287 776 pack s s;
+#X msg 288 748 symbol samples/loop0.wav;
+#X obj 1398 101 SAMPLER;
 #X connect 10 0 14 0;
 #X connect 11 0 12 0;
 #X connect 13 0 10 0;
@@ -5472,5 +5512,47 @@ for more details.;
 #X connect 17 0 18 0;
 #X connect 19 0 17 0;
 #X connect 20 0 19 0;
-#X connect 24 0 23 0;
-#X connect 24 1 23 2;
+#X connect 24 0 28 0;
+#X connect 25 0 24 0;
+#X connect 25 0 31 1;
+#X connect 25 0 30 0;
+#X connect 25 1 24 0;
+#X connect 25 1 31 1;
+#X connect 25 1 30 0;
+#X connect 25 3 29 1;
+#X connect 25 3 27 0;
+#X connect 25 4 29 0;
+#X connect 26 1 24 1;
+#X connect 27 0 26 0;
+#X connect 28 0 31 0;
+#X connect 28 1 31 0;
+#X connect 29 0 24 2;
+#X connect 30 0 31 2;
+#X connect 30 0 31 3;
+#X connect 31 0 23 0;
+#X connect 31 1 23 2;
+#X connect 33 0 46 0;
+#X connect 34 0 43 0;
+#X connect 43 0 33 0;
+#X connect 43 0 45 0;
+#X connect 44 0 34 0;
+#X connect 45 0 35 0;
+#X connect 45 1 36 0;
+#X connect 45 2 37 0;
+#X connect 45 3 38 0;
+#X connect 45 4 39 0;
+#X connect 45 5 40 0;
+#X connect 45 6 41 0;
+#X connect 45 7 42 0;
+#X connect 46 0 43 1;
+#X connect 47 0 48 0;
+#X connect 48 0 54 0;
+#X connect 48 1 49 0;
+#X connect 49 0 54 0;
+#X connect 51 0 50 0;
+#X connect 52 0 54 0;
+#X connect 52 1 53 1;
+#X connect 53 0 51 0;
+#X connect 54 0 53 0;
+#X connect 55 0 30 0;
+#X connect 55 1 30 0;
