@@ -5492,7 +5492,7 @@ for more details.;
 #X obj 980 24 basic-lfo 1;
 #X obj 1183 20 basic-lfo 2;
 #X obj 1137 143 scope;
-#X obj 853 138 s&h 3;
+#X obj 865 130 s&h 3;
 #X obj 1174 280 mixer2 5;
 #X connect 10 0 38 0;
 #X connect 10 1 39 0;
