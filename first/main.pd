@@ -5486,7 +5486,7 @@ for more details.;
 #X obj 705 297 vca 3;
 #X obj 526 91 trigger-seq 5;
 #X obj 342 479 wavefold 1;
-#X obj 18 205 midi-out 1;
+#X obj 18 215 midi-out 1;
 #X obj 400 210 clock-divider-even 4;
 #X obj 99 113 4to1-switch 2;
 #X obj 980 24 basic-lfo 1;
