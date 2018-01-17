@@ -1,4 +1,4 @@
-#N canvas -8 -8 1366 696 10;
+#N canvas 0 50 1366 696 10;
 #X declare -path patch_editor_abs;
 #X obj 6 708 declare -path patch_editor_abs;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
@@ -5494,7 +5494,7 @@ for more details.;
 #X obj 1137 143 scope;
 #X obj 888 98 s&h 3;
 #X obj 1174 280 mixer2 5;
-#X obj 12 138 sinebank 3;
+#X obj 12 148 sinebank 3;
 #X obj 143 339 combfilter 2;
 #X connect 10 0 38 0;
 #X connect 10 1 39 0;
