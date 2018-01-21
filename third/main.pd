@@ -5487,49 +5487,139 @@ for more details.;
 #X obj 329 144 route 0 1 2 3 4 5 6 7;
 #X obj 404 116 mod 8;
 #X obj 94 428 maestro4;
-#X text 339 294 grain;
-#X text 326 303 separation;
-#X text 392 303 variation;
-#X text 456 294 grain;
-#X text 456 303 size;
-#X text 576 299 grain;
-#X text 577 308 pitch;
-#X text 625 308 variation;
-#X text 626 290 grain;
-#X text 625 299 pitch;
-#X text 689 300 stereo;
-#X text 689 308 spread;
-#X text 390 287 grain;
-#X text 392 296 rate;
-#X obj 274 322 r msgs;
-#X text 524 298 grain;
-#X text 514 306 size var;
-#X obj 681 325 nbx 5 14 0 10 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 10 256;
-#X obj 624 324 nbx 5 14 0 100 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 100 256;
-#X obj 568 323 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 1 256;
-#X obj 514 323 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 666 256;
-#X obj 454 322 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 991 256;
-#X obj 396 322 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 61 256;
-#X obj 339 321 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 245 256;
-#X text 267 221 send some messages...;
-#X msg 269 255 voices \$1;
-#X obj 262 237 nbx 5 14 0 500 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 100 256;
-#X obj 444 364 disis_munger~ 3000 2 16;
-#X obj 1161 19 sampler;
-#X msg 149 307 ramptime \$1;
-#X obj 163 290 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 2136 256;
-#X obj 451 208 nbx 5 14 0 3000 0 1 empty empty empty 0 -6 0 10 -262144
--1 -1 2916 256;
-#X msg 445 235 delaylength_ms \$1;
+#X obj 291 231 sampler;
+#X obj 7 318 stereo-delay 1;
+#X text 513 15 stereo granulator...;
+#X text 513 30 munger~ takes a signal input;
+#X text 511 40 and granulates it \, allowing for;
+#X text 511 50 different transposition and;
+#X text 1172 3 the 'voices' message tells the munger how many grains
+to;
+#X text 1170 23 cpu intensive. you can smoothly sweep this parameter.
+;
+#X text 511 59 granular sampling effects.;
+#X text 1170 32 'maxvoices' sets an upper limit to this \, and will
+have some;
+#X text 1173 42 impact on performance if set really high (20 by default.)
+;
+#X text 1172 76 'ramptime' sets the length (in ms) of the ramping envelope
+;
+#X text 1170 86 on each grain. if the grain is smaller than the ramptime
+\,;
+#X text 1170 96 the ramptime will be scaled to half the grain size.
+;
+#X text 1170 118 turn the munger on and off \, to save CPU. (1) by
+default.;
+#X text 1168 128 (NOTE: this was responsible for a bug in the previous
+;
+#X text 1171 137 versions of munger which resulted in frustratingly
+silent;
+#X text 1171 146 mungers. fixed now \, I believe.);
+#X text 1171 169 constrain how far back in time the munger looks for
+grains.;
+#X text 1169 179 the smaller this is \, the smaller the largest grain
+can be.;
+#X text 1169 189 the numnger's argument sets the maximum delay length
+;
+#X text 1170 198 possible ( and the default value for delaylength.)
+this is a;
+#X text 1171 208 super cool parameter to mess with.;
+#X text 1171 228 allows grains to play backwards and forwards (0) \,
+just;
+#X text 1169 238 forward (1) \, or just backwards (-1). (0) by default.
+;
+#X text 1171 262 sets the minimum allowable grainsize. useful when
+;
+#X text 1169 272 randomizing with the 'grain size variation' input.
+;
+#X text 1171 303 turn recording on and off. turning off freezes the
+buffer;
+#X text 1169 313 on (1) by default.;
+#X text 1171 335 set the playback position within the buffer (between
+0 and;
+#X text 1172 345 1.) -1 = randomized position (which is the default.)
+It is;
+#X text 1170 355 possible to get some interesting stretching effect
+by;
+#X text 1169 365 scrubbing through this with 'record' on \, and some
+good;
+#X text 1170 374 transposition effects with 'record' off.;
+#X text 1170 394 set the baseline gain for grains (1 by default) \,
+and set a;
+#X text 1168 404 randomization range around that baseline (0 by default.)
+;
+#X text 1170 426 apply pitch sieves to the grains. control how deeply
+into;
+#X text 1168 435 these sieves to go with the 'grain pitch variation'
+input;
+#X text 1168 445 (below.) floats work too. set to 'smooth' (no sieve)
+by;
+#X text 1168 454 default.;
+#X text 1037 554 posts the values of user controlled variables to the
+;
+#X text 1036 565 console;
+#X text 1037 576 impolitely clears the internal sample buffer.;
+#X text 568 495 grain;
+#X text 555 504 separation;
+#X text 621 504 variation;
+#X text 685 495 grain;
+#X text 685 504 size;
+#X text 805 500 grain;
+#X text 806 509 pitch;
+#X text 854 509 variation;
+#X text 855 491 grain;
+#X text 854 500 pitch;
+#X text 918 501 stereo;
+#X text 918 509 spread;
+#X text 619 488 grain;
+#X text 621 497 rate;
+#X obj 739 24 loadbang;
+#X obj 739 45 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 739 63 metro 250;
+#X obj 739 83 counter 0 15;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array mycoll 16 float 1;
+#A 0 57 45 57 57 45 57 57 47 55 47 59 60 60 57 57 57;
+#X coords 0 72 15 40 100 70 1;
+#X restore 635 99 graph;
+#X obj 739 104 tabread mycoll;
+#X obj 738 126 sel 0;
+#X obj 738 150 mtof;
+#X obj 738 175 * 2;
+#X msg 763 197 20;
+#X obj 738 219 line~;
+#X obj 738 242 osc~ 200;
+#X text 986 8 send some messages...;
+#X msg 988 42 voices \$1;
+#X msg 993 99 ramptime \$1;
+#X obj 996 119 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X msg 996 137 power \$1;
+#X msg 998 236 ambidirectional \$1;
+#X msg 998 265 minsize 5;
+#X obj 1000 289 tgl 15 1 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X msg 1000 307 record \$1;
+#X msg 1001 355 position \$1;
+#X msg 1003 397 gain \$1;
+#X msg 1003 416 rand_gain \$1;
+#X msg 1003 443 smooth;
+#X msg 1003 463 tempered;
+#X msg 1003 483 scale 0 4 7 -2 12 15;
+#X msg 1003 503 scale 0 4 4 4 7 7 11 11 14 18 -12 -12 -12;
+#X msg 1003 556 state;
+#X msg 1003 576 clear;
+#X obj 503 523 r msgs;
+#X obj 960 504 s msgs;
+#X obj 953 163 s msgs;
+#X msg 640 293 1;
+#X msg 645 312 2;
+#X msg 651 331 3;
+#X text 593 252 select a sound source;
+#X text 594 288 oscil;
+#X text 585 298 sequence;
+#X text 591 316 sample;
 #N canvas 0 50 473 362 choose 0;
 #X obj 78 50 inlet;
 #X obj 94 93 sel 1 2 3;
@@ -5570,28 +5660,172 @@ for more details.;
 #X connect 11 0 12 1;
 #X connect 12 0 13 1;
 #X connect 13 0 14 0;
-#X restore 830 390 pd choose;
-#X text 800 360 adc;
-#X obj 760 373 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 639 367 pd choose;
+#X obj 806 141 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 806 159 openpanel;
+#X obj 806 198 soundfiler;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array mysample 674138 float 0;
+#X coords 0 1 674137 -1 100 70 1;
+#X restore 833 66 graph;
+#X obj 704 332 adc~;
+#X text 609 337 adc;
+#X msg 806 178 read -resize \$1 mysample;
+#X floatatom 805 256 12 0 0 0 - - -, f 12;
+#X obj 805 337 phasor~;
+#X floatatom 805 218 20 0 0 0 - - -, f 20;
+#X obj 805 293 f;
+#X obj 805 274 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 805 316 * 1;
+#X text 868 204 length in samples;
+#X obj 640 271 loadbang;
+#X obj 860 337 snapshot~;
+#X floatatom 860 360 5 0 0 0 - - -, f 5;
+#X obj 860 313 metro 20;
+#X obj 860 291 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
-#X obj 759 391 metro 20;
-#X msg 822 428 note 1 1 0.5 500 500 0.9 1000 -1;
-#X msg 482 525 state;
-#X msg 416 582 clear;
-#X text 804 524 allows grains to play backwards and forwards (0) \,
-just;
-#X text 802 534 forward (1) \, or just backwards (-1). (0) by default.
-;
-#X msg 631 532 ambidirectional \$1;
-#X msg 1013 277 scale 0 4 7 -2 12 15;
-#X msg 932 299 scale 0 4 4 4 7 7 11 11 14 18 -12 -12 -12;
-#X msg 932 319 scale 0 -2 2 -4 4 -6 6 -8 8 -10 10 -12 12 -14 14 -16
-16 -18 18 -20 20;
-#X obj 554 403 stereo-delay 1;
-#X msg 792 162 rand_gain \$1;
-#X msg 818 194 smooth, f 14;
-#X obj 787 143 nbx 5 14 0 32767 0 1 empty empty empty 0 -6 0 10 -262144
+#X obj 804 382 tabread4~ mysample;
+#X text 753 499 grain;
+#X text 743 507 size var;
+#X obj 1007 82 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 1000 256;
+#X obj 981 24 nbx 5 14 0 500 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 40 256;
+#X obj 1002 165 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 3000 256;
+#X obj 1001 216 nbx 5 14 -1 1 0 1 empty empty empty 0 -6 0 10 -262144
 -1 -1 0 256;
+#X obj 1001 332 nbx 5 14 -1 1 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 1 256;
+#X obj 1003 373 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 1 256;
+#X obj 1066 397 nbx 5 14 0 32767 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 0 256;
+#X obj 910 526 nbx 5 14 0 10 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 1 256;
+#X obj 853 525 nbx 5 14 0 100 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 1 256;
+#X obj 797 524 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 2 256;
+#X obj 740 524 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 102 256;
+#X obj 683 523 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 24 256;
+#X obj 625 523 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 5 256;
+#X obj 568 522 nbx 5 14 0 1e+037 0 1 empty empty empty 0 -6 0 10 -262144
+-1 -1 2 256;
+#X msg 1003 523 scale 0 -2 2 -4 4 -6 6 -8 8 -10 10 -12 12 -14 14 -16
+16 -18 18 -20 20;
+#X obj 1119 28 loadbang;
+#X msg 1138 95 1;
+#X obj 801 455 loadbang;
+#X obj 1443 525 vu 15 120 empty empty -1 -8 0 8 -66577 -1 1 0;
+#X obj 1442 485 env~ 16384;
+#X obj 1372 525 vu 15 120 empty empty -1 -8 0 8 -66577 -1 1 0;
+#X obj 1371 485 env~ 16384;
+#X obj 1371 504 - 99;
+#X obj 1442 504 - 99;
+#X obj 1371 466 receive~ left;
+#X obj 1443 466 receive~ right;
+#X msg 890 42 verbose \$1;
+#X obj 890 25 nbx 5 14 0 3 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 2 256;
+#X text 784 0 pd console verbosity;
+#X text 784 11 0 - none;
+#X msg 996 192 delaylength_ms \$1;
+#X text 785 20 1 - critical(default);
+#X msg 729 455 oneshot \$1;
+#X obj 729 437 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 626 455 buffer mysample;
+#X obj 568 350 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 561 268 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 2 256;
+#N canvas 0 50 490 272 optional_arguments 0;
+#X text 75 41 and allocates memory \, so be careful with large values.
+;
+#X text 72 51 (3000ms by default.) this also constrains the maximum
+;
+#X text 74 60 grain size \, to 1/3rd the maximum delay time.;
+#X text 51 12 optional arguments:;
+#X text 64 32 1 sets the maximum delay time (in ms);
+#X text 62 91 3 either optional max voices (default 50) or name;
+#X text 71 100 (optional). If more than one disis_munger~ object is
+used;
+#X text 74 110 in the same patch \, this enables easier tracking of
+the;
+#X text 73 120 PD console output.;
+#X text 59 135 4 if optional max voices was set as third argument;
+#X text 71 145 this argument is used for the name instead. Alternately
+\,;
+#X text 71 154 last argument can be also used for extending the visual
+;
+#X text 72 164 width of the object by typing _____. This can be also
+;
+#X text 71 173 used as the 3rd argument in which case all arguments
+that;
+#X text 70 181 follow are ignored.;
+#X text 38 207 IMPORTANT! In order to be able to name any instance
+\, you;
+#X text 40 215 must provide arguments first 3 arguments. Old 1-argument
+;
+#X text 38 223 format is provided for backwards compatibilitiy purposes.
+;
+#X text 63 76 2 sets number of output channels 2-64 (2 by default)
+;
+#X restore 629 605 pd optional_arguments;
+#X msg 1003 596 spatialize 0.1 0.5 0.1 0.5 0.1 0.5 0.1 0.5 0.1 0.5
+0.1 0.5 0.1 0.5 0.1 0.5;
+#X msg 863 418 discretepan \$1;
+#X text 863 432 multichannel only option;
+#X text 862 442 toggles whether every grain;
+#X text 862 451 can be only on one channel;
+#X text 863 460 at any given time.;
+#X obj 863 402 nbx 5 14 0 1 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 568 368 metro 20;
+#X msg 528 471 buffer;
+#X text 507 455 use internal buffer;
+#X text 508 448 revert to or;
+#X msg 938 64 maxvoices 500;
+#X text 784 29 2 - all;
+#X text 784 38 3 - grains/sec;
+#X text 1002 624 spatialize multichannel grains (gain + rand_gain pairs/ch)
+;
+#X text 1002 633 IMPORTANT! no sound will come out from multichannel
+object;
+#X text 1002 641 until this option is passed through to it;
+#X msg 631 405 note 1 1 0.5 500 500 0.9 1000 -1;
+#X text 1170 13 allow simultaneously (set to 15 here.) the more \,
+the more;
+#X text 1174 52 munger by default has hardwired max of 50 which can
+be;
+#X text 1007 64 <- click this one...;
+#X text 1174 61 altered by using 3rd creation argument up to 1000;
+#X text 509 175 original munger~;
+#X text 510 184 by Dan Trueman \,;
+#X text 511 78 disis_munger~ by;
+#X text 510 88 Ivica Ico Bukvic;
+#X text 510 98 and Ji-Sun Kim;
+#X text 511 107 with help from;
+#X text 510 117 Thomas Grill and;
+#X text 511 127 Dan Trueman;
+#X text 511 136 Virginia Tech;
+#X text 511 146 DISIS;
+#X text 511 154 disis.music.vt.edu;
+#X text 510 194 Computer Music;
+#X text 510 203 Center \, Columbia;
+#X text 510 211 University;
+#X text 513 1 disis_munger~;
+#X obj 804 360 *~ 88200;
+#X obj 896 256 samplerate~;
+#X obj 805 236 expr ($f2/$f1);
+#X obj 896 236 loadbang;
+#X obj 645 568 disis_munger~ 3000 2 51 default;
 #X connect 10 0 14 0;
 #X connect 11 0 12 0;
 #X connect 13 0 10 0;
@@ -5614,34 +5848,123 @@ just;
 #X connect 36 6 32 0;
 #X connect 36 7 33 0;
 #X connect 37 0 34 1;
-#X connect 56 0 66 7;
-#X connect 57 0 66 6;
-#X connect 58 0 66 5;
-#X connect 59 0 66 4;
-#X connect 60 0 66 3;
-#X connect 61 0 66 2;
-#X connect 62 0 66 1;
-#X connect 64 0 66 0;
-#X connect 65 0 64 0;
-#X connect 66 0 85 0;
-#X connect 66 1 85 0;
-#X connect 67 0 66 0;
-#X connect 67 1 66 0;
-#X connect 68 0 66 0;
-#X connect 69 0 68 0;
-#X connect 70 0 71 0;
-#X connect 71 0 66 0;
-#X connect 74 0 75 0;
-#X connect 75 0 76 0;
-#X connect 76 0 66 0;
-#X connect 77 0 66 0;
-#X connect 78 0 66 0;
-#X connect 81 0 66 0;
-#X connect 82 0 66 0;
-#X connect 83 0 66 0;
-#X connect 84 0 66 0;
-#X connect 85 0 38 0;
-#X connect 85 1 38 2;
-#X connect 86 0 66 0;
-#X connect 87 0 66 0;
-#X connect 88 0 86 0;
+#X connect 40 0 38 0;
+#X connect 40 1 38 2;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 99 0;
+#X connect 99 0 101 0;
+#X connect 101 0 102 0;
+#X connect 102 1 103 0;
+#X connect 103 0 104 0;
+#X connect 104 0 105 0;
+#X connect 104 0 106 0;
+#X connect 105 0 106 1;
+#X connect 106 0 107 0;
+#X connect 107 0 136 1;
+#X connect 109 0 128 0;
+#X connect 110 0 128 0;
+#X connect 111 0 112 0;
+#X connect 112 0 128 0;
+#X connect 113 0 128 0;
+#X connect 114 0 128 0;
+#X connect 115 0 116 0;
+#X connect 116 0 128 0;
+#X connect 117 0 128 0;
+#X connect 118 0 127 0;
+#X connect 119 0 127 0;
+#X connect 120 0 127 0;
+#X connect 121 0 127 0;
+#X connect 122 0 127 0;
+#X connect 123 0 127 0;
+#X connect 124 0 127 0;
+#X connect 125 0 127 0;
+#X connect 126 0 238 0;
+#X connect 129 0 136 0;
+#X connect 130 0 136 0;
+#X connect 131 0 136 0;
+#X connect 136 0 238 0;
+#X connect 137 0 138 0;
+#X connect 138 0 143 0;
+#X connect 139 0 146 0;
+#X connect 141 0 136 3;
+#X connect 143 0 139 0;
+#X connect 144 0 147 1;
+#X connect 144 0 148 0;
+#X connect 144 0 145 1;
+#X connect 145 0 234 0;
+#X connect 146 0 234 1;
+#X connect 146 0 236 0;
+#X connect 147 0 149 0;
+#X connect 148 0 147 0;
+#X connect 149 0 145 0;
+#X connect 151 0 129 0;
+#X connect 152 0 153 0;
+#X connect 154 0 152 0;
+#X connect 155 0 154 0;
+#X connect 156 0 136 2;
+#X connect 156 0 152 0;
+#X connect 159 0 110 0;
+#X connect 160 0 109 0;
+#X connect 161 0 189 0;
+#X connect 162 0 113 0;
+#X connect 163 0 117 0;
+#X connect 164 0 118 0;
+#X connect 165 0 119 0;
+#X connect 166 0 238 7;
+#X connect 167 0 238 6;
+#X connect 168 0 238 5;
+#X connect 169 0 238 4;
+#X connect 170 0 238 3;
+#X connect 171 0 238 2;
+#X connect 172 0 238 1;
+#X connect 173 0 127 0;
+#X connect 174 0 160 0;
+#X connect 174 0 159 0;
+#X connect 174 0 175 0;
+#X connect 174 0 161 0;
+#X connect 174 0 162 0;
+#X connect 174 0 163 0;
+#X connect 174 0 164 0;
+#X connect 174 0 165 0;
+#X connect 174 0 121 0;
+#X connect 174 0 186 0;
+#X connect 174 0 197 0;
+#X connect 175 0 111 0;
+#X connect 175 0 115 0;
+#X connect 176 0 166 0;
+#X connect 176 0 167 0;
+#X connect 176 0 168 0;
+#X connect 176 0 169 0;
+#X connect 176 0 170 0;
+#X connect 176 0 171 0;
+#X connect 176 0 172 0;
+#X connect 178 0 182 0;
+#X connect 180 0 181 0;
+#X connect 181 0 179 0;
+#X connect 181 0 179 1;
+#X connect 182 0 177 0;
+#X connect 182 0 177 1;
+#X connect 183 0 180 0;
+#X connect 184 0 178 0;
+#X connect 185 0 128 0;
+#X connect 186 0 185 0;
+#X connect 189 0 128 0;
+#X connect 191 0 238 0;
+#X connect 192 0 191 0;
+#X connect 193 0 238 0;
+#X connect 194 0 204 0;
+#X connect 195 0 204 1;
+#X connect 197 0 127 0;
+#X connect 198 0 127 0;
+#X connect 203 0 198 0;
+#X connect 204 0 214 0;
+#X connect 205 0 238 0;
+#X connect 208 0 128 0;
+#X connect 214 0 238 0;
+#X connect 234 0 156 0;
+#X connect 235 0 236 1;
+#X connect 236 0 144 0;
+#X connect 237 0 235 0;
+#X connect 238 0 38 4;
+#X connect 238 1 38 6;
