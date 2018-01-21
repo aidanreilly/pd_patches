@@ -5462,7 +5462,7 @@ for more details.;
 #X floatatom 127 30 5 0 0 0 - - -, f 5;
 #X text 174 28 num 2 cv;
 #X text 174 62 440 mid a 57;
-#X obj 27 437 maestro4;
+#X obj 31 408 maestro4;
 #N canvas 0 50 1366 696 grainstates2c 0;
 #X obj -191 753 +;
 #X obj -129 720 random;
@@ -5539,7 +5539,7 @@ for more details.;
 #X obj -265 -32 t b b;
 #X msg -267 10 0;
 #X msg -324 8 1;
-#X msg 97 64 0 0 0 0 0 0.32549 0 0 0;
+#X msg 97 64 0 0 0.137255 0 0 0.243137 0 0 0;
 #X connect 0 0 36 0;
 #X connect 0 0 37 0;
 #X connect 3 0 43 0;
@@ -5627,29 +5627,29 @@ for more details.;
 #X connect 48 0 40 0;
 #X restore 240 703 pd gs2scene_1;
 #X obj 111 153 hsl 256 15 0 1 0 0 empty empty length 2 8 0 10 -262144
--1 -1 1925 1;
+-1 -1 525 1;
 #X obj 111 171 hsl 256 8 0 1 0 0 empty empty rnd 2 4 0 10 -262144 -1
 -1 200 1;
 #X obj 377 163 hsl 96 15 0 0.5 0 0 empty empty ramp 2 8 0 10 -262144
--1 -1 2300 1;
+-1 -1 500 1;
 #X obj 111 116 hsl 256 15 0 1 0 0 empty empty position 2 8 0 10 -262144
--1 -1 7700 1;
+-1 -1 4800 1;
 #X obj 377 183 hsl 96 15 0 1 0 0 empty empty pan_rnd 2 8 0 10 -262144
--1 -1 4900 1;
+-1 -1 2700 1;
 #X obj 377 143 hsl 96 15 0 1 0 0 empty empty pitch_rnd 2 8 0 10 -262144
 -1 -1 0 1;
 #X obj 111 134 hsl 256 8 0 1 0 0 empty empty rnd 2 4 0 10 -262144 -1
 -1 400 1;
 #X obj 111 190 hsl 256 15 0 1 0 0 empty empty density 2 8 0 10 -262144
--1 -1 11650 1;
+-1 -1 24350 1;
 #X obj 111 208 hsl 256 8 0 1 0 0 empty empty rnd 2 4 0 10 -262144 -1
--1 3200 1;
+-1 0 1;
 #X obj 154 639 route 0 1 2 3 4 5 6 7;
 #X obj 126 567 int;
 #X obj -12 260 delay 1;
 #X obj 48 800 +;
 #X obj 253 -29 inlet;
-#X obj 107 222 bng 30 250 50 0 empty empty s1 10 10 0 10 -258898 -1
+#X obj 107 222 bng 30 250 50 0 empty empty s1 10 10 0 10 -189026 -1
 -262144;
 #X msg -270 395 0;
 #X obj 148 222 bng 30 250 50 0 empty empty s2 10 10 0 10 -92955 -1
@@ -5776,7 +5776,7 @@ for more details.;
 #X connect 45 0 41 0;
 #X restore 274 736 pd gs2scene_2;
 #X obj 118 259 hsl 296 8 0 7 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 25286 1;
+-1 -1 21071 1;
 #X obj 189 222 bng 30 250 50 0 empty empty s3 10 10 0 10 -20333 -1
 -262144;
 #N canvas 115 152 968 652 gs2scene_3 0;
@@ -6151,8 +6151,8 @@ for more details.;
 #X connect 45 0 41 0;
 #X restore 322 827 pd gs2scene_5;
 #X msg -132 395 4;
-#X obj 312 222 bng 30 250 50 0 empty empty s6 10 10 0 10 -6881 -1 -262144
-;
+#X obj 312 222 bng 30 250 50 0 empty empty s6 10 10 0 10 -254084 -1
+-262144;
 #X msg -96 393 5;
 #N canvas 746 203 968 652 gs2scene_6 0;
 #X obj 16 8 inlet;
@@ -6196,8 +6196,8 @@ for more details.;
 #X text 296 -89 bang for output;
 #X msg 97 31 set \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
 #X obj 89 128 unpack f f f f f f f f f;
-#X msg 96 64 0.903922 0.0980392 0.0245098 0.00784314 0.0894737 0.341176
-0.0156863 0.336842 0;
+#X msg 96 64 0.954902 0 0.0205882 0.00784314 0.0263158 0.188235 0.0156863
+0 0.284211;
 #X obj 213 102 spigot 0;
 #X msg 365 -13 1;
 #X msg 283 -12 0;
@@ -6556,7 +6556,7 @@ for more details.;
 #X obj 106 288 hsl 32 8 0 1 0 1 empty empty empty -2 -6 0 8 -262144
 -1 -1 2900 1;
 #X obj 147 288 hsl 32 8 0 1 0 1 empty empty empty -2 -6 0 8 -262144
--1 -1 1900 1;
+-1 -1 400 1;
 #X obj 188 288 hsl 32 8 0 1 0 1 empty empty empty -2 -6 0 8 -262144
 -1 -1 2900 1;
 #X obj 229 288 hsl 32 8 0 1 0 1 empty empty empty -2 -6 0 8 -262144
@@ -6803,13 +6803,13 @@ for more details.;
 #X connect 98 0 27 0;
 #X restore -407 617 pd sequencer_8_pos;
 #X obj 441 298 nbx 3 14 2 256 0 1 empty empty ls -15 8 0 10 -262144
--1 -1 48 256;
+-1 -1 7 256;
 #X obj -418 554 +;
 #X obj -423 529 t b f;
 #X obj -376 557 +;
 #X obj -381 532 t b f;
 #X obj 118 300 hsl 296 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1229 1;
+-1 -1 25286 1;
 #X obj -334 556 +;
 #X obj -339 531 t b f;
 #X obj -294 558 +;
@@ -6827,23 +6827,23 @@ for more details.;
 #X obj 107 356 nbx 3 14 0 256 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 1 256;
 #X obj 148 356 nbx 3 14 0 256 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 25 256;
+-1 -1 0 256;
 #X obj 189 356 nbx 3 14 0 256 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 33 256;
 #X obj 230 356 nbx 3 14 0 256 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 45 256;
 #X obj 271 356 nbx 3 14 0 256 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 55 256;
+-1 -1 30 256;
 #X obj 312 356 nbx 3 14 0 256 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0 256;
 #X obj 353 356 nbx 3 14 0 256 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 8 256;
 #X obj 394 356 nbx 3 14 0 256 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 20 256;
+-1 -1 5 256;
 #X obj 106 374 hsl 32 8 0 1 0 1 empty empty empty -2 -6 0 8 -262144
 -1 -1 0 1;
 #X obj 147 374 hsl 32 8 0 1 0 1 empty empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 1400 1;
 #X obj 188 374 hsl 32 8 0 1 0 1 empty empty empty -2 -6 0 8 -262144
 -1 -1 0 1;
 #X obj 229 374 hsl 32 8 0 1 0 1 empty empty empty -2 -6 0 8 -262144
@@ -7088,13 +7088,13 @@ for more details.;
 #X connect 98 0 27 0;
 #X restore 1031 682 pd sequencer_8_pos;
 #X obj 441 383 nbx 3 14 2 256 0 1 empty empty ltp -19 8 0 10 -262144
--1 -1 6 256;
+-1 -1 2 256;
 #X obj 848 626 +;
 #X obj 843 601 t b f;
 #X obj 890 629 +;
 #X obj 885 604 t b f;
 #X obj 118 386 hsl 296 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9833 1;
+-1 -1 14750 1;
 #X obj 932 628 +;
 #X obj 927 603 t b f;
 #X obj 972 630 +;
@@ -7125,7 +7125,7 @@ for more details.;
 -1 -1 0 256;
 #X obj -141 890 abs_granularsynthesis_particles_20;
 #X obj 460 343 tgl 15 1 empty empty sq_on -32 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj -44 200 spigot;
 #X obj 1101 527 spigot;
 #X obj 153 618 pack f f f f f f f f f f;
@@ -7355,7 +7355,7 @@ for more details.;
 #X msg 532 331 read -resize \$1 \$2;
 #X obj 543 252 t b a;
 #X obj 534 307 pack s s;
-#X msg 535 279 symbol samples/sample1.wav;
+#X msg 535 279 symbol samples/sample3.wav;
 #X obj 1082 75 + 1;
 #X obj 1006 77 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -7922,23 +7922,21 @@ for more details.;
 #X coords 0 -1 1 1 120 30 1 100 100;
 #X restore 319 74 pd songpos96-16;
 #X obj 656 58 hsl 128 8 0 128 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 794 1;
 #X obj 528 97 hsl 128 8 0 128 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 397 1;
 #X obj 601 119 hsl 128 8 0 128 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 1191 1;
 #X obj 473 51 nbx 3 14 -24 24 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 0 256;
+-1 -1 1 256;
 #X text 554 27 thinner \, shorter \, random pitch;
 #X text 471 36 transpose;
 #X text 281 606 same crude sequencer as in the 1st version (which actually
 contributes to the sound): step-sequencers scanning through a table
 with values for up to 8 'states'. pattern controlled filter and dual-delay
 fx.;
-#X msg 787 102 location bridgemelody.wav;
 #X obj 801 19 knob 1;
-#X msg 868 153 location white_noise_for_baby.wav;
-#X msg 838 183 location samples/sample1.wav;
+#X msg 839 228 location samples/sample1.wav;
 #N canvas 161 56 1044 700 pcf1s 0;
 #X obj 313 592 inlet~;
 #X obj -94 605 inlet~;
@@ -7946,9 +7944,9 @@ fx.;
 #X obj 454 1131 outlet~;
 #X obj 668 13 inlet;
 #X obj 342 105 vsl 8 90 20 120 0 1 empty empty ct 0 100 1 8 -225271
--1 -1 6100 1;
+-1 -1 7500 1;
 #X obj 304 105 vsl 8 90 0 50 0 1 empty empty sq 0 100 1 8 -233017 -1
--1 20 1;
+-1 3 1;
 #X obj 65 810 *~;
 #X obj 118 816 *~;
 #X obj 199 857 *~;
@@ -7956,14 +7954,14 @@ fx.;
 #X obj 502 911 *~;
 #X obj 583 959 *~;
 #X obj 368 104 vsl 8 90 0 1 0 1 empty empty lp 0 100 1 8 -262144 -1
--1 771 1;
+-1 5141 1;
 #X obj 381 104 vsl 8 90 0 1 0 1 empty empty bp 0 100 1 8 -262144 -1
--1 1972 1;
+-1 210 1;
 #X obj 394 104 vsl 8 90 0 1 0 1 empty empty hp 0 100 1 8 -262144 -1
--1 3900 1;
+-1 5100 1;
 #X text 714 13 <-bpm;
 #X obj 108 200 hsl 175 8 0 15 0 0 empty empty empty -2 -6 0 8 -262144
--258699 -1 2320 1;
+-258699 -1 15080 1;
 #X obj 291 106 vsl 8 90 0 1 0 1 empty empty gl 0 100 1 8 -262144 -1
 -1 1800 1;
 #X obj 104 121 vsl 8 73 -1 1 0 1 empty empty empty 0 -8 0 8 -262144
@@ -7999,7 +7997,7 @@ fx.;
 #X obj 277 121 vsl 8 73 -1 1 0 1 empty empty empty 0 -8 0 8 -262144
 -1 -1 5700 1;
 #X obj 316 105 vsl 8 90 0.01 12 1 1 empty empty fr 0 100 1 8 -262144
--1 -1 7100 1;
+-1 -1 3300 1;
 #X obj 329 105 vsl 8 90 0 30 0 1 empty empty a 0 100 1 8 -262144 -1
 -1 4600 1;
 #X obj 145 291 f;
@@ -8041,7 +8039,7 @@ fx.;
 #X obj 339 898 * -1;
 #X obj 339 922 + 1;
 #X obj 406 104 vsl 8 90 0 1 0 1 empty empty d/w 0 100 1 8 -262144 -1
--1 210 1;
+-1 280 1;
 #X obj 439 1073 +~;
 #X obj 482 1049 *~;
 #X obj 419 1048 *~;
@@ -8071,7 +8069,7 @@ fx.;
 #X obj 249 102 nbx 3 14 2 16 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 16 256;
 #X obj 201 105 hsl 40 8 -30 30 0 0 empty empty lfo -24 5 0 10 -262144
--1 -1 1197 1;
+-1 -1 2947 1;
 #N canvas 705 79 1076 1000 lopass2p2zm 0;
 #X obj -222 90 inlet~;
 #X obj 133 939 outlet~;
@@ -9989,7 +9987,7 @@ hp-filter;
 #X obj 674 80 knob 4;
 #X obj 225 222 knob 5;
 #X obj 164 174 knob 6;
-#X obj 286 253 knob 7;
+#X obj 270 261 knob 7;
 #X obj 514 68 knob 3;
 #X obj 501 5 knob 2;
 #X obj 872 255 butt 2;
@@ -10004,7 +10002,7 @@ hp-filter;
 #N canvas 272 100 1162 979 dualdelay1s 0;
 #X obj -11 367 inlet~;
 #X obj 163 115 vsl 8 100 20 120 0 1 empty empty cut 0 110 1 8 -233017
--1 -1 6300 1;
+-1 -1 7400 1;
 #X obj 65 364 mtof;
 #X obj 141 115 vsl 8 100 0.01 1 1 1 empty empty fr 0 110 1 8 -262144
 -1 -1 1500 1;
@@ -10029,14 +10027,14 @@ hp-filter;
 #X obj 359 597 * -1;
 #X obj 359 621 + 1;
 #X obj 199 145 hsl 96 8 0 1 0 1 empty empty d/w -22 5 0 10 -262144
--1 -1 7400 1;
+-1 -1 4100 1;
 #X obj 399 114 inlet;
 #X obj 487 357 pow -1;
 #X obj 508 395 / 4;
 #X obj 539 424 *;
 #X obj 523 460 * 60000;
 #X obj 198 131 hsl 96 8 0 0.95 0 1 empty empty fb -16 5 0 8 -262144
--1 -1 5600 1;
+-1 -1 2400 1;
 #X obj 478 573 abs_delayline1;
 #X obj 260 114 nbx 3 14 0 32 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 3 256;
@@ -10062,7 +10060,7 @@ hp-filter;
 #X obj 311 629 *;
 #X obj 295 665 * 60000;
 #X obj 198 181 hsl 96 8 0 0.95 0 1 empty empty fb -16 5 0 8 -262144
--1 -1 5800 1;
+-1 -1 1900 1;
 #X obj 255 704 abs_delayline1;
 #X obj 260 164 nbx 3 14 0 32 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 4 256;
@@ -11374,6 +11372,8 @@ hp-filter;
 #X connect 96 0 27 0;
 #X coords 0 -1 1 1 200 130 1 100 100;
 #X restore 732 471 pd dualdelay1s;
+#X msg 868 153 location samples/sample2.wav;
+#X msg 864 188 location samples/sample3.wav;
 #X connect 10 0 14 0;
 #X connect 11 0 12 0;
 #X connect 13 0 10 0;
@@ -11382,27 +11382,27 @@ hp-filter;
 #X connect 17 0 18 0;
 #X connect 19 0 17 0;
 #X connect 20 0 19 0;
-#X connect 24 0 37 0;
-#X connect 24 1 37 1;
+#X connect 24 0 35 0;
+#X connect 24 1 35 1;
 #X connect 25 0 24 0;
-#X connect 25 0 37 2;
-#X connect 25 2 37 3;
-#X connect 25 2 54 2;
-#X connect 25 2 54 3;
+#X connect 25 0 35 2;
+#X connect 25 2 35 3;
+#X connect 25 2 52 2;
+#X connect 25 2 52 3;
 #X connect 26 0 24 2;
 #X connect 27 0 24 3;
 #X connect 28 0 24 4;
 #X connect 29 0 24 1;
-#X connect 33 0 24 5;
-#X connect 34 1 26 0;
-#X connect 35 0 24 5;
-#X connect 36 0 24 5;
-#X connect 37 0 54 0;
-#X connect 37 1 54 1;
-#X connect 39 1 28 0;
-#X connect 43 1 27 0;
-#X connect 44 1 29 0;
-#X connect 47 0 36 0;
-#X connect 48 1 25 1;
-#X connect 54 0 23 0;
-#X connect 54 1 23 2;
+#X connect 33 1 26 0;
+#X connect 34 0 24 5;
+#X connect 35 0 52 0;
+#X connect 35 1 52 1;
+#X connect 37 1 28 0;
+#X connect 41 1 27 0;
+#X connect 42 1 29 0;
+#X connect 45 0 34 0;
+#X connect 46 1 25 1;
+#X connect 52 0 23 0;
+#X connect 52 1 23 2;
+#X connect 53 0 24 5;
+#X connect 54 0 24 5;
