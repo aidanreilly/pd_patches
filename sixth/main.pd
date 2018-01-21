@@ -6809,7 +6809,7 @@ for more details.;
 #X obj -376 557 +;
 #X obj -381 532 t b f;
 #X obj 118 300 hsl 296 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 25286 1;
+-1 -1 21071 1;
 #X obj -334 556 +;
 #X obj -339 531 t b f;
 #X obj -294 558 +;
@@ -7094,7 +7094,7 @@ for more details.;
 #X obj 890 629 +;
 #X obj 885 604 t b f;
 #X obj 118 386 hsl 296 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 14750 1;
+-1 -1 0 1;
 #X obj 932 628 +;
 #X obj 927 603 t b f;
 #X obj 972 630 +;
@@ -7382,6 +7382,7 @@ for more details.;
 #X obj 1081 102 mod 8;
 #X obj 118 9 r k11;
 #X obj 119 64 scale 0 127 0 1;
+#X obj 903 15 loadbang;
 #X connect 0 0 3 1;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -7790,6 +7791,7 @@ for more details.;
 #X connect 224 0 220 1;
 #X connect 225 0 226 0;
 #X connect 226 0 29 0;
+#X connect 227 0 211 0;
 #X coords 0 -1 1 1 380 300 1 100 100;
 #X restore 424 152 pd grainstates2c;
 #N canvas 60 77 1184 711 songpos96-16 0;
@@ -7965,7 +7967,7 @@ fx.;
 -1 5100 1;
 #X text 714 13 <-bpm;
 #X obj 108 200 hsl 175 8 0 15 0 0 empty empty empty -2 -6 0 8 -262144
--258699 -1 15080 1;
+-258699 -1 4640 1;
 #X obj 291 106 vsl 8 90 0 1 0 1 empty empty gl 0 100 1 8 -262144 -1
 -1 1800 1;
 #X obj 104 121 vsl 8 73 -1 1 0 1 empty empty empty 0 -8 0 8 -262144
@@ -8073,7 +8075,7 @@ fx.;
 #X obj 249 102 nbx 3 14 2 16 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 16 256;
 #X obj 201 105 hsl 40 8 -30 30 0 0 empty empty lfo -24 5 0 10 -262144
--1 -1 1211 1;
+-1 -1 1002 1;
 #N canvas 705 79 1076 1000 lopass2p2zm 0;
 #X obj -222 90 inlet~;
 #X obj 133 939 outlet~;
