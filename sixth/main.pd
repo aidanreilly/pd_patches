@@ -5633,7 +5633,7 @@ for more details.;
 #X obj 377 163 hsl 96 15 0 0.5 0 0 empty empty ramp 2 8 0 10 -262144
 -1 -1 2300 1;
 #X obj 111 116 hsl 256 15 0 1 0 0 empty empty position 2 8 0 10 -262144
--1 -1 9437 1;
+-1 -1 4819 1;
 #X obj 377 183 hsl 96 15 0 1 0 0 empty empty pan_rnd 2 8 0 10 -262144
 -1 -1 4900 1;
 #X obj 377 143 hsl 96 15 0 1 0 0 empty empty pitch_rnd 2 8 0 10 -262144
@@ -5652,7 +5652,7 @@ for more details.;
 #X obj 107 222 bng 30 250 50 0 empty empty s1 10 10 0 10 -189026 -1
 -262144;
 #X msg -270 395 0;
-#X obj 148 222 bng 30 250 50 0 empty empty s2 10 10 0 10 -94095 -1
+#X obj 148 222 bng 30 250 50 0 empty empty s2 10 10 0 10 -90417 -1
 -262144;
 #X msg -241 395 1;
 #N canvas 97 258 968 652 gs2scene_2 0;
@@ -5701,7 +5701,7 @@ for more details.;
 #X msg 365 -13 1;
 #X msg 283 -12 0;
 #X obj 414 469 abs_grainstates_2c_colour;
-#X msg 96 64 0.456863 0.12549 0.0754902 0.00784314 0.121053 0.370079
+#X msg 96 64 0.456863 0.12549 0.0754902 0.00784314 0.121053 0.188976
 0.0156863 0 0.515789;
 #X connect 0 0 37 0;
 #X connect 0 0 38 0;
@@ -6809,7 +6809,7 @@ for more details.;
 #X obj -376 557 +;
 #X obj -381 532 t b f;
 #X obj 118 300 hsl 296 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 21071 1;
+-1 -1 12643 1;
 #X obj -334 556 +;
 #X obj -339 531 t b f;
 #X obj -294 558 +;
@@ -7145,7 +7145,7 @@ for more details.;
 #X text 431 270 pos;
 #X text 432 357 pos;
 #X text 422 327 tp;
-#N canvas 146 172 1695 875 presets 0;
+#N canvas 0 0 1370 700 presets 0;
 #X obj 159 670 until;
 #X obj 152 719 list append;
 #X obj 289 753 bang;
@@ -7381,8 +7381,8 @@ for more details.;
 #X obj 1006 130 route 0 1 2 3 4 5 6 7;
 #X obj 1081 102 mod 8;
 #X obj 118 9 r k11;
-#X obj 119 64 scale 0 127 0 1;
 #X obj 903 15 loadbang;
+#X obj 119 64 / 127;
 #X connect 0 0 3 1;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -7789,9 +7789,9 @@ for more details.;
 #X connect 223 6 218 0;
 #X connect 223 7 219 0;
 #X connect 224 0 220 1;
-#X connect 225 0 226 0;
-#X connect 226 0 29 0;
-#X connect 227 0 211 0;
+#X connect 225 0 227 0;
+#X connect 226 0 211 0;
+#X connect 227 0 29 0;
 #X coords 0 -1 1 1 380 300 1 100 100;
 #X restore 424 152 pd grainstates2c;
 #N canvas 60 77 1184 711 songpos96-16 0;
@@ -7943,7 +7943,7 @@ with values for up to 8 'states'. pattern controlled filter and dual-delay
 fx.;
 #X obj 801 19 knob 1;
 #X msg 839 228 location samples/sample1.wav;
-#N canvas 161 56 1044 700 pcf1s 0;
+#N canvas -8 -8 1366 696 pcf1s 0;
 #X obj 313 592 inlet~;
 #X obj -94 605 inlet~;
 #X obj 242 1059 outlet~;
@@ -7960,14 +7960,14 @@ fx.;
 #X obj 502 911 *~;
 #X obj 583 959 *~;
 #X obj 368 104 vsl 8 90 0 1 0 1 empty empty lp 0 100 1 8 -262144 -1
--1 5141 1;
+-1 1892 1;
 #X obj 381 104 vsl 8 90 0 1 0 1 empty empty bp 0 100 1 8 -262144 -1
 -1 210 1;
 #X obj 394 104 vsl 8 90 0 1 0 1 empty empty hp 0 100 1 8 -262144 -1
 -1 5100 1;
 #X text 714 13 <-bpm;
 #X obj 108 200 hsl 175 8 0 15 0 0 empty empty empty -2 -6 0 8 -262144
--258699 -1 4640 1;
+-258699 -1 0 1;
 #X obj 291 106 vsl 8 90 0 1 0 1 empty empty gl 0 100 1 8 -262144 -1
 -1 1800 1;
 #X obj 104 121 vsl 8 73 -1 1 0 1 empty empty empty 0 -8 0 8 -262144
@@ -8045,7 +8045,7 @@ fx.;
 #X obj 339 898 * -1;
 #X obj 339 922 + 1;
 #X obj 406 104 vsl 8 90 0 1 0 1 empty empty d/w 0 100 1 8 -262144 -1
--1 3294 1;
+-1 2593 1;
 #X obj 439 1073 +~;
 #X obj 482 1049 *~;
 #X obj 419 1048 *~;
@@ -8075,7 +8075,7 @@ fx.;
 #X obj 249 102 nbx 3 14 2 16 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 16 256;
 #X obj 201 105 hsl 40 8 -30 30 0 0 empty empty lfo -24 5 0 10 -262144
--1 -1 1002 1;
+-1 -1 2604 1;
 #N canvas 705 79 1076 1000 lopass2p2zm 0;
 #X obj -222 90 inlet~;
 #X obj 133 939 outlet~;
@@ -9793,13 +9793,11 @@ hp-filter;
 #X restore 510 825 pd hipass2p2zm;
 #X obj 122 652 mtof;
 #X obj 387 43 r k8;
-#X obj 386 67 cyclone/scale 0 127 0 1;
-#X obj 439 40 cyclone/scale 0 127 0 1;
 #X obj 440 16 r k9;
-#X obj 466 129 cyclone/scale 0 127 0 1;
 #X obj 467 105 r k10;
-#X obj 465 181 cyclone/scale 0 127 0 1;
-#X obj 466 157 r k11;
+#X obj 466 129 / 127;
+#X obj 439 40 / 127;
+#X obj 387 67 / 127;
 #X connect 0 0 78 0;
 #X connect 0 0 120 0;
 #X connect 0 0 124 0;
@@ -9979,14 +9977,12 @@ hp-filter;
 #X connect 126 0 120 1;
 #X connect 126 0 121 1;
 #X connect 126 0 123 1;
-#X connect 127 0 128 0;
-#X connect 128 0 14 0;
-#X connect 129 0 13 0;
-#X connect 130 0 129 0;
-#X connect 131 0 6 0;
-#X connect 132 0 131 0;
-#X connect 133 0 75 0;
-#X connect 134 0 133 0;
+#X connect 127 0 132 0;
+#X connect 128 0 131 0;
+#X connect 129 0 130 0;
+#X connect 130 0 6 0;
+#X connect 131 0 13 0;
+#X connect 132 0 14 0;
 #X coords 0 -1 1 1 320 110 1 100 100;
 #X restore 397 476 pd pcf1s;
 #X obj 964 46 butt 1;
@@ -10001,10 +9997,10 @@ hp-filter;
 #X obj 900 65 loadbang;
 #X obj 335 34 butt 0;
 #X obj 838 321 knob 8;
-#X obj 905 371 knob 9;
-#X obj 962 440 knob 10;
-#X obj 1032 499 knob 11;
-#X text 964 414 these go into the seq section \, filters;
+#X obj 950 328 knob 9;
+#X obj 849 357 knob 10;
+#X obj 262 135 knob 11;
+#X text 955 362 these go into the seq section \, filters;
 #N canvas 272 100 1162 979 dualdelay1s 0;
 #X obj -11 367 inlet~;
 #X obj 163 115 vsl 8 100 20 120 0 1 empty empty cut 0 110 1 8 -233017
@@ -11380,6 +11376,7 @@ hp-filter;
 #X restore 732 471 pd dualdelay1s;
 #X msg 868 153 location samples/sample2.wav;
 #X msg 864 188 location samples/sample3.wav;
+#X text 389 130 position;
 #X connect 10 0 14 0;
 #X connect 11 0 12 0;
 #X connect 13 0 10 0;
