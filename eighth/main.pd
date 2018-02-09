@@ -5493,7 +5493,7 @@ for more details.;
 #X obj 559 640 *~ 0.25;
 #X obj 623 642 *~ 0.25;
 #X obj 495 642 *~ 0.25;
-#X obj 53 478 knob 1;
+#X obj 50 480 knob 1;
 #X obj 1219 494 knob 2;
 #X obj 1215 170 knob 3;
 #X obj 1217 331 knob 4;
