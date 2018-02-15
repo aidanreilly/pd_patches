@@ -1,6 +1,20 @@
-#N canvas 0 50 1366 696 10;
+#N canvas -8 -8 1920 1008 10;
 #X declare -path patch_editor_abs;
-#X obj 8 645 declare -path patch_editor_abs;
+#X obj 8 923 declare -path patch_editor_abs;
+#X text 11 895 DO NOT DELETE THESE OBJECTS:;
+#X obj 9 316 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
+0;
+#X obj 10 342 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
+17 7 0 10 -262144 -1 -1;
+#X obj 10 362 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
+-262144 -1 -1;
+#X obj 10 380 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
+7 0 10 -262144 -1 -1;
+#X obj 10 420 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
+-262144 -1 -1;
+#X obj 10 400 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0
+10 -262144 -4034 -1;
+#X obj 251 803 maestro4 1;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
 #X obj 26 34 loadbang;
@@ -946,7 +960,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 3 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1378,7 +1392,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2028,7 +2042,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2732,7 +2746,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3813,7 +3827,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5433,43 +5447,96 @@ for more details.;
 #X connect 16 0 15 0;
 #X connect 17 0 16 0;
 #X connect 20 0 4 0;
-#X restore 8 666 pd patch-editor-do-not-delete;
-#X text 20 629 DO NOT DELETE THESE OBJECTS:;
-#X obj 9 5 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
-0;
-#X obj 10 31 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
-17 7 0 10 -262144 -1 -1;
-#X obj 10 51 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
--262144 -1 -1;
-#X obj 10 69 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
-7 0 10 -262144 -1 -1;
-#X obj 10 109 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
--262144 -1 -1;
-#X obj 10 89 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0 10
--262144 -4034 -1;
-#X text 130 7 Purple is an attenuator \, green is an attenuverter;
-#X obj 10 187 > 0;
-#X obj 11 236 pack 0 10;
-#X obj 19 266 line~;
-#X obj 10 165 t f f f;
-#X obj 10 209 t f;
-#X obj 10 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X text 32 138 button 2 gate;
-#X obj 135 209 sig~;
-#X obj 135 237 lop~ 10;
-#X obj 133 187 / 127;
-#X floatatom 133 160 5 0 0 0 - - -, f 5;
-#X text 180 158 num 2 cv;
-#X text 164 115 440 mid a 57;
-#X obj 282 177 maestro4;
-#X obj 290 35 bwl-osc;
-#X connect 10 0 14 0;
-#X connect 11 0 12 0;
-#X connect 13 0 10 0;
-#X connect 14 0 11 0;
-#X connect 15 0 13 0;
-#X connect 17 0 18 0;
-#X connect 19 0 17 0;
-#X connect 20 0 19 0;
-#X connect 24 0 23 0;
+#X restore 7 944 pd patch-editor-do-not-delete;
+#X obj 582 351 butt 1;
+#X obj 965 351 butt 2;
+#X obj 200 359 butt 0;
+#X obj 722 616 knob 10;
+#X obj 310 395 knob 1;
+#X obj 424 396 knob 2;
+#X obj 582 391 knob 3;
+#X obj 693 391 knob 4;
+#X obj 802 392 knob 5;
+#X obj 964 386 knob 6;
+#X obj 1076 386 knob 7;
+#X obj 1184 386 knob 8;
+#X obj 410 629 knob 9;
+#X obj 1018 619 knob 11;
+#X obj 202 394 knob 0;
+#X obj 576 200 external-audio 1;
+#X obj 220 434 abs_audioflow-2_sv;
+#X obj 21 665 stereo-delay 1;
+#X floatatom 1489 644 5 0 0 0 - - -, f 5;
+#X obj 1469 672 moses 63;
+#X floatatom 1522 697 5 0 0 0 - - -, f 5;
+#X floatatom 1470 701 5 0 0 0 - - -, f 5;
+#X obj 1552 919 list trim;
+#X obj 1391 918 list trim;
+#X obj 1554 891 list prepend /Looperfwd;
+#X obj 1376 870 list prepend /Looperbwd;
+#X obj 1533 814 float;
+#X obj 1434 844 float;
+#X obj 1529 756 * 10;
+#X obj 1529 728 / 63;
+#X obj 1523 780 - 10;
+#X obj 1466 729 / 63;
+#X obj 1465 754 * -10;
+#X obj 1457 787 + 10;
+#X obj 1440 815 * -1;
+#X obj 1280 819 * 1;
+#X obj 1281 790 / 127;
+#X obj 575 425 abs_audioflow-2_sv;
+#X text 1351 400 RIGHT INLET TAKES \; (without the semi-colons) \;
+/Looperrecord 0|1 \; /Looperfwd 1 \; /Looperbwd 1 \; /Looperstop 1
+\; /Switch 0|1 \; /delay 0-1 \; /feedback 0-1 \; /gain 0-1 \; /reset
+bng \;;
+#X text 1267 647 /Looperrecord 0|1 \; /Looperfwd 1 \; /Looperbwd 1
+\; /Looperstop 1 \; /Switch 0|1 \; /delay 0-1 \; /feedback 0-1 \; /gain
+0-1 \; /reset bng \;;
+#X obj 962 420 abs_audioflow-2_sv;
+#X obj 302 669 analog-filter 1;
+#X obj 607 657 analog-filter 2;
+#X obj 929 662 analog-filter 3;
+#X obj 16 448 basic-lfo 2;
+#X obj 17 577 3way-xfade 1;
+#X connect 13 0 52 1;
+#X connect 22 0 51 1;
+#X connect 23 0 53 1;
+#X connect 25 0 26 0;
+#X connect 25 0 47 0;
+#X connect 25 0 50 0;
+#X connect 25 1 26 0;
+#X connect 25 1 47 0;
+#X connect 25 1 50 0;
+#X connect 26 0 51 0;
+#X connect 27 0 8 6;
+#X connect 27 1 8 6;
+#X connect 28 0 29 0;
+#X connect 29 0 31 0;
+#X connect 29 1 30 0;
+#X connect 30 0 39 0;
+#X connect 31 0 41 0;
+#X connect 34 0 32 0;
+#X connect 35 0 33 0;
+#X connect 36 0 34 0;
+#X connect 37 0 35 0;
+#X connect 38 0 40 0;
+#X connect 39 0 38 0;
+#X connect 40 0 36 0;
+#X connect 41 0 42 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 44 0 37 0;
+#X connect 46 0 45 0;
+#X connect 47 0 52 0;
+#X connect 50 0 53 0;
+#X connect 51 0 8 0;
+#X connect 51 0 55 0;
+#X connect 52 0 8 2;
+#X connect 52 0 55 1;
+#X connect 53 0 8 4;
+#X connect 53 0 55 2;
+#X connect 54 0 8 7;
+#X connect 54 0 55 3;
+#X connect 55 0 27 0;
+#X coords 0 1008 1 1007 85 60 0;
