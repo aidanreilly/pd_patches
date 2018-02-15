@@ -133,7 +133,7 @@
 #X msg 394 123 0.5;
 #X obj 364 97 loadbang;
 #X obj 530 207 tgl 20 0 empty empty off|on 28 12 0 15 -262144 -1 -1
-0 1;
+1 1;
 #X obj 483 165 switch~;
 #X msg 1097 379 0;
 #X obj 969 268 sel start stop;
@@ -142,7 +142,7 @@
 #X obj 913 74 hsl 128 30 0 61387.2 0 0 \$0-start-s \$0-start start
 136 15 0 10 -262144 -258113 -1 0 1;
 #X obj 913 109 hsl 128 30 0 61387.2 0 0 \$0-stop-s \$0-stop stop 136
-15 0 10 -262144 -258113 -1 12700 1;
+15 0 10 -262144 -258113 -1 0 1;
 #X obj 1197 96 table \$0-sample 4.41e+006;
 #X obj 1080 347 t b f;
 #X msg 1131 375 0;
@@ -151,9 +151,9 @@
 #X obj 1142 557 bng 20 250 50 0 empty empty reset 0 -8 0 10 -128992
 -1 -1;
 #X obj 416 281 hsl 100 20 -10 10 0 0 \$0-speed-s \$0-speed vector(+/-speed)
-4 8 0 10 -262144 -1 -1 4076 1;
+4 8 0 10 -262144 -1 -1 0 1;
 #X obj 416 308 hsl 100 20 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 4
-8 0 10 -262144 -1 -1 3300 1;
+8 0 10 -262144 -1 -1 0 1;
 #X obj 1051 171 r \$0-start-s;
 #X obj 1002 350 t b f f;
 #X obj 1054 194 r \$0-stop-s;
@@ -328,7 +328,7 @@
 #X obj 1269 471 r \$0-pitch-s;
 #X obj 969 295 t b b b b;
 #X obj 416 358 hsl 100 20 0 1 0 0 empty \$0-pos info:position 4 8 0
-10 -228856 -1 -1 7675 1;
+10 -228856 -1 -1 0 1;
 #X obj 1129 516 s \$0-pos;
 #X obj 1129 486 snapshot~;
 #X obj 1129 450 metro 10;
@@ -403,7 +403,7 @@
 #X msg 49 9 1;
 #X msg 78 9 0;
 #X obj 31 -22 route bang 1 0;
-#X obj 47 68 tgl 20 0 empty empty PLA 0 -6 0 10 -258113 -1 -1 1 1;
+#X obj 47 68 tgl 20 0 empty empty PLA 0 -6 0 10 -258113 -1 -1 0 1;
 #X obj 76 95 sel 1 0;
 #X obj 25 68 tgl 20 0 empty empty REC 0 -6 0 10 -258113 -1 -1 0 1;
 #X obj 27 95 sel 1 0;
@@ -429,7 +429,7 @@
 #X restore 526 242 pd rec_play_switch;
 #X obj 969 435 *~ 1;
 #X obj 416 332 hsl 100 20 -1 1 0 0 \$0-phaseMultiplier empty phase*(-1to1)
-4 8 0 10 -262144 -1 -1 4600 1;
+4 8 0 10 -262144 -1 -1 0 1;
 #X floatatom 1194 340 5 0 0 0 - - -, f 5;
 #X obj 663 149 route rec;
 #X msg 663 233 bang;
@@ -480,12 +480,12 @@
 #X msg 699 234 0;
 #X obj 364 97 loadbang;
 #X msg 365 123 0;
-#X obj 208 215 cyclone/scale 0 127 -10 10;
 #X obj 442 21 route /Looperrecord /Looperfwd /Looperbwd /Looperstop
 /Switch /delay /feedback /gain /reset /vector /pitch /phase, f 84
 ;
-#X obj 205 242 cyclone/scale 0 127 0.1 10;
-#X obj 210 268 cyclone/scale 0 127 -1 1;
+#X obj 208 215 scale 0 127 -10 10;
+#X obj 205 242 scale 0 127 0.1 10;
+#X obj 210 268 scale 0 127 -1 1;
 #X connect 1 0 164 0;
 #X connect 4 0 5 1;
 #X connect 5 0 29 0;
@@ -601,7 +601,7 @@
 #X connect 116 0 99 0;
 #X connect 117 0 98 0;
 #X connect 118 0 111 0;
-#X connect 119 0 170 0;
+#X connect 119 0 169 0;
 #X connect 120 0 143 0;
 #X connect 121 0 58 0;
 #X connect 123 0 107 0;
@@ -651,19 +651,19 @@
 #X connect 165 1 166 0;
 #X connect 166 0 120 1;
 #X connect 167 0 168 0;
-#X connect 169 0 67 0;
-#X connect 170 0 115 0;
-#X connect 170 1 116 0;
-#X connect 170 2 117 0;
-#X connect 170 3 118 0;
-#X connect 170 4 131 0;
-#X connect 170 5 14 0;
-#X connect 170 6 16 0;
-#X connect 170 7 15 0;
-#X connect 170 8 66 0;
-#X connect 170 9 169 0;
-#X connect 170 10 171 0;
-#X connect 170 11 172 0;
+#X connect 169 0 115 0;
+#X connect 169 1 116 0;
+#X connect 169 2 117 0;
+#X connect 169 3 118 0;
+#X connect 169 4 131 0;
+#X connect 169 5 14 0;
+#X connect 169 6 16 0;
+#X connect 169 7 15 0;
+#X connect 169 8 66 0;
+#X connect 169 9 170 0;
+#X connect 169 10 171 0;
+#X connect 169 11 172 0;
+#X connect 170 0 67 0;
 #X connect 171 0 68 0;
 #X connect 172 0 122 0;
 #X coords 0 -1 1 1 260 186 1 400 200;
