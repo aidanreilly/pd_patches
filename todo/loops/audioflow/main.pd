@@ -1,2 +1,0 @@
-#N canvas -200 78 1366 696 10;
-#X obj 258 110 abs_audioflow-_sv;
