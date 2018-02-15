@@ -1,20 +1,20 @@
-#N canvas -8 -8 1920 1008 10;
+#N canvas 0 50 1366 696 10;
 #X declare -path patch_editor_abs;
-#X obj 8 923 declare -path patch_editor_abs;
-#X text 11 895 DO NOT DELETE THESE OBJECTS:;
-#X obj 9 316 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
+#X obj 8 611 declare -path patch_editor_abs;
+#X text 11 583 DO NOT DELETE THESE OBJECTS:;
+#X obj 9 4 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
 0;
-#X obj 10 342 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
+#X obj 10 30 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
 17 7 0 10 -262144 -1 -1;
-#X obj 10 362 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
+#X obj 10 50 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
 -262144 -1 -1;
-#X obj 10 380 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
+#X obj 10 68 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
 7 0 10 -262144 -1 -1;
-#X obj 10 420 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
+#X obj 10 108 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
 -262144 -1 -1;
-#X obj 10 400 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0
-10 -262144 -4034 -1;
-#X obj 251 803 maestro4 1;
+#X obj 10 88 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0 10
+-262144 -4034 -1;
+#X obj 251 491 maestro4 1;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
 #X obj 26 34 loadbang;
@@ -472,7 +472,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2042,7 +2042,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 2 256;
+10 -262144 -1 -1 3 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2314,7 +2314,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3937,7 +3937,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5447,96 +5447,93 @@ for more details.;
 #X connect 16 0 15 0;
 #X connect 17 0 16 0;
 #X connect 20 0 4 0;
-#X restore 7 944 pd patch-editor-do-not-delete;
-#X obj 582 351 butt 1;
-#X obj 965 351 butt 2;
-#X obj 200 359 butt 0;
-#X obj 722 616 knob 10;
-#X obj 310 395 knob 1;
-#X obj 424 396 knob 2;
-#X obj 582 391 knob 3;
-#X obj 693 391 knob 4;
-#X obj 802 392 knob 5;
-#X obj 964 386 knob 6;
-#X obj 1076 386 knob 7;
-#X obj 1184 386 knob 8;
-#X obj 410 629 knob 9;
-#X obj 1018 619 knob 11;
-#X obj 202 394 knob 0;
-#X obj 576 200 external-audio 1;
-#X obj 220 434 abs_audioflow-2_sv;
-#X obj 21 665 stereo-delay 1;
-#X floatatom 1489 644 5 0 0 0 - - -, f 5;
-#X obj 1469 672 moses 63;
-#X floatatom 1522 697 5 0 0 0 - - -, f 5;
-#X floatatom 1470 701 5 0 0 0 - - -, f 5;
-#X obj 1552 919 list trim;
-#X obj 1391 918 list trim;
-#X obj 1554 891 list prepend /Looperfwd;
-#X obj 1376 870 list prepend /Looperbwd;
-#X obj 1533 814 float;
-#X obj 1434 844 float;
-#X obj 1529 756 * 10;
-#X obj 1529 728 / 63;
-#X obj 1523 780 - 10;
-#X obj 1466 729 / 63;
-#X obj 1465 754 * -10;
-#X obj 1457 787 + 10;
-#X obj 1440 815 * -1;
-#X obj 1280 819 * 1;
-#X obj 1281 790 / 127;
-#X obj 575 425 abs_audioflow-2_sv;
-#X text 1351 400 RIGHT INLET TAKES \; (without the semi-colons) \;
+#X restore 7 632 pd patch-editor-do-not-delete;
+#X obj 635 -136 butt 1;
+#X obj 1036 -72 butt 2;
+#X obj 168 -169 butt 0;
+#X obj 722 304 knob 10;
+#X obj 356 -168 knob 1;
+#X obj 470 -167 knob 2;
+#X obj 577 -201 knob 3;
+#X obj 688 -201 knob 4;
+#X obj 797 -200 knob 5;
+#X obj 954 -158 knob 6;
+#X obj 1066 -158 knob 7;
+#X obj 1174 -158 knob 8;
+#X obj 410 317 knob 9;
+#X obj 1018 307 knob 11;
+#X obj 250 -170 knob 0;
+#X obj 538 -39 external-audio 1;
+#X obj 21 353 stereo-delay 1;
+#X text 1141 310 RIGHT INLET TAKES \; (without the semi-colons) \;
 /Looperrecord 0|1 \; /Looperfwd 1 \; /Looperbwd 1 \; /Looperstop 1
 \; /Switch 0|1 \; /delay 0-1 \; /feedback 0-1 \; /gain 0-1 \; /reset
 bng \;;
-#X text 1267 647 /Looperrecord 0|1 \; /Looperfwd 1 \; /Looperbwd 1
-\; /Looperstop 1 \; /Switch 0|1 \; /delay 0-1 \; /feedback 0-1 \; /gain
-0-1 \; /reset bng \;;
-#X obj 962 420 abs_audioflow-2_sv;
-#X obj 302 669 analog-filter 1;
-#X obj 607 657 analog-filter 2;
-#X obj 929 662 analog-filter 3;
-#X obj 16 448 basic-lfo 2;
-#X obj 17 577 3way-xfade 1;
-#X connect 13 0 52 1;
-#X connect 22 0 51 1;
-#X connect 23 0 53 1;
-#X connect 25 0 26 0;
-#X connect 25 0 47 0;
-#X connect 25 0 50 0;
-#X connect 25 1 26 0;
-#X connect 25 1 47 0;
-#X connect 25 1 50 0;
-#X connect 26 0 51 0;
-#X connect 27 0 8 6;
-#X connect 27 1 8 6;
-#X connect 28 0 29 0;
-#X connect 29 0 31 0;
-#X connect 29 1 30 0;
-#X connect 30 0 39 0;
-#X connect 31 0 41 0;
-#X connect 34 0 32 0;
-#X connect 35 0 33 0;
-#X connect 36 0 34 0;
-#X connect 37 0 35 0;
-#X connect 38 0 40 0;
-#X connect 39 0 38 0;
-#X connect 40 0 36 0;
-#X connect 41 0 42 0;
-#X connect 42 0 43 0;
-#X connect 43 0 44 0;
-#X connect 44 0 37 0;
-#X connect 46 0 45 0;
-#X connect 47 0 52 0;
-#X connect 50 0 53 0;
-#X connect 51 0 8 0;
-#X connect 51 0 55 0;
-#X connect 52 0 8 2;
-#X connect 52 0 55 1;
-#X connect 53 0 8 4;
-#X connect 53 0 55 2;
-#X connect 54 0 8 7;
-#X connect 54 0 55 3;
-#X connect 55 0 27 0;
-#X coords 0 1008 1 1007 85 60 0;
+#X obj 302 357 analog-filter 1;
+#X obj 616 351 analog-filter 2;
+#X obj 929 350 analog-filter 3;
+#X obj 16 136 basic-lfo 2;
+#X obj 17 265 3way-xfade 1;
+#X obj 293 112 abs_audioflow-2_sv;
+#X obj 58 -135 prepend /Looperrecord;
+#X obj 1059 -39 prepend /Looperrecord;
+#X obj 603 -90 prepend /Looperrecord;
+#X obj 225 -120 prepend /vector;
+#X obj 345 -122 prepend /pitch;
+#X obj 462 -123 prepend /phase;
+#X obj 577 114 abs_audioflow-2_sv;
+#X obj 961 108 abs_audioflow-2_sv;
+#X obj 574 -167 prepend /vector;
+#X obj 689 -165 prepend /pitch;
+#X obj 832 -167 prepend /phase;
+#X obj 948 -107 prepend /vector;
+#X obj 1069 -107 prepend /pitch;
+#X obj 1180 -122 prepend /phase;
+#X connect 10 1 36 0;
+#X connect 11 1 35 0;
+#X connect 12 1 34 0;
+#X connect 13 0 29 1;
+#X connect 14 1 38 0;
+#X connect 15 1 39 0;
+#X connect 16 1 42 0;
+#X connect 17 1 43 0;
+#X connect 18 1 44 0;
+#X connect 19 1 45 0;
+#X connect 20 1 46 0;
+#X connect 21 1 47 0;
+#X connect 22 0 28 1;
+#X connect 23 0 30 1;
+#X connect 24 1 37 0;
+#X connect 25 0 33 0;
+#X connect 25 0 40 0;
+#X connect 25 0 41 0;
+#X connect 25 1 33 0;
+#X connect 25 1 40 0;
+#X connect 25 1 41 0;
+#X connect 26 0 8 6;
+#X connect 26 1 8 6;
+#X connect 28 0 8 0;
+#X connect 28 0 32 0;
+#X connect 29 0 8 2;
+#X connect 29 0 32 1;
+#X connect 30 0 8 4;
+#X connect 30 0 32 2;
+#X connect 31 0 8 7;
+#X connect 31 0 32 3;
+#X connect 32 0 26 0;
+#X connect 33 0 28 0;
+#X connect 34 0 33 1;
+#X connect 35 0 41 1;
+#X connect 36 0 40 1;
+#X connect 37 0 33 1;
+#X connect 38 0 33 1;
+#X connect 39 0 33 1;
+#X connect 40 0 29 0;
+#X connect 41 0 30 0;
+#X connect 42 0 40 1;
+#X connect 43 0 40 1;
+#X connect 44 0 40 1;
+#X connect 45 0 41 1;
+#X connect 46 0 41 1;
+#X connect 47 0 41 1;
+#X coords 0 696 1 695 85 60 0;
