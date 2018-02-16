@@ -1,4 +1,4 @@
-#N canvas 0 50 1366 696 10;
+#N canvas -8 -8 1366 696 10;
 #X declare -path patch_editor_abs;
 #X obj 8 611 declare -path patch_editor_abs;
 #X text 11 583 DO NOT DELETE THESE OBJECTS:;
@@ -14,7 +14,7 @@
 -262144 -1 -1;
 #X obj 10 88 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0 10
 -262144 -4034 -1;
-#X obj 251 491 maestro4 1;
+#X obj 271 486 maestro4 1;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
 #X obj 26 34 loadbang;
@@ -852,7 +852,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1014,7 +1014,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5464,7 +5464,7 @@ for more details.;
 #X obj 1018 307 knob 11;
 #X obj 250 -170 knob 0;
 #X obj 538 -39 external-audio 1;
-#X obj 21 353 stereo-delay 1;
+#X obj 30 437 stereo-delay 1;
 #X text 1141 310 RIGHT INLET TAKES \; (without the semi-colons) \;
 /Looperrecord 0|1 \; /Looperfwd 1 \; /Looperbwd 1 \; /Looperstop 1
 \; /Switch 0|1 \; /delay 0-1 \; /feedback 0-1 \; /gain 0-1 \; /reset
@@ -5486,9 +5486,10 @@ bng \;;
 #X obj 948 -107 prepend /vector;
 #X obj 1069 -107 prepend /pitch;
 #X obj 1180 -122 prepend /phase;
-#X obj 323 366 ladder-filter 1;
-#X obj 607 366 ladder-filter 2;
-#X obj 915 375 ladder-filter 3;
+#X obj 313 351 ladder-filter 1;
+#X obj 579 334 ladder-filter 2;
+#X obj 920 335 ladder-filter 3;
+#X obj 30 354 hp-filter 1;
 #X connect 10 1 33 0;
 #X connect 11 1 32 0;
 #X connect 12 1 31 0;
@@ -5514,7 +5515,7 @@ bng \;;
 #X connect 26 1 8 6;
 #X connect 28 0 8 7;
 #X connect 28 0 29 3;
-#X connect 29 0 26 0;
+#X connect 29 0 48 0;
 #X connect 30 0 45 0;
 #X connect 31 0 30 1;
 #X connect 32 0 38 1;
@@ -5531,6 +5532,10 @@ bng \;;
 #X connect 43 0 38 1;
 #X connect 44 0 38 1;
 #X connect 45 0 29 0;
+#X connect 45 0 8 0;
 #X connect 46 0 29 1;
+#X connect 46 0 8 2;
 #X connect 47 0 29 2;
+#X connect 47 0 8 4;
+#X connect 48 0 26 0;
 #X coords 0 696 1 695 85 60 0;
