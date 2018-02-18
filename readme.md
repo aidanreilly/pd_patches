@@ -1,7 +1,7 @@
 #Collection of pure data patches for custom midi controller and the Automationism modular synthesis environment.
 
 * First - ASR patch with sine waves and LPGs
-* Second -  
+* Second -  live Granular freezer 
 * Third - live input granular synthesis with disis_munger~
 * Fourth - mutable rhythm machine
 * Fifth - red panda-esqe live granular delay     
