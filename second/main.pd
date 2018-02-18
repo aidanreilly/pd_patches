@@ -5486,7 +5486,7 @@ for more details.;
 #X obj 331 66 r b2;
 #X obj 329 144 route 0 1 2 3 4 5 6 7;
 #X obj 404 116 mod 8;
-#X obj 249 270 midirealtimein;
+#X obj 252 267 midirealtimein;
 #X obj 272 297 sel 248;
 #X obj 280 323 counter 0 0 5;
 #X obj 294 346 sel 0;
@@ -5564,7 +5564,7 @@ for more details.;
 #X obj 634 126 loadbang;
 #X msg 634 156 72 100;
 #X obj 560 142 r notes;
-#N canvas 1362 722 1366 696 allocate-all-on 1;
+#N canvas 1362 722 1366 696 allocate-all-on 0;
 #X obj 265 83 latch-notes;
 #X text 391 145 this allocates voices in such a way that all 16 voices
 always play \, i.e 1 key down will play on all 16 voices \, 16 keys
