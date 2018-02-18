@@ -1,4 +1,5 @@
-Collection of PD patches for custom midi controller and utilizing the Automationism modular synthesis environment.
+#Collection of pure data patches for custom midi controller and the Automationism modular synthesis environment.
+
 * First - ASR patch with sine waves and LPGs
 * Second -  
 * Third - live input granular synthesis with disis_munger~
