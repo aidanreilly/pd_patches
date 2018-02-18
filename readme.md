@@ -3,7 +3,7 @@ Collection of PD patches for custom midi controller and utilizing the Automation
 * Second -  
 * Third - live input granular synthesis with disis_munger~
 * Fourth - mutable rhythm machine
-* Fifth - 
-* Sixth - strange granular landscapes 
+* Fifth - red panda-esqe live granular delay     
+* Sixth - granular mush cloud, based on a martin brinkmann patch
 * Seventh - three back to front loopers making out with each other like harpies
 * Eighth - 16 or so sine waves beating off each other slowly
