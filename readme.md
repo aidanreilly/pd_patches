@@ -2,7 +2,7 @@
 
 * First - ASR patch with sine waves and LPGs
 * Second -  live Granular freezer 
-* Third - live input granular synthesis with disis_munger~
+* Third - lissajous midi sequencer
 * Fourth - mutable rhythm machine
 * Fifth - red panda-esqe live granular delay     
 * Sixth - granular mush cloud, based on a martin brinkmann patch
