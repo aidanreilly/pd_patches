@@ -1,0 +1,479 @@
+#N struct 1005-rectangle float x float c float step;
+#N struct 1005-array array tab 1005-draw float x float y float c;
+#N struct 1005-draw float x float y float c;
+#N canvas 1353 178 416 515 10;
+#N canvas 404 50 1207 819 lissa-seq 0;
+#X obj 857 414 s \$0-rectanglePointer;
+#X msg 917 150 clear;
+#X obj 918 304 s \$0-arrayPointer;
+#X obj 877 282 t b p;
+#X obj 877 260 append \$0-array x y;
+#X msg 1007 216 traverse \$1 \, bang;
+#X obj 1007 238 pointer;
+#X obj 1007 194 symbol pd-\$0-paintSubpatch;
+#X obj 877 348 setsize \$0-array tab;
+#X msg 877 238 200 200;
+#X obj 917 172 s pd-\$0-paintSubpatch;
+#X obj 857 392 append \$0-rectangle x;
+#X msg 857 370 0;
+#X obj 877 327 nbx 3 15 1 128 0 0 empty \$0-steps steps 41 10 0 10
+-262130 -1 -1 128 256;
+#X obj 857 128 t b b b b;
+#X obj 870 61 bng 15 250 50 0 empty \$0-reset reset 17 7 0 10 -262144
+-1 -1;
+#X obj 857 38 loadbang;
+#X obj 870 81 t b b;
+#X obj 870 103 s \$0-cInit;
+#X obj 571 167 set \$0-rectangle c;
+#X obj 571 128 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-bgcolor bgcolor
+0 -8 0 10 -262130 -1 -1 235 256;
+#X obj 476 22 r \$0-stepNumber;
+#X obj 476 211 element \$0-array tab;
+#X obj 613 189 r \$0-arrayPointer;
+#X obj 476 233 get \$0-draw x y;
+#X floatatom 476 321 5 0 0 0 - - -, f 5;
+#X floatatom 578 322 5 0 0 0 - - -, f 5;
+#X obj 476 299 i;
+#X obj 578 300 i;
+#X obj 536 445 hradio 15 1 1 8 empty \$0-scale scale 0 -8 0 10 -262130
+-1 -1 5;
+#X obj 536 465 text size \$0-scales;
+#X obj 560 348 nbx 5 14 0 127 0 0 empty \$0-random random 0 -8 0 10
+-262130 -1 -1 0 256;
+#X obj 542 389 random 0;
+#X obj 542 411 -;
+#X obj 608 372 * 2;
+#X obj 608 394 + 1;
+#X obj 476 428 +;
+#X obj 476 406 *;
+#X obj 518 538 text get \$0-scales;
+#X obj 476 494 t f b f;
+#X obj 518 516 f;
+#X obj 560 367 t f f;
+#X obj 476 538 /;
+#X obj 518 560 f;
+#X obj 476 384 / 12;
+#X obj 476 560 * 12;
+#X obj 476 516 -;
+#X obj 476 472 i;
+#X obj 476 450 + 0.5;
+#X obj 476 362 t f b;
+#X obj 476 582 +;
+#X obj 476 697 noteout;
+#X obj 492 661 pgmout;
+#X obj 551 642 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-channel channel
+0 -8 0 10 -262130 -1 -1 0 256;
+#X obj 492 642 nbx 5 14 0 127 0 0 empty \$0-sound sound 0 -8 0 10 -262130
+-1 -1 13 256;
+#X obj 476 604 makenote 100 200;
+#X obj 578 277 + 30;
+#X obj 476 277 + 30;
+#X obj 30 557 cnv 15 200 120 empty empty empty 20 12 0 14 -261682 -66577
+0;
+#X obj 694 38 r \$0-rectanglePointer;
+#X obj 476 340 +;
+#X obj 518 321 nbx 3 14 -1e+037 1e+037 0 0 empty \$0-transpose transpose
+0 -8 0 10 -262130 -1 -1 0 256;
+#X obj 719 235 r \$0-arrayPointer;
+#X obj 624 257 set \$0-array c;
+#X obj 624 238 nbx 5 14 0 999 0 0 empty \$0-linecolor linecolor 0 -8
+0 10 -262130 -1 -1 688 256;
+#X obj 559 494 mod;
+#N canvas 2535 482 450 300 \$0-paintSubpatch 0;
+#X scalar 1005-rectangle 0 235 23 \;;
+#X scalar 1005-array 200 200 688 \; 0 -59.113 665 \; 85.9775 129.055
+665 \; -140.905 -149.308 665 \; 144.945 112.07 665 \; -96.6385 -31.6789
+665 \; 13.4318 -60.9099 665 \; 74.6258 130.036 665 \; -135.733 -149.107
+665 \; 147.82 110.766 665 \; -106.536 -29.7635 665 \; 26.7556 -62.6847
+665 \; 62.6744 131 665 \; -129.47 -148.883 665 \; 149.508 109.424 665
+\; -115.552 -27.843 665 \; 39.8645 -64.4571 665 \; 50.2196 131.942
+665 \; -122.167 -148.632 665 \; 149.994 108.076 665 \; -123.673 -25.8817
+665 \; 52.6531 -66.2186 665 \; 37.3257 132.879 665 \; -113.883 -148.356
+665 \; 149.272 106.659 815 \; -130.759 -23.9882 665 \; 65.0186 -68.0341
+665 \; 24.2027 133.792 665 \; -104.683 -148.043 665 \; 147.358 105.3
+665 \; -136.845 -22.0182 665 \; 76.8618 -69.7399 665 \; 10.7766 134.682
+665 \; -94.6428 -147.722 665 \; 144.256 103.871 665 \; -141.772 -20.117
+665 \; 88.0874 -71.4986 665 \; -2.66375 135.516 665 \; -83.9027 -147.376
+665 \; 139.969 102.423 665 \; -145.607 -18.0671 665 \; 98.6053 -73.1808
+665 \; -16.0827 136.359 665 \; -72.3033 -146.977 665 \; 134.61 101.066
+665 \; -148.238 -16.2322 665 \; 108.331 -74.9145 665 \; -29.3724 137.177
+665 \; -60.3115 -146.613 665 \; 128.142 99.639 665 \; -149.7 -14.1031
+665 \; 117.186 -76.6349 665 \; -42.4262 137.914 665 \; -47.7711 -146.145
+665 \; 120.602 98.0293 665 \; -149.95 -12.2633 665 \; 125.14 -78.2168
+665 \; -55.0709 138.686 665 \; -34.918 -145.718 665 \; 112.082 96.6239
+665 \; -148.991 -10.4215 665 \; 132.009 -79.9109 665 \; -67.278 139.379
+665 \; -21.4975 -145.196 665 \; 102.866 95.2038 665 \; -146.852 -8.43197
+665 \; 137.885 -81.7138 665 \; -79.0749 140.156 665 \; -8.19117 -144.721
+665 \; 92.6189 93.6549 665 \; -143.503 -6.29456 665 \; 142.597 -83.2564
+665 \; -90.2296 140.803 665 \; 5.32665 -144.184 665 \; 81.6199 91.9738
+665 \; -139.099 -4.59514 665 \; 146.208 -84.9073 665 \; -100.651 141.527
+665 \; 18.5105 -143.664 665 \; 69.958 90.3909 665 \; -133.413 -2.60221
+665 \; 148.612 -86.4235 665 \; -110.156 142.128 665 \; 31.98 -143.034
+665 \; 57.9982 89.0281 665 \; -126.698 -0.462332 665 \; 149.835 -87.9265
+665 \; -118.786 142.708 665 \; 45.0443 -142.421 665 \; 45.3083 87.4158
+665 \; -119.044 1.38468 665 \; 149.86 -89.6513 665 \; -126.55 143.309
+665 \; 57.6076 -141.783 665 \; 32.2504 85.6679 665 \; -110.443 3.08504
+665 \; 148.649 -91.3579 665 \; -133.219 143.844 665 \; 69.5833 -141.169
+665 \; 18.9305 83.9026 665 \; -100.856 5.2242 665 \; 146.302 -92.8158
+665 \; -138.885 144.436 665 \; 81.3875 -140.534 665 \; 5.45692 82.3652
+665 \; -90.5674 7.36231 665 \; 142.728 -94.2597 665 \; -143.422 144.999
+665 \; 92.401 -139.771 665 \; -7.76845 80.8154 665 \; -79.1857 9.49891
+665 \; 137.994 -95.6893 665 \; -146.795 145.46 665 \; 102.45 -139.09
+665 \; -21.2235 79.2532 665 \; -67.9174 11.0493 665 \; 132.14 -97.3276
+665 \; -148.976 145.9 665 \; 111.898 -138.388 665 \; -34.5062 77.6791
+665 \; -55.6005 13.1823 665 \; 125.373 -98.7256 665 \; -149.946 146.382
+665 \; 120.262 -137.665 665 \; -47.5086 75.8405 665 \; -42.5512 15.3126
+665 \; 117.45 -100.327 665 \; -149.735 146.714 665 \; 127.845 -136.802
+665 \; \;;
+#X coords 0 400 400 0 400 400 2 0 0;
+#X restore 30 30 pd \$0-paintSubpatch;
+#N canvas 152 92 322 377 seq 0;
+#X obj 54 83 metro 200;
+#X obj 136 39 pow -1;
+#X obj 136 61 * 30000;
+#X obj 54 105 f;
+#X obj 54 127 + 1;
+#X obj 126 188 r feel;
+#X obj 54 149 & 255;
+#X obj 54 193 & 1;
+#X obj 54 171 t f f;
+#X obj 54 215 pack;
+#X obj 55 237 route 0 1;
+#X obj 126 237 *;
+#X obj 136 210 t b f;
+#X floatatom 126 259 5 0 0 0 - - -, f 5;
+#X obj 84 259 pipe;
+#X obj 84 335 s \$0-stepNumber;
+#X obj 136 19 nbx 5 14 -1e+037 1e+037 0 1 empty bpm bpm 0 -8 0 10 -262130
+-1 -1 160 256;
+#X obj 190 296 nbx 5 14 1 128 0 1 empty \$0-steps steps 0 -8 0 10 -262130
+-1 -1 128 256;
+#X obj 54 38 tgl 15 0 empty play play 17 7 0 10 -262130 -1 -1 1 1;
+#X obj 84 313 f;
+#X obj 114 313 + 1;
+#X obj 144 313 mod 128;
+#X msg 144 291 0;
+#X obj 84 292 b;
+#X obj 54 58 t f b;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 1;
+#X connect 2 0 12 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 11 0;
+#X connect 6 0 3 1;
+#X connect 6 0 8 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 8 1 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 23 0;
+#X connect 10 1 14 0;
+#X connect 11 0 13 0;
+#X connect 11 0 14 1;
+#X connect 12 0 11 0;
+#X connect 12 1 11 1;
+#X connect 14 0 23 0;
+#X connect 16 0 1 0;
+#X connect 17 0 21 1;
+#X connect 18 0 24 0;
+#X connect 19 0 20 0;
+#X connect 19 0 15 0;
+#X connect 20 0 21 0;
+#X connect 21 0 19 1;
+#X connect 22 0 21 0;
+#X connect 23 0 19 0;
+#X connect 24 0 0 0;
+#X connect 24 1 22 0;
+#X restore 40 655 pd seq;
+#X obj 40 633 text define -k \$0-scales;
+#A set 0 1 2 3 4 5 6 7 8 9 10 11 \; 0 0 2 2 4 5 5 7 7 9 9 11 \; 0 2
+4 5 7 9 11 \; 0 2 3 5 7 8 10 \; 0 4 7 \; 0 3 7 \; 0 1 \; 0 \;;
+#X obj 584 146 change;
+#X obj 584 189 b;
+#X obj 700 385 until;
+#X obj 700 434 f 0;
+#X obj 729 434 + 1;
+#X msg 715 409 0;
+#X obj 810 664 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-lissajous_p1 lissajous_p1
+0 -8 0 10 -262130 -1 -1 699.35 256;
+#X obj 806 718 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-lissajous_p2 lissajous_p2
+0 -8 0 10 -262130 -1 -1 787.38 256;
+#X obj 699 760 set \$0-draw y;
+#X obj 700 716 set \$0-draw x;
+#X obj 867 521 element \$0-array tab;
+#X obj 1004 499 r \$0-arrayPointer;
+#X obj 702 360 f;
+#X obj 977 641 spigot;
+#X obj 1016 621 tgl 15 0 empty \$0-motion motion 17 7 0 10 -262144
+-1 -1 1 1;
+#X obj 720 340 nbx 3 15 1 128 0 0 empty \$0-steps steps 41 10 0 10
+-262130 -1 -1 128 256;
+#X obj 720 584 set \$0-draw c;
+#X obj 802 542 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-color color 0
+-8 0 10 -262130 -1 -1 665 256;
+#X obj 720 562 f;
+#X obj 740 511 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-colorOn colorOn
+0 -8 0 10 -262130 -1 -1 815 256;
+#X obj 740 478 sel;
+#X obj 802 508 b;
+#X obj 700 456 t f b f f;
+#X obj 995 675 nbx 5 14 0 999 0 0 empty \$0-mSpeed mSpeed 0 -8 0 10
+-262130 -1 -1 7 256;
+#X obj 700 661 *;
+#X obj 718 639 / 100;
+#X obj 476 255 / 8;
+#X obj 578 255 / 8;
+#X obj 571 91 r \$0-cInit;
+#X obj 977 716 * 1;
+#X obj 700 683 expr sin(6.2832*$f1*$f2/$f3)*150;
+#X obj 700 738 expr sin((6.2832*$f1*$f2/$f3)+$f4/3)*150;
+#N canvas 514 354 450 75 \$0-array 0;
+#X obj 16 42 plot tab c 1 0 0;
+#X obj 16 20 struct \$0-array array tab \$0-draw float x float y float
+c;
+#X restore 40 589 pd \$0-array;
+#N canvas 517 156 359 104 \$0-draw 0;
+#X obj 15 18 struct \$0-draw float x float y float c;
+#X obj 15 40 filledcurve c c 3 0 1 0 1;
+#X restore 40 567 pd \$0-draw;
+#N canvas 807 595 470 178 \$0-rectangle 0;
+#X obj 44 92 s \$0-rectangle;
+#X text 42 34 This is a one pixel polygon that will be stretched to
+the size of the area;
+#X obj 44 114 filledpolygon c 0 0 0 0 400 0 400 400 0 400;
+#X obj 44 70 struct \$0-rectangle float x float c float step;
+#X obj 44 145 drawnumber step 5 20 0 step=;
+#X connect 3 0 0 0;
+#X restore 40 611 pd \$0-rectangle;
+#X obj 270 770 f;
+#X obj 252 639 until;
+#X obj 252 661 f;
+#X obj 296 639 0;
+#X obj 282 661 + 1;
+#X obj 270 792 set \$0-draw c;
+#X msg 252 617 128;
+#X obj 358 770 element \$0-array tab;
+#X obj 495 748 r \$0-arrayPointer;
+#X obj 252 554 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-color color 0
+-8 0 10 -262130 -1 -1 665 256;
+#X obj 252 727 sel;
+#X obj 270 748 b;
+#X obj 270 705 r \$0-stepNumber;
+#X obj 252 595 t b b;
+#X obj 252 683 t f f;
+#X obj 252 573 t b f;
+#X obj 326 642 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-colorOn colorOn
+0 -8 0 10 -262130 -1 -1 815 256;
+#X obj 376 661 r \$0-stepNumber;
+#X obj 358 683 f;
+#X obj 326 661 t f b;
+#X obj 326 584 r \$0-cInit;
+#X obj 995 694 / 100;
+#X obj 718 619 nbx 5 14 1 1000 0 0 empty \$0-lissajous_p3 lissajous_p3
+0 -8 0 10 -262130 -1 -1 464.94 256;
+#X obj 762 318 f;
+#X obj 792 318 + 1;
+#X obj 780 297 0;
+#X obj 780 275 r play;
+#X obj 702 296 t b b f b;
+#X obj 536 67 set \$0-rectangle step;
+#X obj 476 45 t f f b f;
+#X obj 30 430 cnv 15 400 100 empty empty empty 20 12 0 14 -261682 -66577
+0;
+#X obj 246 465 nbx 3 15 1 128 0 1 \$0-sound \$0-no-r pgm 41 10 0 10
+-203904 -1 -1 13 256;
+#X obj 246 480 nbx 3 15 1 16 0 0 \$0-channel \$0-no-r midich 41 10
+0 10 -203904 -1 -1 1 256;
+#X obj 36 435 tgl 15 0 play \$0-no-r play 17 7 0 10 -262130 -1 -1 1
+1;
+#X obj 36 450 nbx 3 15 20 500 0 1 bpm \$0-no-r bpm 41 10 0 10 -262130
+-1 -1 160 256;
+#X obj 36 465 nbx 3 15 1 128 0 1 \$0-steps \$0-no-r steps 41 10 0 10
+-262130 -1 -1 128 256;
+#X obj 39 495 hsl 35 15 0 0.33 0 1 feel \$0-no-r swing 39 10 0 10 -262130
+-1 -1 0 0;
+#X obj 36 480 nbx 3 15 0 9 0 1 \$0-random \$0-no-r random 41 10 0 10
+-262130 -1 -1 0 256;
+#X obj 371 480 nbx 5 14 0 999 0 1 \$0-colorOn \$0-no-r colorOn 0 -8
+0 10 -262130 -1 -1 815 256;
+#X obj 371 451 nbx 5 14 0 999 0 1 \$0-color \$0-no-r color 0 -8 0 10
+-262130 -1 -1 665 256;
+#X obj 246 450 hradio 15 1 1 8 \$0-scale \$0-no-r scale 0 -8 0 10 -262130
+-1 -1 5;
+#X obj 313 510 nbx 5 14 0 999 0 1 \$0-bgcolor \$0-no-r bgcolor 0 -8
+0 10 -262130 -1 -1 235 256;
+#X obj 36 510 nbx 3 14 -1e+037 1e+037 0 1 \$0-transpose \$0-no-r transp
+41 10 0 10 -262130 -1 -1 0 256;
+#X obj 371 510 nbx 5 14 0 999 0 1 \$0-linecolor \$0-no-r linecolor
+0 -8 0 10 -262130 -1 -1 688 256;
+#X obj 123 449 nbx 5 14 1 1000 0 1 \$0-lissajous_p1 empty lissajous_p1
+0 -8 0 10 -262130 -1 -1 699.35 256;
+#X obj 123 510 nbx 5 14 1 1000 0 1 \$0-lissajous_p3 empty lissajous_p3
+0 -8 0 10 -262130 -1 -1 464.94 256;
+#X obj 189 509 tgl 15 1 \$0-motion - motion 17 7 0 10 -262130 -1 -1
+1 1;
+#X obj 246 510 nbx 5 14 1 100 0 1 \$0-mSpeed \$0-no-r mSpeed 0 -8 0
+10 -262130 -1 -1 7 256;
+#X obj 123 479 nbx 5 14 1 1000 0 1 \$0-lissajous_p2 empty lissajous_p2
+0 -8 0 10 -262130 -1 -1 787.38 256;
+#X connect 1 0 10 0;
+#X connect 3 0 13 0;
+#X connect 3 1 2 0;
+#X connect 3 1 8 1;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 2;
+#X connect 6 0 11 1;
+#X connect 7 0 5 0;
+#X connect 9 0 4 0;
+#X connect 11 0 0 0;
+#X connect 12 0 11 0;
+#X connect 13 0 8 0;
+#X connect 14 0 12 0;
+#X connect 14 1 9 0;
+#X connect 14 2 7 0;
+#X connect 14 3 1 0;
+#X connect 15 0 17 0;
+#X connect 16 0 14 0;
+#X connect 17 0 18 0;
+#X connect 17 1 14 0;
+#X connect 20 0 19 0;
+#X connect 20 0 69 0;
+#X connect 21 0 133 0;
+#X connect 22 0 24 0;
+#X connect 23 0 22 1;
+#X connect 24 0 95 0;
+#X connect 24 1 96 0;
+#X connect 25 0 60 0;
+#X connect 26 0 60 0;
+#X connect 27 0 25 0;
+#X connect 28 0 26 0;
+#X connect 29 0 30 0;
+#X connect 29 0 40 1;
+#X connect 30 0 37 1;
+#X connect 30 0 42 1;
+#X connect 30 0 65 1;
+#X connect 31 0 41 0;
+#X connect 32 0 33 0;
+#X connect 33 0 36 1;
+#X connect 34 0 35 0;
+#X connect 35 0 32 1;
+#X connect 36 0 48 0;
+#X connect 37 0 36 0;
+#X connect 38 0 43 0;
+#X connect 39 0 46 0;
+#X connect 39 1 40 0;
+#X connect 39 2 65 0;
+#X connect 40 0 38 0;
+#X connect 41 0 33 1;
+#X connect 41 1 34 0;
+#X connect 42 0 45 0;
+#X connect 43 0 50 1;
+#X connect 44 0 37 0;
+#X connect 45 0 50 0;
+#X connect 46 0 42 0;
+#X connect 47 0 39 0;
+#X connect 48 0 47 0;
+#X connect 49 0 44 0;
+#X connect 49 1 32 0;
+#X connect 50 0 55 0;
+#X connect 53 0 52 1;
+#X connect 53 0 51 2;
+#X connect 54 0 52 0;
+#X connect 55 0 51 0;
+#X connect 55 1 51 1;
+#X connect 56 0 28 0;
+#X connect 57 0 27 0;
+#X connect 59 0 19 1;
+#X connect 59 0 132 1;
+#X connect 60 0 49 0;
+#X connect 61 0 60 1;
+#X connect 62 0 63 1;
+#X connect 64 0 63 0;
+#X connect 65 0 38 1;
+#X connect 65 0 46 1;
+#X connect 69 0 70 0;
+#X connect 70 0 64 0;
+#X connect 71 0 72 0;
+#X connect 72 0 73 0;
+#X connect 72 0 91 0;
+#X connect 73 0 72 1;
+#X connect 74 0 72 1;
+#X connect 75 0 99 1;
+#X connect 76 0 100 1;
+#X connect 79 0 77 1;
+#X connect 79 0 78 1;
+#X connect 79 0 85 1;
+#X connect 80 0 79 1;
+#X connect 81 0 71 0;
+#X connect 82 0 98 0;
+#X connect 83 0 82 1;
+#X connect 84 0 81 1;
+#X connect 84 0 99 2;
+#X connect 84 0 100 2;
+#X connect 86 0 87 1;
+#X connect 87 0 85 0;
+#X connect 88 0 87 1;
+#X connect 89 0 88 0;
+#X connect 89 1 90 0;
+#X connect 90 0 86 0;
+#X connect 91 0 93 0;
+#X connect 91 1 87 0;
+#X connect 91 2 89 0;
+#X connect 91 3 79 0;
+#X connect 92 0 125 0;
+#X connect 93 0 99 0;
+#X connect 93 0 100 0;
+#X connect 94 0 93 1;
+#X connect 95 0 57 0;
+#X connect 96 0 56 0;
+#X connect 97 0 20 0;
+#X connect 97 0 64 0;
+#X connect 98 0 100 3;
+#X connect 99 0 78 0;
+#X connect 100 0 77 0;
+#X connect 104 0 109 0;
+#X connect 105 0 106 0;
+#X connect 106 0 108 0;
+#X connect 106 0 118 0;
+#X connect 107 0 106 1;
+#X connect 108 0 106 1;
+#X connect 110 0 105 0;
+#X connect 111 0 109 1;
+#X connect 112 0 111 1;
+#X connect 113 0 119 0;
+#X connect 114 1 115 0;
+#X connect 115 0 104 0;
+#X connect 116 0 114 1;
+#X connect 117 0 110 0;
+#X connect 117 1 107 0;
+#X connect 118 0 114 0;
+#X connect 118 1 111 0;
+#X connect 119 0 117 0;
+#X connect 119 1 104 1;
+#X connect 120 0 123 0;
+#X connect 121 0 122 1;
+#X connect 122 0 111 0;
+#X connect 123 0 109 0;
+#X connect 123 1 122 0;
+#X connect 124 0 113 0;
+#X connect 124 0 120 0;
+#X connect 125 0 98 1;
+#X connect 126 0 94 0;
+#X connect 127 0 82 0;
+#X connect 127 0 128 0;
+#X connect 128 0 127 1;
+#X connect 129 0 127 1;
+#X connect 130 0 129 0;
+#X connect 131 0 81 0;
+#X connect 131 1 74 0;
+#X connect 131 2 89 1;
+#X connect 131 3 127 0;
+#X connect 133 0 22 0;
+#X connect 133 1 131 0;
+#X connect 133 2 20 0;
+#X connect 133 3 132 0;
+#X coords 0 500 400 0 400 500 2 30 30;
+#X restore 7 5 pd lissa-seq;
