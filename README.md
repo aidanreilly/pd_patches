@@ -1,2 +1,11 @@
 # pd_patches
-pure data patches 
+Pure data patches for pisound and midi controller
+
+* *First* - ASR patch with sine waves and LPGs
+* *Second* - live Granular freezer
+* *Third* - lissajous midi sequencer
+* *Fourth* - mutable rhythm machine
+* *Fifth* - red panda-esqe live granular delay
+* *Sixth* - granular mush cloud, based on a martin brinkmann patch
+* *Seventh* - three back to front loopers making out with each other like harpies
+* *Eighth* - 16 or so sine waves beating off each other slowly
