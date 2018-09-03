@@ -8,4 +8,4 @@ Pure data patches for pisound and midi controller
 * *Fifth* - red panda-esqe live granular delay
 * *Sixth* - granular mush cloud, based on a martin brinkmann patch
 * *Seventh* - three back to front loopers making out with each other like harpies
-* *Eighth* - 16 or so sine waves beating off each other slowly
+* *Eighth* - 3 octave sine wave reference tuner
