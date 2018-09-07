@@ -11,8 +11,8 @@
 #X text 24 230 SAMPLE - signal in;
 #X obj 445 18 asr;
 #X text 26 334 OUT - outputs;
-#X text 19 63 A simple A 4-stage Analog Shift Register (ASR). The sampled
-input is passed from left to right across the outputs on each trigger
-in received.;
 #X text 22 250 TRIG - trigger/gate input that will sample the signal
 at the SAMPLE - input;
+#X text 19 63 A simple 5-stage Analog Shift Register (ASR). The sampled
+input is passed from left to right across the outputs on each trigger
+in received.;
