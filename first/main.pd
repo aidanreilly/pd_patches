@@ -5501,9 +5501,6 @@ for more details.;
 #X obj 558 387 wtable 2;
 #X obj 1065 143 vca;
 #X obj 1277 102 knob 11;
-#X obj 227 35 metro 500;
-#X obj 197 9 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X connect 10 1 35 0;
 #X connect 10 2 36 0;
 #X connect 10 4 37 0;
@@ -5574,5 +5571,3 @@ for more details.;
 #X connect 59 0 43 0;
 #X connect 60 0 59 1;
 #X connect 61 0 59 2;
-#X connect 62 0 50 0;
-#X connect 63 0 62 0;
