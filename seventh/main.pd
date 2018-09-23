@@ -4279,7 +4279,7 @@ signal or short impulse(square-wave) to function properly.;
 #X obj 36 266 r open-color-code!;
 #X msg 36 313 \; pd-color-code vis \$1;
 #X msg 37 404 1;
-#N canvas 7 50 360 358 manual 1;
+#N canvas 7 50 360 358 manual 0;
 #X obj 28 82 bng 30 250 50 0 open-signal-flow! empty empty 10 7 0 10
 -158136 -1 -262144;
 #X obj 49 82 bng 30 250 50 0 open-signal-flow! empty empty 17 7 0 10
@@ -5461,7 +5461,7 @@ for more details.;
 /Looperrecord 0|1 \; /Looperfwd 1 \; /Looperbwd 1 \; /Looperstop 1
 \; /Switch 0|1 \; /delay 0-1 \; /feedback 0-1 \; /gain 0-1 \; /reset
 bng \;;
-#X obj 16 136 basic-lfo 2;
+#X obj 21 136 basic-lfo 2;
 #X obj 17 265 3way-xfade 1;
 #X obj 296 64 abs_audioflow-2_sv;
 #X obj 58 -135 prepend /Looperrecord;
@@ -5512,7 +5512,7 @@ bng \;;
 -1 -1;
 #X msg 873 683 1 0 \, 0 1 1;
 #X obj 873 705 vline~;
-#X obj 278 451 lpg;
+#X obj 300 445 lpg;
 #X obj 549 449 lpg 1;
 #X obj 890 392 lpg 2;
 #X obj 55 685 midi-in;
