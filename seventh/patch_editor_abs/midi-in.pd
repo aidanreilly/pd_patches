@@ -1,4 +1,4 @@
-#N canvas 258 245 796 617 10;
+#N canvas 213 28 796 617 10;
 #X obj 307 433 / 127;
 #X obj 307 455 sig~;
 #X obj 386 205 > 0;
@@ -27,6 +27,7 @@
 0;
 #X obj 386 183 t f f f;
 #X obj 307 100 notein 1;
+#X obj 667 365 outlet clock;
 #X connect 0 0 1 0;
 #X connect 1 0 7 0;
 #X connect 2 0 14 0;
@@ -37,6 +38,7 @@
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
 #X connect 14 0 3 0;
+#X connect 14 0 24 0;
 #X connect 14 1 11 0;
 #X connect 15 0 0 0;
 #X connect 15 1 17 0;
