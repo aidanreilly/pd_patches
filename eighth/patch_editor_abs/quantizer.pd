@@ -4,7 +4,7 @@
 #X obj 406 395 outlet~;
 #X obj 406 278 / 127;
 #X obj 108 142 hsl 128 15 0 127 0 1 \$0-quantizer-scale-s \$0-quantizer-scale-r
-SCALE 133 7 0 10 -262144 -1 -1 0 1;
+SCALE 133 7 0 10 -262144 -1 -1 3500 1;
 #X obj 406 327 +~;
 #X obj 406 349 min~ 1;
 #X obj 406 370 max~ 0;
@@ -195,10 +195,10 @@ SCALE 133 7 0 10 -262144 -1 -1 0 1;
 #X restore 488 268 pd state-saving-multiple-instances;
 #X obj 488 342 s \$0-instance-num;
 #X obj 488 294 makefilename %d;
-#X obj 215 114 cnv 5 5 5 empty \$0-instance-num 0 0 0 0 12 -262144
+#X obj 215 114 cnv 5 5 5 empty \$0-instance-num 1 0 0 0 12 -262144
 -66577 0;
 #X msg 488 319 label \$1;
-#N canvas 81 50 1117 745 state-saving-via-preset-manager-module 1;
+#N canvas 81 50 1117 745 state-saving-via-preset-manager-module 0;
 #X obj 477 349 textfile;
 #X msg 755 332 rewind;
 #X msg 712 332 bang;
@@ -495,6 +495,7 @@ SCALE 133 7 0 10 -262144 -1 -1 0 1;
 #X connect 43 0 0 0;
 #X connect 44 0 2 0;
 #X restore 266 420 pd choose-scale;
+#X obj 336 38 inlet;
 #X connect 1 0 5 0;
 #X connect 3 0 1 0;
 #X connect 4 0 11 0;
@@ -518,4 +519,5 @@ SCALE 133 7 0 10 -262144 -1 -1 0 1;
 #X connect 30 0 13 0;
 #X connect 31 0 0 0;
 #X connect 32 0 10 0;
+#X connect 33 0 4 0;
 #X coords 0 -1 1 1 175 75 2 100 100;
