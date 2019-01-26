@@ -4,7 +4,7 @@
 #X obj 406 395 outlet~;
 #X obj 406 278 / 127;
 #X obj 108 142 hsl 128 15 0 127 0 1 \$0-quantizer-scale-s \$0-quantizer-scale-r
-SCALE 133 7 0 10 -262144 -1 -1 3500 1;
+SCALE 133 7 0 10 -262144 -1 -1 0 1;
 #X obj 406 327 +~;
 #X obj 406 349 min~ 1;
 #X obj 406 370 max~ 0;
@@ -139,7 +139,7 @@ SCALE 133 7 0 10 -262144 -1 -1 3500 1;
 #X obj 142 114 cnv 5 5 5 empty empty QUANTIZER 0 0 0 12 -262144 -66577
 0;
 #X obj 103 167 cnv 5 5 5 empty empty OUT 0 0 0 8 -262144 -66577 0;
-#X obj 102 109 cnv 5 5 5 empty empty IN 0 0 0 8 -262144 -66577 0;
+#X obj 258 107 cnv 5 5 5 empty empty IN 0 0 0 8 -262144 -66577 0;
 #N canvas 21 50 593 700 state-saving-multiple-instances 0;
 #X obj 215 28 loadbang;
 #X obj 261 480 textfile;

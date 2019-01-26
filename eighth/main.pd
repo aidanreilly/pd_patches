@@ -1,4 +1,4 @@
-#N canvas -8 -8 1920 1008 10;
+#N canvas -8 -8 1370 730 10;
 #X declare -path patch_editor_abs;
 #X obj 8 645 declare -path patch_editor_abs;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
@@ -5458,7 +5458,7 @@ for more details.;
 #X text 32 138 button 2 gate;
 #X obj 189 50 knob 0;
 #X obj 244 445 midi-out 2;
-#X obj 313 141 midi-in 2;
+#X obj 403 134 midi-in 2;
 #X obj 250 280 quantizer 1;
 #X text 94 201 really basic quantizer;
 #X connect 10 0 14 0;
