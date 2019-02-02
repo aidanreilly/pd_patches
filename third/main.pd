@@ -3,7 +3,7 @@
 #N struct 1003-draw float x float y float c;
 #N canvas -8 -8 1366 696 10;
 #X declare -path patch_editor_abs;
-#N canvas 0 50 1366 696 lissa-seq 0;
+#N canvas -8 -8 1366 696 lissa-seq 0;
 #X obj 857 414 s \$0-rectanglePointer;
 #X msg 917 150 clear;
 #X obj 918 304 s \$0-arrayPointer;
@@ -18,7 +18,7 @@
 #X obj 857 392 append \$0-rectangle x;
 #X msg 857 370 0;
 #X obj 877 327 nbx 3 15 1 128 0 0 empty \$0-steps steps 41 10 0 10
--262130 -1 -1 66 256;
+-262130 -1 -1 33 256;
 #X obj 857 128 t b b b b;
 #X obj 870 61 bng 15 250 50 0 empty \$0-reset reset 17 7 0 10 -262144
 -1 -1;
@@ -37,7 +37,7 @@
 #X obj 476 299 i;
 #X obj 578 300 i;
 #X obj 536 445 hradio 15 1 1 8 empty \$0-scale scale 0 -8 0 10 -262130
--1 -1 5;
+-1 -1 6;
 #X obj 536 465 text size \$0-scales;
 #X obj 560 348 nbx 5 14 0 127 0 0 empty \$0-random random 0 -8 0 10
 -262130 -1 -1 2 256;
@@ -81,30 +81,19 @@
 0 10 -262130 -1 -1 688 256;
 #X obj 559 494 mod;
 #N canvas 2535 482 450 300 \$0-paintSubpatch 0;
-#X scalar 1003-rectangle 0 235 12 \;;
-#X scalar 1003-array 200 200 688 \; 0 0 665 \; 119.028 149.891 665
-\; -144.868 11.4148 665 \; 57.3029 -149.023 665 \; 75.1403 -22.7634
-665 \; -148.741 147.291 665 \; 105.913 33.9666 665 \; 19.8555 -144.705
-665 \; -130.066 -44.9995 665 \; 138.454 141.281 665 \; -38.4579 55.7368
-665 \; -91.6203 -137.03 665 \; 149.999 -66.1686 815 \; -90.965 132.001
-665 \; -39.3616 76.2169 665 \; 138.784 -126.199 665 \; -129.578 -85.8536
-665 \; 18.9639 119.666 665 \; 106.535 94.933 665 \; -148.622 -112.439
-665 \; 74.3449 -103.492 665 \; 58.2088 104.509 665 \; -145.087 111.476
-665 \; 118.459 -96.0207 665 \; 0.862534 -118.765 665 \; -119.553 87.0362
-665 \; 144.659 125.391 665 \; -56.4794 -77.491 665 \; -75.9645 -131.29
-665 \; 148.855 67.4968 665 \; -105.314 136.428 665 \; -20.6013 -57.1114
-665 \; 130.547 -140.801 665 \; -138.092 46.3255 665 \; 37.6236 144.307
-665 \; 92.3883 -35.3388 665 \; -149.994 -147.003 665 \; 90.1606 24.1474
-665 \; 40.1933 148.846 665 \; -139.164 -12.816 665 \; 129.142 -149.828
-665 \; -17.9626 1.4836 665 \; -107.294 149.936 665 \; 148.483 10.0034
-665 \; -73.6583 -149.177 665 \; -58.9354 -21.2868 665 \; 145.34 147.538
-665 \; -117.928 32.6628 665 \; -1.72504 -145.089 665 \; 120.116 -43.5645
-665 \; -144.408 141.772 665 \; 55.6114 54.3567 665 \; 76.5181 -137.634
-665 \; -148.967 -64.7017 665 \; 104.646 132.699 665 \; 21.5279 74.9354
-665 \; -131.006 -126.995 665 \; 137.839 -84.6026 665 \; -36.717 120.555
-665 \; -92.7788 93.7796 665 \; 149.985 -113.416 665 \; -89.411 -102.52
-665 \; -40.8122 105.62 665 \; 139.456 110.453 665 \; -128.588 -97.1
-665 \; 17.3242 -117.944 665 \; \;;
+#X scalar 1003-rectangle 0 235 19 \;;
+#X scalar 1003-array 200 200 688 \; 0 60.4684 665 \; -60.6999 146.443
+665 \; -111.016 -3.22636 665 \; -142.34 -147.704 665 \; -149.314 -54.5085
+665 \; -130.745 126.397 665 \; -89.8093 103.915 665 \; -33.5094 -85.7786
+665 \; 28.5224 -137.445 665 \; 85.675 32.0541 665 \; 128.171 149.974
+665 \; 148.741 26.5679 665 \; 143.866 -139.589 665 \; 114.379 -81.1311
+665 \; 65.3252 107.875 665 \; 5.09701 123.299 665 \; -56.0041 -59.6803
+665 \; -107.524 -146.627 665 \; -140.65 2.3667 665 \; -149.715 147.551
+815 \; -133.168 55.3095 665 \; -93.8399 -125.932 665 \; -38.4594 -104.533
+665 \; 23.5025 85.0715 665 \; 81.4417 137.787 665 \; 125.449 -31.2132
+665 \; 147.996 -149.987 665 \; 145.226 -27.4141 665 \; 117.61 139.271
+665 \; 69.8777 81.8548 665 \; 10.1881 -107.276 665 \; -51.2423 -123.785
+665 \; -103.909 58.8906 665 \; \;;
 #X coords 0 400 400 0 400 400 2 0 0;
 #X restore 28 30 pd \$0-paintSubpatch;
 #N canvas 152 92 322 377 seq 0;
@@ -125,9 +114,9 @@
 #X obj 84 259 pipe;
 #X obj 84 335 s \$0-stepNumber;
 #X obj 136 19 nbx 5 14 20 500 0 1 empty bpm bpm 0 -8 0 10 -262130 -1
--1 221 256;
+-1 106 256;
 #X obj 190 296 nbx 5 14 1 128 0 1 empty \$0-steps steps 0 -8 0 10 -262130
--1 -1 66 256;
+-1 -1 33 256;
 #X obj 54 38 tgl 15 0 empty play play 17 7 0 10 -262130 -1 -1 1 1;
 #X obj 84 313 f;
 #X obj 114 313 + 1;
@@ -177,9 +166,9 @@
 #X obj 729 434 + 1;
 #X msg 715 409 0;
 #X obj 810 664 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-lissajous_p1 lissajous_p1
-0 -8 0 10 -262130 -1 -1 722.35 256;
+0 -8 0 10 -262130 -1 -1 48.1968 256;
 #X obj 806 718 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-lissajous_p2 lissajous_p2
-0 -8 0 10 -262130 -1 -1 413.38 256;
+0 -8 0 10 -262130 -1 -1 40.3307 256;
 #X obj 699 760 set \$0-draw y;
 #X obj 700 716 set \$0-draw x;
 #X obj 867 521 element \$0-array tab;
@@ -187,9 +176,9 @@
 #X obj 702 360 f;
 #X obj 977 641 spigot;
 #X obj 1016 621 tgl 15 0 empty \$0-motion motion 17 7 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 720 340 nbx 3 15 1 128 0 0 empty \$0-steps steps 41 10 0 10
--262130 -1 -1 66 256;
+-262130 -1 -1 33 256;
 #X obj 720 584 set \$0-draw c;
 #X obj 802 542 nbx 5 14 -1e+037 1e+037 0 0 empty \$0-color color 0
 -8 0 10 -262130 -1 -1 665 256;
@@ -200,7 +189,7 @@
 #X obj 802 508 b;
 #X obj 700 456 t f b f f;
 #X obj 995 675 nbx 5 14 0 999 0 0 empty \$0-mSpeed mSpeed 0 -8 0 10
--262130 -1 -1 7 256;
+-262130 -1 -1 2 256;
 #X obj 700 661 *;
 #X obj 718 639 / 100;
 #X obj 476 255 / 8;
@@ -252,7 +241,7 @@ the size of the area;
 #X obj 326 584 r \$0-cInit;
 #X obj 995 694 / 100;
 #X obj 718 619 nbx 5 14 1 1000 0 0 empty \$0-lissajous_p3 lissajous_p3
-0 -8 0 10 -262130 -1 -1 450.94 256;
+0 -8 0 10 -262130 -1 -1 63.9291 256;
 #X obj 762 318 f;
 #X obj 792 318 + 1;
 #X obj 780 297 0;
@@ -269,9 +258,9 @@ the size of the area;
 #X obj 35 435 tgl 15 0 play \$0-no-r play 17 7 0 10 -262130 -1 -1 1
 1;
 #X obj 35 450 nbx 3 15 20 500 0 1 bpm \$0-no-r bpm 41 10 0 10 -262130
--1 -1 221 256;
+-1 -1 106 256;
 #X obj 35 465 nbx 3 15 1 128 0 1 \$0-steps \$0-no-r steps 41 10 0 10
--262130 -1 -1 66 256;
+-262130 -1 -1 33 256;
 #X obj 38 495 hsl 35 15 0 0.33 0 1 feel \$0-no-r swing 39 10 0 10 -262130
 -1 -1 400 0;
 #X obj 35 480 nbx 3 15 0 9 0 1 \$0-random \$0-no-r random 41 10 0 10
@@ -281,7 +270,7 @@ the size of the area;
 #X obj 370 451 nbx 5 14 0 999 0 1 \$0-color \$0-no-r color 0 -8 0 10
 -262130 -1 -1 665 256;
 #X obj 245 450 hradio 15 1 1 8 \$0-scale \$0-no-r scale 0 -8 0 10 -262130
--1 -1 5;
+-1 -1 6;
 #X obj 312 510 nbx 5 14 0 999 0 1 \$0-bgcolor \$0-no-r bgcolor 0 -8
 0 10 -262130 -1 -1 235 256;
 #X obj 35 510 nbx 3 14 0 127 0 1 \$0-transpose \$0-no-r transp 41 10
@@ -289,17 +278,16 @@ the size of the area;
 #X obj 370 510 nbx 5 14 0 999 0 1 \$0-linecolor \$0-no-r linecolor
 0 -8 0 10 -262130 -1 -1 688 256;
 #X obj 122 449 nbx 5 14 1 1000 0 1 \$0-lissajous_p1 empty lissajous_p1
-0 -8 0 10 -262130 -1 -1 722.35 256;
+0 -8 0 10 -262130 -1 -1 48.1968 256;
 #X obj 122 510 nbx 5 14 1 1000 0 1 \$0-lissajous_p3 empty lissajous_p3
-0 -8 0 10 -262130 -1 -1 450.94 256;
+0 -8 0 10 -262130 -1 -1 63.9291 256;
 #X obj 188 509 tgl 15 1 \$0-motion - motion 17 7 0 10 -262130 -1 -1
-0 1;
+1 1;
 #X obj 245 510 nbx 5 14 1 100 0 1 \$0-mSpeed \$0-no-r mSpeed 0 -8 0
-10 -262130 -1 -1 7 256;
+10 -262130 -1 -1 2 256;
 #X obj 122 479 nbx 5 14 1 1000 0 1 \$0-lissajous_p2 empty lissajous_p2
-0 -8 0 10 -262130 -1 -1 413.38 256;
+0 -8 0 10 -262130 -1 -1 40.3307 256;
 #X obj -7 406 r b0;
-#X obj -6 435 r k0;
 #X obj 1151 684 / 127;
 #X obj 1151 706 sig~;
 #X obj 1230 456 > 0;
@@ -324,10 +312,23 @@ the size of the area;
 #X obj 1126 93 float 1;
 #X obj 1128 40 r b2;
 #X obj 1201 90 mod 8;
-#X obj 1159 300 map 0 127 20 500;
-#X obj 1249 192 r k10;
-#X obj 1279 234 r k11;
+#X obj 1220 234 map 0 127 20 500;
 #X obj 1164 337 map 0 127 1 128;
+#X obj 1249 192 r k0;
+#X obj 1134 388 map 0 127 1 128;
+#X obj 1153 316 r k1;
+#X obj 1123 367 r k2;
+#X obj 1030 416 map 0 127 1 128;
+#X obj 1019 395 r k3;
+#X obj 1228 298 map 0 127 1 1000;
+#X obj 1108 294 map 0 127 1 1000;
+#X obj 1041 288 r k4;
+#X obj 1042 318 map 0 127 1 1000;
+#X obj 1107 264 r k5;
+#X obj 1227 268 r k6;
+#X obj 1207 161 map 0 127 1 128;
+#X obj 1196 140 r k7;
+#X obj 192 536 r b1;
 #X connect 1 0 10 0;
 #X connect 3 0 13 0;
 #X connect 3 1 2 0;
@@ -393,9 +394,9 @@ the size of the area;
 #X connect 53 0 51 2;
 #X connect 54 0 52 0;
 #X connect 55 0 51 0;
-#X connect 55 0 169 0;
+#X connect 55 0 168 0;
 #X connect 55 1 51 1;
-#X connect 55 1 170 0;
+#X connect 55 1 169 0;
 #X connect 56 0 28 0;
 #X connect 57 0 27 0;
 #X connect 59 0 19 1;
@@ -488,34 +489,46 @@ the size of the area;
 #X connect 133 2 20 0;
 #X connect 133 3 132 0;
 #X connect 153 0 137 0;
-#X connect 154 0 138 0;
-#X connect 155 0 156 0;
-#X connect 156 0 162 0;
-#X connect 157 0 168 0;
-#X connect 158 0 159 0;
-#X connect 159 0 163 0;
-#X connect 160 0 161 0;
-#X connect 161 0 164 0;
+#X connect 154 0 155 0;
+#X connect 155 0 161 0;
+#X connect 156 0 167 0;
+#X connect 157 0 158 0;
+#X connect 158 0 162 0;
+#X connect 159 0 160 0;
+#X connect 160 0 163 0;
+#X connect 164 0 165 0;
 #X connect 165 0 166 0;
-#X connect 166 0 167 0;
-#X connect 168 0 158 0;
-#X connect 168 1 165 0;
-#X connect 169 0 155 0;
-#X connect 170 0 157 0;
-#X connect 170 1 160 0;
-#X connect 171 0 137 0;
-#X connect 173 0 177 0;
-#X connect 174 0 175 0;
+#X connect 167 0 157 0;
+#X connect 167 1 164 0;
+#X connect 168 0 154 0;
+#X connect 169 0 156 0;
+#X connect 169 1 159 0;
+#X connect 170 0 137 0;
+#X connect 172 0 176 0;
+#X connect 173 0 174 0;
+#X connect 174 0 172 0;
+#X connect 174 0 144 0;
 #X connect 175 0 173 0;
-#X connect 175 0 144 0;
-#X connect 176 0 174 0;
-#X connect 177 0 175 1;
-#X connect 178 0 138 0;
-#X connect 179 0 178 0;
-#X connect 180 0 181 0;
-#X connect 181 0 139 0;
+#X connect 176 0 174 1;
+#X connect 177 0 138 0;
+#X connect 178 0 139 0;
+#X connect 179 0 177 0;
+#X connect 180 0 141 0;
+#X connect 181 0 178 0;
+#X connect 182 0 180 0;
+#X connect 183 0 140 0;
+#X connect 184 0 183 0;
+#X connect 185 0 149 0;
+#X connect 186 0 152 0;
+#X connect 187 0 188 0;
+#X connect 188 0 148 0;
+#X connect 189 0 186 0;
+#X connect 190 0 185 0;
+#X connect 191 0 146 0;
+#X connect 192 0 191 0;
+#X connect 193 0 150 0;
 #X coords 0 500 400 0 400 500 2 30 30;
-#X restore 13 8 pd lissa-seq;
+#X restore 626 5 pd lissa-seq;
 #X obj 548 721 declare -path patch_editor_abs;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
@@ -3736,7 +3749,7 @@ the size of the area;
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 2 256;
+10 -262144 -1 -1 3 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5844,7 +5857,7 @@ for more details.;
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 4 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5951,107 +5964,55 @@ for more details.;
 #X connect 20 0 4 0;
 #X restore 548 742 pd patch-editor-do-not-delete;
 #X text 560 705 DO NOT DELETE THESE OBJECTS:;
-#X obj 466 9 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
+#X obj 14 10 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
 0;
-#X obj 467 35 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
+#X obj 15 36 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
 17 7 0 10 -262144 -1 -1;
-#X obj 467 55 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
+#X obj 15 56 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
 -262144 -1 -1;
-#X obj 467 73 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
+#X obj 15 74 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
 7 0 10 -262144 -1 -1;
-#X obj 467 113 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
+#X obj 15 114 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
 -262144 -1 -1;
-#X obj 467 93 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0
-10 -262144 -4034 -1;
-#X obj 473 491 maestro4 1;
-#X obj 1491 261 asr;
-#X obj 782 622 slope 1;
-#X obj 1053 623 slope 2;
-#X obj 1408 618 slope 3;
-#X obj 1672 616 slope 4;
-#X obj 1323 35 param-nudge 1;
-#X obj 681 86 knob 11;
-#X obj 1164 8 butt 0;
-#X obj 624 158 butt 1;
-#X obj 1286 8 butt 2;
-#X obj 985 512 lpg 0;
-#X obj 1288 510 lpg 1;
-#X obj 1496 511 lpg 2;
-#X obj 1707 510 lpg 3;
-#X obj 888 343 knob 0;
-#X obj 1177 274 knob 1;
-#X obj 1200 165 knob 2;
-#X obj 1370 180 knob 3;
-#X obj 930 588 knob 4;
-#X obj 1298 589 knob 5;
-#X obj 1569 587 knob 6;
-#X obj 1823 585 knob 7;
-#X obj 945 19 knob 8;
-#X obj 1456 318 knob 9;
-#X obj 638 263 knob 10;
-#X obj 1000 392 bwl-osc 0;
-#X obj 1293 387 bwl-osc 1;
-#X obj 1524 385 bwl-osc 2;
-#X obj 1724 386 bwl-osc 3;
-#X obj 819 393 vca 0;
-#X obj 1008 312 vca 1;
-#X obj 1039 202 vca 2;
-#X obj 1300 213 vca 3;
-#X obj 979 52 trigger-seq 5;
-#X obj 743 516 wavefold 1;
-#X obj 469 149 sinebank 3;
-#X obj 600 343 combfilter 2;
-#X text 135 536 note gate vel;
-#X connect 0 0 11 0;
-#X connect 0 1 11 1;
-#X connect 0 1 44 0;
-#X connect 11 0 36 0;
-#X connect 11 1 37 0;
-#X connect 11 2 38 0;
-#X connect 11 3 39 0;
-#X connect 12 0 21 1;
-#X connect 13 0 22 1;
-#X connect 14 0 23 1;
-#X connect 15 0 24 1;
-#X connect 18 0 44 1;
-#X connect 20 0 16 0;
-#X connect 21 0 40 0;
-#X connect 22 0 41 0;
-#X connect 23 0 42 0;
-#X connect 24 0 43 0;
-#X connect 25 0 40 1;
-#X connect 26 0 41 1;
-#X connect 27 0 42 1;
-#X connect 28 0 43 1;
-#X connect 29 0 12 1;
-#X connect 29 0 12 2;
-#X connect 30 0 13 1;
-#X connect 30 0 13 2;
-#X connect 31 0 14 1;
-#X connect 31 0 14 2;
-#X connect 32 0 15 1;
-#X connect 32 0 15 2;
-#X connect 33 0 45 1;
-#X connect 34 0 36 1;
-#X connect 34 0 37 1;
-#X connect 34 0 38 1;
-#X connect 34 0 39 1;
-#X connect 36 0 45 0;
-#X connect 37 0 22 0;
-#X connect 37 0 36 2;
-#X connect 38 0 23 0;
-#X connect 39 0 24 0;
-#X connect 39 0 38 2;
-#X connect 40 0 10 0;
-#X connect 41 0 10 2;
-#X connect 42 0 10 4;
-#X connect 43 0 47 0;
-#X connect 44 0 12 0;
-#X connect 44 0 13 0;
-#X connect 44 0 14 0;
-#X connect 44 0 15 0;
-#X connect 45 0 21 0;
-#X connect 46 2 10 3;
-#X connect 46 3 10 5;
-#X connect 46 4 10 7;
-#X connect 47 0 10 6;
+#X obj 15 94 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0 10
+-262144 -4034 -1;
+#X obj 709 517 asr;
+#X obj 168 35 butt 0;
+#X obj 279 37 butt 1;
+#X obj 374 33 butt 2;
+#X obj 386 139 knob 6;
+#X obj 350 583 midi-out 2;
+#X obj 570 585 midi-out 3;
+#X obj 804 581 midi-out 4;
+#X obj 136 580 midi-out 1;
+#X text 164 13 start/stop;
+#X text 180 69 bpm;
+#X text 381 7 scale;
+#X text 293 71 steps;
+#X text 456 62 random;
+#X text 541 59 swing;
+#X text 295 6 motion;
+#X text 163 120 lissajous 1;
+#X text 298 117 lissajous 2;
+#X text 401 116 lissajous 3;
+#X obj 500 195 knob 11;
+#X obj 165 90 knob 0;
+#X obj 280 88 knob 1;
+#X obj 398 89 knob 2;
+#X obj 513 87 knob 3;
+#X obj 167 140 knob 4;
+#X obj 275 139 knob 5;
+#X obj 495 139 knob 7;
+#X obj 170 199 knob 8;
+#X obj 279 196 knob 9;
+#X obj 389 195 knob 10;
+#X connect 0 0 10 0;
+#X connect 0 1 10 1;
+#X connect 0 1 17 1;
+#X connect 0 1 16 1;
+#X connect 0 1 15 1;
+#X connect 0 1 18 1;
+#X connect 10 0 18 0;
+#X connect 10 1 15 0;
+#X connect 10 2 16 0;
+#X connect 10 3 17 0;
