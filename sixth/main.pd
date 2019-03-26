@@ -1,4 +1,4 @@
-#N canvas 291 142 750 363 10;
+#N canvas -8 -8 1366 696 10;
 #X declare -path patch_editor_abs;
 #X obj 8 645 declare -path patch_editor_abs;
 #N canvas 447 50 707 551 patch-editor-do-not-delete 0;
@@ -5634,7 +5634,7 @@ for more details.;
 #X obj 377 163 hsl 96 15 0 0.5 0 0 empty empty ramp 2 8 0 10 -262144
 -1 -1 4900 1;
 #X obj 111 116 hsl 256 15 0 1 0 0 empty empty position 2 8 0 10 -262144
--1 -1 13823 1;
+-1 -1 14595 1;
 #X obj 377 183 hsl 96 15 0 1 0 0 empty empty pan_rnd 2 8 0 10 -262144
 -1 -1 3500 1;
 #X obj 377 143 hsl 96 15 0 1 0 0 empty empty pitch_rnd 2 8 0 10 -262144
@@ -5653,7 +5653,7 @@ for more details.;
 #X obj 107 222 bng 30 250 50 0 empty empty s1 10 10 0 10 -213184 -1
 -262144;
 #X msg -270 395 0;
-#X obj 148 222 bng 30 250 50 0 empty empty s2 10 10 0 10 -4416 -1 -262144
+#X obj 148 222 bng 30 250 50 0 empty empty s2 10 10 0 10 -4158 -1 -262144
 ;
 #X msg -241 395 1;
 #N canvas 97 258 968 652 gs2scene_2 0;
@@ -5702,7 +5702,7 @@ for more details.;
 #X msg 365 -13 1;
 #X msg 283 -12 0;
 #X obj 414 469 abs_grainstates_2c_colour;
-#X msg 96 64 0.119608 0.0784314 0.00882353 0.00784314 0.257895 0.542088
+#X msg 96 64 0.119608 0.0784314 0.00882353 0.00784314 0.257895 0.572338
 0.0627451 0 0.368421;
 #X connect 0 0 37 0;
 #X connect 0 0 38 0;
@@ -6810,7 +6810,7 @@ for more details.;
 #X obj -376 557 +;
 #X obj -381 532 t b f;
 #X obj 118 300 hsl 296 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 24759 1;
+-1 -1 10009 1;
 #X obj -334 556 +;
 #X obj -339 531 t b f;
 #X obj -294 558 +;
@@ -7095,7 +7095,7 @@ for more details.;
 #X obj 890 629 +;
 #X obj 885 604 t b f;
 #X obj 118 386 hsl 296 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4302 1;
+-1 -1 11677 1;
 #X obj 932 628 +;
 #X obj 927 603 t b f;
 #X obj 972 630 +;
@@ -7970,7 +7970,7 @@ fx.;
 -1 2900 1;
 #X text 714 13 <-bpm;
 #X obj 108 200 hsl 175 8 0 15 0 0 empty empty empty -2 -6 0 8 -262144
--258699 -1 8120 1;
+-258699 -1 3480 1;
 #X obj 291 106 vsl 8 90 0 1 0 1 empty empty gl 0 100 1 8 -262144 -1
 -1 2500 1;
 #X obj 104 121 vsl 8 73 -1 1 0 1 empty empty empty 0 -8 0 8 -262144
@@ -8078,7 +8078,7 @@ fx.;
 #X obj 249 102 nbx 3 14 2 16 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 16 256;
 #X obj 201 105 hsl 40 8 -30 30 0 0 empty empty lfo -24 5 0 10 -262144
--1 -1 1583 1;
+-1 -1 1938 1;
 #N canvas 705 79 1076 1000 lopass2p2zm 0;
 #X obj -222 90 inlet~;
 #X obj 133 939 outlet~;
