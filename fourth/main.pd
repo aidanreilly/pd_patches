@@ -1,7 +1,7 @@
-#N canvas 0 50 1366 696 10;
+#N canvas 318 183 629 309 10;
 #X declare -path patch_editor_abs;
 #X declare -path patch_editor_abs;
-#X obj 12 600 declare -path patch_editor_abs;
+#X obj 12 213 declare -path patch_editor_abs;
 #N canvas 0 50 718 398 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
 #X obj 26 34 loadbang;
@@ -4612,127 +4612,127 @@ as well.;
 #X connect 27 0 26 0;
 #X connect 36 0 35 0;
 #X connect 37 0 36 0;
-#X restore 12 621 pd patch-editor-do-not-delete;
-#X text 15 572 DO NOT DELETE THESE OBJECTS:;
-#X obj 10 20 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
-0;
-#X obj 11 46 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
+#X restore 12 234 pd patch-editor-do-not-delete;
+#X text 15 185 DO NOT DELETE THESE OBJECTS:;
+#X obj 10 -367 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144
+-66577 0;
+#X obj 11 -341 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
 17 7 0 10 -262144 -1 -1;
-#X obj 11 66 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0 10
+#X obj 11 -321 bng 15 250 50 0 open-manual! empty <--MANUAL 17 7 0
+10 -262144 -1 -1;
+#X obj 11 -303 bng 15 250 50 0 open-modules! empty <--MODULES(esc)
+17 7 0 10 -262144 -1 -1;
+#X obj 11 -263 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
 -262144 -1 -1;
-#X obj 11 84 bng 15 250 50 0 open-modules! empty <--MODULES(esc) 17
-7 0 10 -262144 -1 -1;
-#X obj 11 124 bng 15 250 50 0 \$0-reset! empty <--RESET! 17 7 0 10
--262144 -1 -1;
-#X obj 11 104 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0
+#X obj 11 -283 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0
 10 -262144 -4034 -1;
-#X obj 1114 30 hammond-knobs;
-#X text 287 37 Purple is an attenuator \, green is an attenuverter
+#X obj 1114 -357 hammond-knobs;
+#X text 287 -350 Purple is an attenuator \, green is an attenuverter
 ;
-#X obj -55 747 declare -path patch_editor_abs;
-#X text -43 731 DO NOT DELETE THESE OBJECTS:;
-#X obj 42 370 maestro4 1;
-#X obj 653 8 r k1;
-#X floatatom 653 34 5 0 0 0 - - -, f 5;
-#X floatatom 705 34 5 0 0 0 - - -, f 5;
-#X floatatom 753 33 5 0 0 0 - - -, f 5;
-#X floatatom 798 32 5 0 0 0 - - -, f 5;
-#X floatatom 850 32 5 0 0 0 - - -, f 5;
-#X floatatom 898 31 5 0 0 0 - - -, f 5;
-#X floatatom 676 89 5 0 0 0 - - -, f 5;
-#X floatatom 728 89 5 0 0 0 - - -, f 5;
-#X floatatom 776 88 5 0 0 0 - - -, f 5;
-#X floatatom 830 87 5 0 0 0 - - -, f 5;
-#X floatatom 882 87 5 0 0 0 - - -, f 5;
-#X floatatom 930 86 5 0 0 0 - - -, f 5;
-#X obj 970 9 r b1;
-#X obj 1023 9 r b2;
-#X obj 1070 7 r b3;
-#X obj 705 8 r k2;
-#X obj 753 7 r k3;
-#X obj 798 6 r k4;
-#X obj 850 6 r k5;
-#X obj 898 5 r k6;
-#X obj 676 63 r k7;
-#X obj 728 62 r k8;
-#X obj 776 62 r k9;
-#X obj 830 61 r k10;
-#X obj 882 61 r k11;
-#X obj 930 60 r k12;
-#X obj 969 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj -55 360 declare -path patch_editor_abs;
+#X text -43 344 DO NOT DELETE THESE OBJECTS:;
+#X obj 42 -17 maestro4 1;
+#X obj 653 -379 r k1;
+#X floatatom 653 -353 5 0 0 0 - - -, f 5;
+#X floatatom 705 -353 5 0 0 0 - - -, f 5;
+#X floatatom 753 -354 5 0 0 0 - - -, f 5;
+#X floatatom 798 -355 5 0 0 0 - - -, f 5;
+#X floatatom 850 -355 5 0 0 0 - - -, f 5;
+#X floatatom 898 -356 5 0 0 0 - - -, f 5;
+#X floatatom 676 -298 5 0 0 0 - - -, f 5;
+#X floatatom 728 -298 5 0 0 0 - - -, f 5;
+#X floatatom 776 -299 5 0 0 0 - - -, f 5;
+#X floatatom 830 -300 5 0 0 0 - - -, f 5;
+#X floatatom 882 -300 5 0 0 0 - - -, f 5;
+#X floatatom 930 -301 5 0 0 0 - - -, f 5;
+#X obj 970 -378 r b1;
+#X obj 1023 -378 r b2;
+#X obj 1070 -380 r b3;
+#X obj 705 -379 r k2;
+#X obj 753 -380 r k3;
+#X obj 798 -381 r k4;
+#X obj 850 -381 r k5;
+#X obj 898 -382 r k6;
+#X obj 676 -324 r k7;
+#X obj 728 -325 r k8;
+#X obj 776 -325 r k9;
+#X obj 830 -326 r k10;
+#X obj 882 -326 r k11;
+#X obj 930 -327 r k12;
+#X obj 969 -351 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1023 -355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1086 -177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 934 -105 moses 63;
+#X floatatom 997 -55 5 0 0 0 - - -, f 5;
+#X floatatom 924 -55 5 0 0 0 - - -, f 5;
+#X obj 946 -260 sel 1;
+#X obj 944 -224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 994 -307 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 965 -200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1031 -258 sel 1;
+#X obj 1049 -202 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1038 -306 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 530 -22 grids, f 38;
+#X obj 853 -196 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 847 -215 random;
+#X obj 801 -202 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 787 -219 map y;
+#X obj 745 -204 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 731 -221 map x;
+#X obj 703 -199 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 689 -216 hihat;
+#X obj 666 -197 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 650 -219 snare;
+#X obj 621 -209 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 607 -226 bass;
+#X obj 427 -122 f;
+#X obj 460 -95 + 1;
+#X obj 531 9 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 1023 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1086 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 934 282 moses 63;
-#X floatatom 997 332 5 0 0 0 - - -, f 5;
-#X floatatom 924 332 5 0 0 0 - - -, f 5;
-#X obj 946 127 sel 1;
-#X obj 944 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 994 80 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 965 187 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1031 129 sel 1;
-#X obj 1049 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1038 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 530 365 grids, f 38;
-#X obj 853 191 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X text 847 172 random;
-#X obj 801 185 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X text 787 168 map y;
-#X obj 745 183 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X text 731 166 map x;
-#X obj 703 188 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X text 689 171 hihat;
-#X obj 666 190 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X text 650 168 snare;
-#X obj 621 178 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X text 607 161 bass;
-#X obj 427 265 f;
-#X obj 460 292 + 1;
-#X obj 531 396 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 585 407 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 614 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 670 413 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 711 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 742 420 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 452 227 master-metronome;
-#X obj 464 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X floatatom 573 175 5 0 0 0 - - -, f 5;
-#X obj 464 104 loadbang;
-#X msg 464 136 1;
-#X msg 516 135 120;
-#X obj 573 103 * 250;
-#X obj 573 138 + 10;
-#X obj 579 64 / 127;
-#X obj 403 526 kick 1;
-#X obj 602 554 snare 1;
-#X msg 521 448 1 0 \, 0 1 1;
-#X obj 521 470 vline~;
-#X msg 641 495 1 0 \, 0 1 1;
-#X obj 641 517 vline~;
-#X msg 763 493 1 0 \, 0 1 1;
-#X obj 763 515 vline~;
-#X msg 476 462 1;
-#X obj 810 556 snare 2;
+#X obj 585 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 614 18 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 670 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 711 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 742 33 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 452 -160 master-metronome;
+#X obj 464 -206 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X floatatom 573 -212 5 0 0 0 - - -, f 5;
+#X obj 464 -283 loadbang;
+#X msg 464 -251 1;
+#X msg 516 -252 120;
+#X obj 573 -284 * 250;
+#X obj 573 -249 + 10;
+#X obj 579 -323 / 127;
+#X obj 403 139 kick 1;
+#X obj 602 167 snare 1;
+#X msg 521 61 1 0 \, 0 1 1;
+#X obj 521 83 vline~;
+#X msg 641 108 1 0 \, 0 1 1;
+#X obj 641 130 vline~;
+#X msg 763 106 1 0 \, 0 1 1;
+#X obj 763 128 vline~;
+#X msg 476 75 1;
+#X obj 810 169 snare 2;
 #X connect 9 7 93 4;
 #X connect 9 8 93 2;
 #X connect 9 9 85 2;
@@ -4808,4 +4808,4 @@ as well.;
 #X connect 90 0 91 0;
 #X connect 91 0 93 0;
 #X connect 93 0 13 4;
-#X coords 0 696 1 695 85 60 0;
+#X coords 0 309 1 308 85 60 0;
