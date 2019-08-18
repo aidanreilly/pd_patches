@@ -4,7 +4,7 @@
 #X obj 406 395 outlet~;
 #X obj 406 278 / 127;
 #X obj 108 142 hsl 128 15 0 127 0 1 \$0-quantizer-scale-s \$0-quantizer-scale-r
-SCALE 133 7 0 10 -262144 -1 -1 4500 1;
+SCALE 133 7 0 10 -262144 -1 -1 4300 1;
 #X obj 406 327 +~;
 #X obj 406 349 min~ 1;
 #X obj 406 370 max~ 0;
@@ -131,7 +131,7 @@ SCALE 133 7 0 10 -262144 -1 -1 4500 1;
 #X restore 486 365 pd scales-tables;
 #X obj 406 256 tabread;
 #X obj 239 348 t f f;
-#X obj 405 88 inlet~;
+#X obj 87 47 inlet~;
 #X obj 405 144 snapshot~;
 #X obj 405 166 * 28;
 #X obj 405 188 max 0;
