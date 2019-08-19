@@ -8,4 +8,4 @@ Pure data patches for pisound and midi controller
 * *Fifth* - red panda-esqe live granular delay
 * *Sixth* - granular mush cloud, based on a martin brinkmann patch
 * *Seventh* - basic midi ASR patch
-* *Eighth* - Simple midi quantizer
+* *Eighth* - Sod this - full on fugue machine!
