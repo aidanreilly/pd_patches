@@ -2788,7 +2788,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2842,7 +2842,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2896,7 +2896,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3274,7 +3274,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3651,7 +3651,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5448,92 +5448,49 @@ for more details.;
 #X obj 10 89 bng 15 250 50 0 SAVE-S SAVE-R <--SAVE!(enter) 17 7 0 10
 -262144 -4034 -1;
 #X text 130 7 Purple is an attenuator \, green is an attenuverter;
-#X obj 10 187 > 0;
-#X obj 11 236 pack 0 10;
-#X obj 19 266 line~;
-#X obj 10 165 t f f f;
-#X obj 10 209 t f;
-#X obj 10 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X text 32 138 button 2 gate;
-#X obj 135 209 sig~;
-#X obj 135 237 lop~ 10;
-#X obj 133 187 / 127;
-#X floatatom 133 160 5 0 0 0 - - -, f 5;
-#X text 180 158 num 2 cv;
-#X text 164 115 440 mid a 57;
-#X text 327 43 counter;
-#X obj 405 89 + 1;
-#X obj 329 91 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 317 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 341 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 361 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 382 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 405 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 422 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 443 172 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 462 172 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 329 119 float 1;
-#X obj 331 66 r b2;
-#X obj 329 144 route 0 1 2 3 4 5 6 7;
-#X obj 404 116 mod 8;
-#X obj 576 289 knob 0;
-#X obj 558 29 knob 1;
-#X obj 654 32 knob 2;
-#X obj 762 36 knob 3;
-#X obj 667 553 midi-out 2;
-#X obj 598 441 asr;
-#X obj 439 560 midi-out 1;
-#X obj 910 552 midi-out 3;
-#X obj 1129 547 midi-out 4;
-#X obj 950 89 knob 8;
-#X obj 710 248 knob 4;
-#X obj 946 256 knob 5;
-#X obj 1049 257 knob 6;
-#X obj 1231 258 knob 7;
-#X obj 777 314 midi-in 2;
-#X obj 390 304 butt 0;
-#X obj 340 364 butt 1;
-#X obj 320 431 butt 2;
-#X obj 174 441 switch;
-#X connect 10 0 14 0;
-#X connect 11 0 12 0;
-#X connect 13 0 10 0;
-#X connect 14 0 11 0;
-#X connect 15 0 13 0;
-#X connect 17 0 18 0;
-#X connect 19 0 17 0;
-#X connect 20 0 19 0;
-#X connect 24 0 37 0;
-#X connect 25 0 34 0;
-#X connect 34 0 24 0;
-#X connect 34 0 36 0;
-#X connect 35 0 25 0;
-#X connect 36 0 26 0;
-#X connect 36 1 27 0;
-#X connect 36 2 28 0;
-#X connect 36 3 29 0;
-#X connect 36 4 30 0;
-#X connect 36 5 31 0;
-#X connect 36 6 32 0;
-#X connect 36 7 33 0;
-#X connect 37 0 34 1;
-#X connect 43 0 44 0;
-#X connect 43 1 42 0;
-#X connect 43 2 45 0;
-#X connect 43 3 46 0;
-#X connect 52 0 43 0;
-#X connect 52 1 45 1;
-#X connect 52 1 46 1;
-#X connect 52 1 42 1;
-#X connect 52 1 44 1;
-#X connect 52 1 43 1;
+#X obj 390 354 knob 0;
+#X obj 550 552 midi-out 2;
+#X obj 588 84 asr;
+#X obj 292 534 midi-out 1;
+#X obj 803 534 midi-out 3;
+#X obj 1037 517 midi-out 4;
+#X obj 596 21 midi-in 2;
+#X obj 632 303 butt 0;
+#X obj 905 274 butt 1;
+#X obj 569 353 clock-divider-odd 1;
+#X obj 598 457 4to1-switch 1;
+#X obj 300 406 clock-multiply 1;
+#X obj 838 323 clock-divider-odd 1;
+#X obj 812 437 4to1-switch 1;
+#X obj 1051 310 clock-divider-even 1;
+#X obj 1047 411 4to1-switch 2;
+#X obj 1077 243 butt 2;
+#X connect 10 0 21 1;
+#X connect 12 0 13 0;
+#X connect 12 1 11 0;
+#X connect 12 2 14 0;
+#X connect 12 3 15 0;
+#X connect 16 0 12 0;
+#X connect 16 1 12 1;
+#X connect 16 1 19 0;
+#X connect 16 1 20 0;
+#X connect 16 1 21 0;
+#X connect 16 1 22 0;
+#X connect 16 1 23 0;
+#X connect 16 1 25 0;
+#X connect 17 0 20 4;
+#X connect 18 0 23 4;
+#X connect 19 0 20 1;
+#X connect 19 1 20 2;
+#X connect 19 2 20 3;
+#X connect 20 0 11 1;
+#X connect 21 0 13 1;
+#X connect 22 0 23 1;
+#X connect 22 1 23 2;
+#X connect 22 2 23 3;
+#X connect 23 0 14 1;
+#X connect 24 0 25 1;
+#X connect 24 1 25 2;
+#X connect 24 2 25 3;
+#X connect 25 0 15 0;
+#X connect 26 0 25 4;
