@@ -1,0 +1,263 @@
+#N canvas 197 99 1295 631 10;
+#X obj 12 139 cnv 15 440 80 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 12 349 cnv 15 440 150 empty empty empty 20 12 0 14 -249661 -66577
+0;
+#X obj 12 48 cnv 15 440 40 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 12 14 cnv 15 440 30 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X obj 676 328 tgl 15 0 empty empty connection_state 20 7 0 10 -4034
+-1 -1 0 1;
+#X obj 579 368 dac~;
+#X msg 574 44 connect http://locus.creacast.com:9001/aix_provence_st_jerome.ogg
+, f 65;
+#X msg 620 97 connect http://locus.creacast.com:9001/liverpool_ormskirk
+;
+#X msg 647 124 connect http://jupiterfdn.serverroom.us:5606/;
+#X obj 610 417 print error;
+#X obj 1029 473 / 1000;
+#X floatatom 1029 495 7 0 0 3 Kb/s - -, f 7;
+#X floatatom 963 495 5 0 0 3 channel - -, f 5;
+#X floatatom 899 495 5 0 0 3 Hz - -, f 5;
+#X obj 835 473 symbol;
+#X symbolatom 835 495 7 0 0 3 codec - -, f 7;
+#X obj 1157 414 print message;
+#X obj 1092 473 symbol;
+#X symbolatom 1092 495 7 0 0 3 format - -, f 7;
+#X msg 599 70 connect http://209.133.216.3:7118/stream;
+#X obj 574 295 locusamp~ 2 512;
+#X msg 663 152 connect http://locus.creacast.com:9001/dummy-stream-error-404
+, f 61;
+#N canvas 521 110 628 390 remote-file 0;
+#X msg 141 177 disconnect;
+#X obj 306 259 tgl 15 0 empty empty empty 20 7 0 10 -4034 -1 -1 0 1
+;
+#X obj 224 259 dac~;
+#X obj 423 243 route codec;
+#X obj 423 280 symbol;
+#X symbolatom 423 302 10 0 0 3 CODEC - -, f 10;
+#X obj 226 153 symbol;
+#X msg 171 72 mp3;
+#X msg 138 72 ogg;
+#X msg 204 72 opus;
+#X msg 243 72 wav;
+#X msg 276 72 flac;
+#X msg 315 72 weba;
+#X msg 226 177 connect http://hpr.dogphilosophy.net/test/\$1.\$1;
+#X text 136 21 SELECT ONE AUDIO FORMAT;
+#X text 136 37 thanks to Epicanis @ http://hpr.dogphilosophy.net/ for
+audio sources;
+#X obj 226 226 locusamp~;
+#X obj 267 299 spigot;
+#X obj 267 321 print remotefile;
+#X connect 0 0 16 0;
+#X connect 1 0 17 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 13 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 11 0 6 0;
+#X connect 12 0 6 0;
+#X connect 13 0 16 0;
+#X connect 16 0 2 0;
+#X connect 16 1 2 1;
+#X connect 16 2 3 0;
+#X connect 16 2 17 0;
+#X connect 16 3 1 0;
+#X connect 17 0 18 0;
+#X restore 222 440 pd remote-file;
+#X text 99 441 read remote file;
+#X text 162 418 downmix;
+#N canvas 703 200 659 512 to-mono 0;
+#X msg 170 46 connect http://209.133.216.3:7118/stream;
+#X obj 152 95 locusamp~ 1;
+#X msg 85 46 disconnect;
+#X obj 228 128 tgl 15 0 empty empty empty 20 7 0 10 -4034 -1 -1 0 1
+;
+#X obj 144 128 dac~;
+#X floatatom 426 26 6 0 0 1 Hz srate _, f 6;
+#X obj 422 436 samplerate~;
+#X obj 422 414 r pd-dsp-started;
+#X obj 422 458 s srate;
+#X obj 265 112 route channel;
+#X floatatom 265 134 5 0 0 0 - - -, f 5;
+#X msg 85 251 disconnect;
+#X obj 228 333 tgl 15 0 empty empty empty 20 7 0 10 -4034 -1 -1 0 1
+;
+#X floatatom 426 231 6 0 0 1 Hz srate _, f 6;
+#X obj 263 317 route channel;
+#X floatatom 263 339 5 0 0 0 - - -, f 5;
+#X msg 170 251 connect https://archive.org/download/5.1SurroundSoundTestFilesVariousFormatsAACAC3MP4DTSWAV/surroundTestDTS.dts.wav
+;
+#X text 149 230 source: 5.1 surround \, 44100 Hz to mono \,;
+#X obj 134 333 *~ 0.2;
+#X obj 125 366 dac~;
+#X text 191 25 source: stereo \, 44100 Hz to mono \,;
+#X obj 152 300 locusamp~ 1;
+#X obj 189 159 spigot;
+#X obj 189 181 print downmix;
+#X obj 189 373 spigot;
+#X obj 189 395 print downmix;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 0 4 1;
+#X connect 1 1 9 0;
+#X connect 1 1 22 0;
+#X connect 1 2 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 22 1;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 9 0 10 0;
+#X connect 11 0 21 0;
+#X connect 12 0 24 1;
+#X connect 14 0 15 0;
+#X connect 16 0 21 0;
+#X connect 18 0 19 0;
+#X connect 18 0 19 1;
+#X connect 21 0 18 0;
+#X connect 21 1 14 0;
+#X connect 21 1 24 0;
+#X connect 21 2 12 0;
+#X connect 22 0 23 0;
+#X connect 24 0 25 0;
+#X restore 222 418 pd to-mono;
+#N canvas 456 259 643 372 protocol 0;
+#X obj 308 158 symbol;
+#X obj 308 202 locusamp~;
+#X msg 338 47 udp;
+#X msg 371 47 rtmp;
+#X msg 411 47 rtsp;
+#X msg 481 47 dummy;
+#X msg 161 47 file;
+#X msg 201 47 http;
+#X msg 241 47 https;
+#X msg 288 47 ftp;
+#X text 24 47 SELECT A PROTOCOLE:;
+#X obj 348 242 route error;
+#X obj 422 264 print protocole;
+#X obj 348 264 symbol;
+#X symbolatom 348 299 30 0 0 0 - - -, f 30;
+#X text 177 24 application layer;
+#X text 335 25 transport layer;
+#X msg 308 180 connect \$1://127.0.0.1:12345;
+#X text 44 251 All supported file input protocols: https://ffmpeg.org/ffmpeg-protocols.html
+;
+#X connect 0 0 17 0;
+#X connect 1 2 11 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 11 0 13 0;
+#X connect 11 1 12 0;
+#X connect 13 0 14 0;
+#X connect 17 0 1 0;
+#X restore 222 462 pd protocol;
+#X text 43 463 supported file protocols;
+#X obj 642 382 route error warning metadata codec samplerate channel
+bitrate sampleformat, f 74;
+#X obj 697 417 print warning;
+#X obj 799 417 print metadata;
+#N canvas 199 76 599 356 local-file 0;
+#X obj 199 172 tgl 15 0 empty empty connected 20 7 0 10 -4034 -1 -1
+0 1;
+#X obj 391 247 / 1000;
+#X floatatom 391 269 7 0 0 3 Kb/s - -, f 7;
+#X floatatom 320 269 5 0 0 3 channel - -, f 5;
+#X floatatom 249 269 5 0 0 3 Hz - -, f 5;
+#X obj 179 247 symbol;
+#X symbolatom 179 269 7 0 0 3 codec - -, f 7;
+#X obj 462 247 symbol;
+#X symbolatom 462 269 7 0 0 3 format - -, f 7;
+#X obj 139 63 openpanel;
+#X obj 139 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 139 85 connect \$1;
+#X obj 179 208 route codec samplerate channel bitrate sampleformat
+;
+#X msg 53 85 disconnect;
+#X obj 139 144 locusamp~;
+#X obj 137 172 dac~;
+#X text 163 42 <-- SELECT A FILE;
+#X connect 1 0 2 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 0;
+#X connect 11 0 14 0;
+#X connect 12 0 5 0;
+#X connect 12 1 4 0;
+#X connect 12 2 3 0;
+#X connect 12 3 1 0;
+#X connect 12 4 7 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 14 1 15 1;
+#X connect 14 2 12 0;
+#X connect 14 3 0 0;
+#X restore 222 396 pd local-file;
+#X text 92 396 read a local file;
+#X msg 673 224 disconnect;
+#X obj 574 327 *~ 0;
+#X obj 608 327 *~ 0;
+#X obj 503 279 vsl 15 45 0 2 0 0 empty empty volume -10 -9 0 10 -4032
+-1 -1 0 1;
+#X text 725 252 force output status;
+#X text 31 520 Knowned supported file format: Ogg Vorbis \, MP3 \,
+Opus \, AAC (HE-AAC) \, WAVE \, AIFF \, FLAC \, WebA \, Au.;
+#X text 21 22 LOCUSAMP~ v0.2 - FFMPEG BASED MULTI FORMAT STREAMING
+CLIENT;
+#X text 91 364 OTHER FUNCTIONNALITY;
+#X msg 686 252 bang;
+#X obj 12 224 cnv 15 440 120 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X text 19 268 Center outlet: status message (error \, warning \, metadata
+\, codec \, samplerate \, channels \, bitrate \, format).;
+#X text 19 234 Leftmost outlets: sound outlets \, according to creation
+argumemts \, or 2 by default;
+#X text 19 302 Rightmost outlet: connection state. 0: disconnected
+\, 1: connected;
+#X text 19 145 CREATION ARGUMENTS: locusamp~ <channels> <buffer size>
+;
+#X text 19 164 <channels> number of outlets~ \, default 2 \, up to
+64;
+#X text 19 178 <buffer size> per channel of the circular buffer in
+Kilobytes \, default 2048 KB.;
+#X text 21 53 Written by Stéphane Cousot Grégoire Lauvin \, 2017
+Locus Sonus reseach lab \, pd@locusonus.org;
+#X connect 6 0 20 0;
+#X connect 7 0 20 0;
+#X connect 8 0 20 0;
+#X connect 10 0 11 0;
+#X connect 14 0 15 0;
+#X connect 17 0 18 0;
+#X connect 19 0 20 0;
+#X connect 20 0 34 0;
+#X connect 20 1 35 0;
+#X connect 20 2 28 0;
+#X connect 20 3 4 0;
+#X connect 21 0 20 0;
+#X connect 28 0 9 0;
+#X connect 28 1 29 0;
+#X connect 28 2 30 0;
+#X connect 28 3 14 0;
+#X connect 28 4 13 0;
+#X connect 28 5 12 0;
+#X connect 28 6 10 0;
+#X connect 28 7 17 0;
+#X connect 28 8 16 0;
+#X connect 33 0 20 0;
+#X connect 34 0 5 0;
+#X connect 35 0 5 1;
+#X connect 36 0 35 1;
+#X connect 36 0 34 1;
+#X connect 41 0 20 0;

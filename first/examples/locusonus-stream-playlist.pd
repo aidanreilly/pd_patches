@@ -1,0 +1,56 @@
+#N canvas 522 150 684 665 10;
+#X msg 200 60 GET http://locusonus.org/soundmap/list;
+#X obj 221 141 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 200 230 list trim;
+#X obj 200 252 route url;
+#X msg 100 240 clear;
+#X msg 239 365 print;
+#X obj 200 82 t a b;
+#X msg 335 346 rewind;
+#X obj 200 274 symbol;
+#X obj 200 427 textfile;
+#X msg 200 341 add connect \$1;
+#X obj 342 396 bng 30 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+-1;
+#X obj 200 551 locusamp~;
+#X text 384 403 <-- [2] LISTEN TO NEXT STREAM;
+#X text 450 61 <--- [1] GET ACTIVE STREAM URLs;
+#X obj 198 608 dac~;
+#X obj 192 577 *~ 0;
+#X obj 226 577 *~ 0;
+#X obj 112 473 vsl 20 100 0 2 0 0 empty empty volume -10 -9 0 10 -4032
+-1 -1 7500 1;
+#X obj 281 578 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 135 13 require purest_json external;
+#X obj 14 13 import purest_json;
+#X obj 200 109 rest;
+#X obj 200 194 json-decode;
+#X msg 305 528 http://locus.creacast.com:9001/le-rove_niolon.ogg;
+#X msg 305 504 set \$1;
+#X connect 0 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 0;
+#X connect 6 0 22 0;
+#X connect 6 1 4 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 12 0;
+#X connect 9 0 25 0;
+#X connect 10 0 9 0;
+#X connect 11 0 9 0;
+#X connect 12 0 16 0;
+#X connect 12 1 17 0;
+#X connect 12 3 19 0;
+#X connect 16 0 15 0;
+#X connect 17 0 15 1;
+#X connect 18 0 17 1;
+#X connect 18 0 16 1;
+#X connect 22 0 23 0;
+#X connect 22 1 1 0;
+#X connect 23 0 2 0;
+#X connect 23 1 7 0;
+#X connect 25 0 24 0;
