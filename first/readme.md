@@ -1,0 +1,1 @@
+ASR patch with controls for wavefolding on osc1, waveshaping on all 4 oscs, env controls, and global clock and pitch adjustments.

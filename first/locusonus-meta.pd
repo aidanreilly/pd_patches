@@ -1,6 +1,0 @@
-#N canvas 15 49 200 200 10;
-#N canvas 259 75 420 300 META 0;
-#X text 10 10 NAME locusonus;
-#X text 10 22 AUTHOR greglauvin@gmail.com and stef@ubaa.net;
-#X text 10 36 VERSION 0.1;
-#X restore 10 10 pd META;
