@@ -9,7 +9,7 @@
 #X text 185 232 ~ cv out;
 #X text 202 102 cc on midi channel 1;
 #X text 307 68 creation argument is cc number;
-#X floatatom 146 104 5 0 127 0 - - -, f 5;
+#X floatatom 146 104 5 0 0 0 - - -, f 5;
 #X obj 297 296 s k\$1;
 #X obj 96 275 s~ k\$1;
 #X connect 1 0 2 0;

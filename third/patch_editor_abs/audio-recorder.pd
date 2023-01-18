@@ -1,4 +1,4 @@
-#N canvas 0 50 1213 658 10;
+#N canvas 0 22 1213 658 10;
 #X obj 486 68 t b b;
 #X obj 105 135 tgl 15 0 rec/stop-s rec/stop-r REC/STOP 17 7 0 10 -150893
 -1 -1 0 1;
@@ -19,7 +19,7 @@
 #X obj 513 135 t f f;
 #X obj 108 230 hsl 128 15 0 127 0 1 \$0-rec-level-s \$0-rec-level-r
 LEVEL 133 7 0 10 -158136 -1 -1 7900 1;
-#N canvas 0 50 450 278 (subpatch) 0;
+#N canvas 0 22 450 278 (subpatch) 0;
 #X array \$0-right 512 float 0;
 #X coords 0 1 511 -1 80 60 1 0 0;
 #X restore 189 166 graph;
@@ -41,7 +41,7 @@ LEVEL 133 7 0 10 -158136 -1 -1 7900 1;
 #X obj 749 182 pack 0 50;
 #X obj 749 204 line~;
 #X obj 100 457 tabwrite~ \$0-left;
-#N canvas 0 50 450 278 (subpatch) 0;
+#N canvas 0 22 450 278 (subpatch) 0;
 #X array \$0-left 512 float 0;
 #X coords 0 1 511 -1 80 60 1 0 0;
 #X restore 105 166 graph;
